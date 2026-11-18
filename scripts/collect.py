@@ -18,8 +18,8 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data", "items.json")
-KEEP_DAYS = 120          # durée de conservation sur le site
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import store as datastore  # noqa: E402  (un fichier par année, conservation à vie)
 WINDOW_DAYS = 14         # n'ajoute que des éléments récents
 UA = "Mozilla/5.0 (compatible; RevueCriminellePenaleQC/1.0; +https://subrosaconnect.ca)"
 TODAY = dt.datetime.now(dt.timezone(dt.timedelta(hours=-5))).date()  # heure de l'Est (approx.)
@@ -425,11 +425,7 @@ def domaine(item):
 
 
 def main():
-    try:
-        with open(DATA, encoding="utf-8") as f:
-            store = json.load(f)
-    except FileNotFoundError:
-        store = {"items": []}
+    store = datastore.load()
     # applique les filtres actuels aux éléments déjà enregistrés
     store["items"] = [i for i in store["items"] if i["col"] != "presse" or relevant_news(i["titre"], i.get("source"))]
     known = {i["id"] for i in store["items"]}
@@ -446,8 +442,6 @@ def main():
         store["items"].append(item)
         known.add(iid)
         added += 1
-    cutoff = (TODAY - dt.timedelta(days=KEEP_DAYS)).isoformat()
-    store["items"] = [i for i in store["items"] if i.get("trouve_le", "") >= cutoff]
     for i in store["items"]:
         if i["col"] == "decisions" and not i.get("ia") and i.get("source") == "CanLII":
             i.setdefault("source_resume", i.get("resume", ""))
@@ -457,11 +451,7 @@ def main():
     for i in store["items"]:
         i["route"] = bool(ROUTE_RE.search(" ".join(str(i.get(k, "")) for k in ("titre", "resume", "source_resume", "questions", "dispositions"))))
     store["items"].sort(key=lambda i: (i["trouve_le"], i.get("date", "")), reverse=True)
-    if added or not os.path.exists(DATA):
-        store["mis_a_jour"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes")
-    os.makedirs(os.path.dirname(DATA), exist_ok=True)
-    with open(DATA, "w", encoding="utf-8") as f:
-        json.dump(store, f, ensure_ascii=False, indent=1)
+    datastore.save(store, changed=bool(added))
     log(f"{added} nouveaux éléments; total {len(store['items'])}")
 
 

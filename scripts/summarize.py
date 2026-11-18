@@ -15,7 +15,8 @@ import sys
 import anthropic
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data", "items.json")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import store as datastore  # noqa: E402
 MODEL = "claude-opus-5-5"
 MAX_PAR_COLLECTE = int(os.environ.get("MAX_PAR_COLLECTE", "30"))
 
@@ -93,8 +94,7 @@ def main():
     if not os.environ.get("ANTHROPIC_API_KEY"):
         print("Pas de clé ANTHROPIC_API_KEY : résumés désactivés.", file=sys.stderr)
         return
-    with open(DATA, encoding="utf-8") as f:
-        store = json.load(f)
+    store = datastore.load()
     todo = [i for i in store["items"] if i["col"] in ("decisions", "juridique") and "ia" not in i]
     todo = todo[:MAX_PAR_COLLECTE]
     if not todo:
@@ -137,8 +137,7 @@ def main():
         tokens_in += tin
         tokens_out += tout
 
-    with open(DATA, "w", encoding="utf-8") as f:
-        json.dump(store, f, ensure_ascii=False, indent=1)
+    datastore.save(store, changed=done > 0)
     cout = tokens_in / 1e6 * 4 + tokens_out / 1e6 * 20
     print(f"{done} résumés; {tokens_in} jetons en entrée, {tokens_out} en sortie; coût estimé {cout:.3f} $ US", file=sys.stderr)
 

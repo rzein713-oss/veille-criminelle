@@ -4,7 +4,7 @@ Site public de Sub Rosa Connect : décisions, législation, nouvelles de la prof
 Il fonctionne entièrement sur GitHub, gratuitement, sans abonnement Claude.
 
 - **Site** : `index.html`, publié par GitHub Pages à l'adresse `subrosaconnect.ca` (fichier `CNAME`).
-- **Données** : `data/items.json`, conservées 120 jours.
+- **Données** : un fichier par année (`data/items-AAAA.json`) et un index (`data/index.json`). Tout est conservé à vie.
 - **Collecte** : `scripts/collect.py` (Python, bibliothèque standard seulement), lancé deux fois par jour par `.github/workflows/collecte.yml`.
 
 ## Sources

@@ -1,4 +1,5 @@
 {
+ "annee": "2026",
  "items": [
   {
    "col": "presse",
@@ -745,6 +746,5 @@
    "domaine": "criminel",
    "route": false
   }
- ],
- "mis_a_jour": "2026-11-18T16:22+00:00"
+ ]
 }
