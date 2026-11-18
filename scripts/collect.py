@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data", "items.json")
 KEEP_DAYS = 120          # durée de conservation sur le site
 WINDOW_DAYS = 14         # n'ajoute que des éléments récents
-UA = "Mozilla/5.0 (compatible; VeilleCriminelleQC/1.0; +https://veille.subrosaconnect.ca)"
+UA = "Mozilla/5.0 (compatible; VeilleCriminelleQC/1.0; +https://subrosaconnect.ca)"
 TODAY = dt.datetime.now(dt.timezone(dt.timedelta(hours=-5))).date()  # heure de l'Est (approx.)
 
 CRIM_DESC = re.compile(
