@@ -45,6 +45,7 @@ CANLII = [
     ("qccs", "Cour supérieure"),
     ("qccq", "Cour du Québec – chambre criminelle et pénale"),
     ("qccm", "Cour municipale"),
+    ("csc", "Cour suprême du Canada"),  # flux CanLII : contient la classification (questions, résultat)
 ]
 
 NEWS = {
@@ -120,13 +121,55 @@ def cut(s, n=420):
     return s if len(s) <= n else s[: n - 1].rsplit(" ", 1)[0] + "…"
 
 
+# ---------- Décomposition des classifications SOQUIJ ----------
+
+RESULT_RE = re.compile(
+    r"accueilli|rejet[ée]|ordonnée?|acquitt|coupable|confirmée?|infirmée?|modifiée?|fixée?s?\b|arrêt des procédures|"
+    r"annulée?|cassée?|autorisée?|refusée?|accordée?|aucune violation|violation (retenue|reconnue)|exclusion|exclue?s?\b|"
+    r"condamn|libération|sursis|irrecevable|accueillie|rejetée|maintenue?s?\b|réduite|substituée?|imposée?s?\b|suspendue?",
+    re.I)
+LAW_RE = re.compile(r"(^|\s)(Code|Loi|Règlement|Charte|C\.\s?cr\.|C\.\s?p\.\s?p\.|C\.\s?s\.\s?r\.|L\.R\.|art\.)", re.I)
+CASE_RE = re.compile(r"\bc\.\s|R\. c\.|citée?s?$", re.I)
+HEADINGS = {
+    "infractions criminelles et réglementaires", "procédure", "peine", "sentence", "appel", "constitution", "droits garantis",
+    "preuve", "droit administratif", "détermination de la peine", "procédure pénale", "procédure criminelle", "droit criminel",
+}
+
+
+def decompose(classification):
+    """Sépare une classification SOQUIJ en questions, résumé, résultat et dispositions."""
+    questions, resultat, resume, lois = [], [], [], []
+    for seg in re.split(r"\s+—\s+", classification or ""):
+        seg = seg.strip(" .")
+        if not seg or seg.endswith("…"):
+            continue
+        if "?" in seg:
+            questions.append(seg.replace(" ?", "?"))
+        elif LAW_RE.match(seg) and len(seg) < 90:
+            lois.append(seg)
+        elif RESULT_RE.search(seg) and len(seg) < 90 and not re.match(r"(Requêtes?|Demandes?) modifiées?", seg):
+            resultat.append(seg)
+        elif seg.lower() in HEADINGS or CASE_RE.search(seg) or len(seg.split()) < 3:
+            continue
+        else:
+            resume.append(seg)
+    uniq = lambda xs: list(dict.fromkeys(xs))
+    return {
+        "questions": " ".join(uniq(questions)),
+        "resultat": "; ".join(uniq(resultat)),
+        "resume": ". ".join(uniq(resume)) + ("." if resume else ""),
+        "dispositions": "; ".join(uniq(lois)),
+    }
+
+
 # ---------- Sources ----------
 
 def from_canlii():
     out = []
     for db, court in CANLII:
         try:
-            its = items_of(fetch(f"https://www.canlii.org/fr/qc/{db}/rss_new.xml"))
+            juri = "ca" if db == "csc" else "qc"
+            its = items_of(fetch(f"https://www.canlii.org/fr/{juri}/{db}/rss_new.xml"))
         except Exception as e:  # noqa: BLE001
             log("CanLII", db, "échec:", e)
             continue
@@ -143,11 +186,11 @@ def from_canlii():
             tribunal = court
             if db == "qccq" and re.search(r"LSJPA|adolescent", title + desc, re.I):
                 tribunal = "Chambre de la jeunesse"
-            m = re.search(r"(\d{4} QC[A-Z]+ \d+)", title)
-            name = re.sub(r",?\s*\d{4} QC[A-Z]+ \d+.*$", "", title).strip()
+            m = re.search(r"(\d{4} (?:QC[A-Z]+|CSC) \d+)", title)
+            name = re.sub(r",?\s*\d{4} (?:QC[A-Z]+|CSC) \d+.*$", "", title).strip()
             out.append({
                 "col": "decisions", "titre": name or title, "reference": m.group(1) if m else "",
-                "tribunal": tribunal, "date": d.isoformat(), "resume": cut(desc, 600),
+                "tribunal": tribunal, "date": d.isoformat(), "resume": cut(desc, 1500),
                 "url": text(it, "link"), "source": "CanLII",
             })
     return out
@@ -316,7 +359,10 @@ def main():
     store["items"] = [i for i in store["items"] if i["col"] != "presse" or relevant_news(i["titre"], i.get("source"))]
     known = {i["id"] for i in store["items"]}
     added = 0
-    for item in from_canlii() + from_scc() + from_legisinfo() + from_pro_feeds() + from_news():
+    # Cour suprême : remplacée par le flux CanLII (plus complet) — retire les anciennes fiches du site de la CSC
+    store["items"] = [i for i in store["items"] if not (i["col"] == "decisions" and i.get("source") == "Cour suprême du Canada")]
+    known = {i["id"] for i in store["items"]}
+    for item in from_canlii() + from_legisinfo() + from_pro_feeds() + from_news():
         iid = item["col"] + ":" + ident(item)
         if iid in known:
             continue
@@ -328,6 +374,9 @@ def main():
     cutoff = (TODAY - dt.timedelta(days=KEEP_DAYS)).isoformat()
     store["items"] = [i for i in store["items"] if i.get("trouve_le", "") >= cutoff]
     for i in store["items"]:
+        if i["col"] == "decisions" and not i.get("ia") and i.get("source") == "CanLII":
+            i.setdefault("source_resume", i.get("resume", ""))
+            i.update(decompose(i["source_resume"]))
         i["domaine"] = domaine(i)
     store["items"].sort(key=lambda i: (i["trouve_le"], i.get("date", "")), reverse=True)
     if added or not os.path.exists(DATA):

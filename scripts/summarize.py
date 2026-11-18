@@ -26,7 +26,11 @@ Pour chaque élément, tu reçois le titre, la source, la date et la description
 
 Règles :
 - Appuie-toi uniquement sur l'information fournie. N'invente aucun fait, article de loi, nom, juge ou résultat.
-  Si une information manque, laisse le champ vide plutôt que de deviner.
+- Pour une DÉCISION, remplis toujours les quatre champs « questions », « resume », « resultat » et « impact » :
+  dégage la ou les questions en litige et le résultat à partir de la classification; si le résultat n'y figure vraiment pas,
+  écris « Non précisé dans la classification — consulter la décision ». L'impact pratique est ton analyse de la portée
+  de la décision pour un praticien, fondée sur l'information fournie.
+- Pour un élément de législation ou de la profession, laisse « questions » et « resultat » vides.
 - « resume » : 2 ou 3 phrases sur les faits et le raisonnement (ou le contenu du projet de loi / de la nouvelle).
 - « questions » (décisions seulement) : la ou les questions en litige, en une phrase.
 - « resultat » (décisions seulement) : l'issue en quelques mots (ex. « Appel accueilli; nouveau procès ordonné »).
@@ -60,7 +64,8 @@ def prompt_for(item):
         f"Tribunal ou catégorie : {item.get('tribunal') or item.get('categorie', '')}",
         f"Source : {item.get('source', '')}",
         f"Date : {item.get('date', '')}",
-        f"Description de la source : {item.get('resume', '') or '(aucune)'}",
+        f"Description de la source : {item.get('source_resume') or item.get('resume', '') or '(aucune)'}",
+        f"Dispositions citées : {item.get('dispositions', '') or '(non indiquées)'}",
     ]
     return "\n".join(lignes)
 
@@ -118,7 +123,7 @@ def main():
         except (RuntimeError, ValueError, StopIteration) as e:
             print(f"Réponse inutilisable pour {item['id']} : {e}", file=sys.stderr)
             continue
-        item["source_resume"] = item.get("resume", "")
+        item.setdefault("source_resume", item.get("resume", ""))
         item["resume"] = out["resume"].strip() or item.get("resume", "")
         for k in ("questions", "resultat", "impact"):
             if out[k].strip():

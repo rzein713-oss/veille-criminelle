@@ -61,6 +61,9 @@ input[type=search] { min-width: 0; flex: 1 1 180px; }
 .star { font: 600 11.5px var(--f-mono); color: var(--ok); }
 .item p.line { color: var(--fg); }
 .item p.line b { font-weight: 600; }
+.item p.line.na { color: var(--muted); font-style: italic; }
+.item p.line.na b { font-style: normal; color: var(--fg); }
+.item p.dispo { font-size: 12.5px; }
 details.src { font-size: 12.5px; color: var(--muted); }
 details.src summary { cursor: pointer; }
 details.src p { margin-top: 6px; font-size: 12.5px; }
@@ -164,11 +167,20 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
         else h.textContent = i.titre || "(sans titre)";
         art.append(meta, h);
         if (i.important) meta.prepend(el("span", "star", "★ À retenir"));
-        const line = (label, txt) => { if (!txt) return; const p = el("p", "line"); p.append(el("b", null, label + " : "), txt); art.append(p); };
-        if (i.col === "decisions") line("Questions en litige", i.questions);
-        if (i.resume) art.append(el("p", null, i.resume));
-        if (i.col === "decisions") line("Résultat", i.resultat);
-        line("Impact pratique", i.impact);
+        const line = (label, txt, always) => {
+          if (!txt && !always) return;
+          const p = el("p", "line" + (txt ? "" : " na")); p.append(el("b", null, label + " : "), txt || (label === "Impact pratique" ? "analyse à venir" : "non précisé par la source")); art.append(p);
+        };
+        if (i.col === "decisions") {
+          line("Questions en litige", i.questions, true);
+          line("Résumé", i.resume, true);
+          line("Résultat", i.resultat, true);
+          line("Impact pratique", i.impact, true);
+          if (i.dispositions) { const p = el("p", "dispo"); p.append(el("b", null, "Dispositions : "), i.dispositions); art.append(p); }
+        } else {
+          if (i.resume) art.append(el("p", null, i.resume));
+          line("Impact pratique", i.impact);
+        }
         if (i.ia && i.source_resume) {
           const d = el("details", "src"); d.append(el("summary", null, "Résumé rédigé par IA à partir de la source · voir la description d'origine"), el("p", null, i.source_resume));
           art.append(d);
