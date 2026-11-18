@@ -281,6 +281,31 @@ def ident(item):
     return item.pop("key", None) or item.get("reference") or item["url"]
 
 
+PENAL_RE = re.compile(
+    r"Code de procédure pénale|\bC\.\s?p\.\s?p\.|Code de la sécurité routière|\bC\.\s?s\.\s?r\.|constat d.infraction|"
+    r"infraction pénale|poursuite pénale|infractions? réglementaires?|amende|contravention|Règlement municipal|stationnement|"
+    r"Loi sur la santé et la sécurité du travail|Loi sur la qualité de l.environnement|Loi sur les impôts|Loi sur l.administration fiscale|"
+    r"Loi sur la protection du consommateur|Loi sur les valeurs mobilières|Loi sur les produits alimentaires|Loi sur la santé publique|"
+    r"Ville de |Municipalité de |Agence du revenu du Québec c\.|Commission des normes|Autorité des marchés financiers c\.|MAPAQ|CNESST",
+    re.I)
+CRIMINAL_RE = re.compile(r"Code criminel|\bC\.\s?cr\.|(^|\s)R\. c\.|c\. R\.|LSJPA|Loi réglementant certaines drogues|criminel", re.I)
+
+
+def domaine(item):
+    """« criminel » ou « penal » : sert aux onglets du site."""
+    if item.get("domaine_ia") in ("criminel", "penal"):
+        return item["domaine_ia"]
+    if item["col"] == "presse":
+        return "penal" if item.get("categorie") == "Droit pénal et réglementaire" else "criminel"
+    texte = " ".join(str(item.get(k, "")) for k in ("titre", "source_resume", "resume"))
+    if item["col"] == "decisions":
+        crim_titre = re.search(r"(^|\s)R\. c\.|c\. R\.|LSJPA", item.get("titre", ""))
+        if PENAL_RE.search(texte) and not crim_titre and not re.search(r"Code criminel|\bC\.\s?cr\.", texte):
+            return "penal"
+        return "criminel"
+    return "penal" if PENAL_RE.search(texte) and not CRIMINAL_RE.search(texte) else "criminel"
+
+
 def main():
     try:
         with open(DATA, encoding="utf-8") as f:
@@ -302,6 +327,8 @@ def main():
         added += 1
     cutoff = (TODAY - dt.timedelta(days=KEEP_DAYS)).isoformat()
     store["items"] = [i for i in store["items"] if i.get("trouve_le", "") >= cutoff]
+    for i in store["items"]:
+        i["domaine"] = domaine(i)
     store["items"].sort(key=lambda i: (i["trouve_le"], i.get("date", "")), reverse=True)
     if added or not os.path.exists(DATA):
         store["mis_a_jour"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes")

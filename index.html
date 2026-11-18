@@ -36,8 +36,11 @@ header .emblem { width: clamp(64px, 14vw, 92px); height: auto; grid-row: span 2;
 h1 { font-family: var(--f-display); font-weight: 500; font-size: clamp(18px, 3.6vw, 22px); line-height: 1.2; margin: 0; text-wrap: balance; }
 header .lede { grid-column: 1 / -1; margin-top: 10px; }
 .lede { color: var(--muted); margin: 0; max-width: 62ch; }
-.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 14px; flex-wrap: wrap; }
-.tab { font: 500 14px var(--f-body); color: var(--muted); background: none; border: 0; padding: 10px 14px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tabs { display: flex; gap: 10px 28px; border-bottom: 1px solid var(--line); margin-bottom: 14px; flex-wrap: wrap; }
+.tgroup { display: grid; gap: 2px; }
+.glabel { font: 500 11.5px var(--f-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--accent); padding-left: 2px; }
+.tpair { display: flex; gap: 2px; }
+.tab { font: 500 14px var(--f-body); color: var(--muted); background: none; border: 0; padding: 8px 10px 10px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
 .tab[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--accent); }
 .tab .n { font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-left: 6px; }
 .tab:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -72,14 +75,32 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
     <img class="emblem" src="assets/embleme.png" width="320" height="275" alt="Logo Sub Rosa Connect : balance de la justice surmontée d'une rose">
     <div class="brand">Sub Rosa Connect</div>
     <h1>Revue en droit criminel et pénal</h1>
-    <p class="lede">Décisions, législation, nouvelles de la profession et actualités en droit criminel et pénal au Québec, y compris les infractions réglementaires et les cours municipales. Mise à jour automatique deux fois par jour, avec un lien vers chaque source.</p>
+    <p class="lede">Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec. Mise à jour quotidienne.</p>
   </header>
 
-  <div class="tabs" role="tablist">
-    <button class="tab" role="tab" data-col="decisions" aria-selected="true">Décisions<span class="n" id="n-decisions">0</span></button>
-    <button class="tab" role="tab" data-col="juridique" aria-selected="false">Législation et Barreau<span class="n" id="n-juridique">0</span></button>
-    <button class="tab" role="tab" data-col="presse" aria-selected="false">Revue de presse<span class="n" id="n-presse">0</span></button>
-  </div>
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <div class="tgroup" role="group" aria-labelledby="g-decisions">
+      <span class="glabel" id="g-decisions">Décisions</span>
+      <div class="tpair">
+        <button class="tab" role="tab" data-col="decisions" data-dom="criminel" aria-selected="true">Criminel<span class="n" id="n-decisions-criminel">0</span></button>
+        <button class="tab" role="tab" data-col="decisions" data-dom="penal" aria-selected="false">Pénal<span class="n" id="n-decisions-penal">0</span></button>
+      </div>
+    </div>
+    <div class="tgroup" role="group" aria-labelledby="g-juridique">
+      <span class="glabel" id="g-juridique">Législations et Barreau</span>
+      <div class="tpair">
+        <button class="tab" role="tab" data-col="juridique" data-dom="criminel" aria-selected="false">Criminel<span class="n" id="n-juridique-criminel">0</span></button>
+        <button class="tab" role="tab" data-col="juridique" data-dom="penal" aria-selected="false">Pénal<span class="n" id="n-juridique-penal">0</span></button>
+      </div>
+    </div>
+    <div class="tgroup" role="group" aria-labelledby="g-presse">
+      <span class="glabel" id="g-presse">Revue de presse</span>
+      <div class="tpair">
+        <button class="tab" role="tab" data-col="presse" data-dom="criminel" aria-selected="false">Criminel<span class="n" id="n-presse-criminel">0</span></button>
+        <button class="tab" role="tab" data-col="presse" data-dom="penal" aria-selected="false">Pénal<span class="n" id="n-presse-penal">0</span></button>
+      </div>
+    </div>
+  </nav>
 
   <div class="bar">
     <label for="cat" id="cat-label">Tribunal</label>
@@ -105,7 +126,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 
 <script>
 (function () {
-  const state = { col: "decisions", items: [], cat: "", range: 30, q: "" };
+  const state = { col: "decisions", dom: "criminel", items: [], cat: "", range: 30, q: "" };
+  const domOf = (i) => i.domaine === "penal" ? "penal" : "criminel";
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
   const safeUrl = (u) => (typeof u === "string" && /^https?:\/\//i.test(u)) ? u : null;
@@ -114,8 +136,9 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
   const norm = (s) => (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
   function render() {
-    for (const c of ["decisions", "juridique", "presse"]) $("n-" + c).textContent = state.items.filter(i => i.col === c).length;
-    const items = state.items.filter(i => i.col === state.col);
+    for (const c of ["decisions", "juridique", "presse"]) for (const d of ["criminel", "penal"])
+      $("n-" + c + "-" + d).textContent = state.items.filter(i => i.col === c && domOf(i) === d).length;
+    const items = state.items.filter(i => i.col === state.col && domOf(i) === state.dom);
     $("cat-label").textContent = state.col === "decisions" ? "Tribunal" : "Catégorie";
     const cats = [...new Set(items.map(catOf).filter(Boolean))].sort();
     const sel = $("cat"), keep = state.cat;
@@ -157,7 +180,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
   }
 
   document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
-    state.col = t.dataset.col; state.cat = "";
+    state.col = t.dataset.col; state.dom = t.dataset.dom; state.cat = "";
     document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected", String(x === t)));
     render();
   }));

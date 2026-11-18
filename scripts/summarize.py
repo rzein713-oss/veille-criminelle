@@ -31,6 +31,8 @@ Règles :
 - « questions » (décisions seulement) : la ou les questions en litige, en une phrase.
 - « resultat » (décisions seulement) : l'issue en quelques mots (ex. « Appel accueilli; nouveau procès ordonné »).
 - « impact » : 1 ou 2 phrases sur la portée pratique pour un avocat en droit criminel ou pénal (argument utile, point de vigilance, changement de pratique).
+- « domaine » : "criminel" (Code criminel, LSJPA, drogues, droit criminel en général) ou "penal" (Code de procédure pénale,
+  Code de la sécurité routière, infractions réglementaires et lois statutaires, cours municipales en matière pénale).
 - « important » : true seulement si l'élément change ou précise l'état du droit de façon notable, sinon false.
 - Chambre de la jeunesse / LSJPA : n'identifie jamais l'adolescent, une victime ou un témoin mineur; garde l'intitulé anonymisé.
 - Personnes accusées : rappelle la présomption d'innocence s'il n'y a pas de verdict de culpabilité."""
@@ -43,8 +45,9 @@ SCHEMA = {
         "resultat": {"type": "string"},
         "impact": {"type": "string"},
         "important": {"type": "boolean"},
+        "domaine": {"type": "string", "enum": ["criminel", "penal"]},
     },
-    "required": ["resume", "questions", "resultat", "impact", "important"],
+    "required": ["resume", "questions", "resultat", "impact", "important", "domaine"],
     "additionalProperties": False,
 }
 
@@ -121,6 +124,8 @@ def main():
             if out[k].strip():
                 item[k] = out[k].strip()
         item["important"] = bool(out["important"])
+        item["domaine_ia"] = out["domaine"]
+        item["domaine"] = out["domaine"]
         item["ia"] = True
         done += 1
         tokens_in += tin
