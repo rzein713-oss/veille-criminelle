@@ -59,6 +59,9 @@ input[type=search] { min-width: 0; flex: 1 1 180px; }
 .item h3 a:hover { color: var(--accent); text-decoration: underline; }
 .item p { margin: 0; max-width: 70ch; overflow-wrap: anywhere; color: var(--muted); font-size: 14px; }
 .star { font: 600 11.5px var(--f-mono); color: var(--ok); }
+.chip.route { background: #e6ebf3; color: #1c263b; }
+.chk { display: inline-flex; gap: 6px; align-items: center; white-space: nowrap; color: var(--fg); }
+.chk input { accent-color: #1c263b; }
 .item p.line { color: var(--fg); }
 .item p.line b { font-weight: 600; }
 .item p.line.na { color: var(--muted); font-style: italic; }
@@ -114,6 +117,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
       <option value="30" selected>30 derniers jours</option>
       <option value="0">Tout</option>
     </select>
+    <label class="chk"><input type="checkbox" id="route"> Sécurité routière seulement</label>
     <input type="search" id="q" placeholder="Rechercher (ex. Jordan, 10b), LSJPA)" aria-label="Rechercher">
     <span class="status" id="status">Chargement…</span>
   </div>
@@ -129,7 +133,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 
 <script>
 (function () {
-  const state = { col: "decisions", dom: "criminel", items: [], cat: "", range: 30, q: "" };
+  const state = { col: "decisions", dom: "criminel", items: [], cat: "", range: 30, q: "", route: false };
   const domOf = (i) => i.domaine === "penal" ? "penal" : "criminel";
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
@@ -149,7 +153,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
     sel.value = cats.includes(keep) ? keep : ""; state.cat = sel.value;
     const cutoff = state.range ? new Date(Date.now() - state.range * 864e5).toISOString().slice(0, 10) : "";
     const q = norm(state.q);
-    const shown = items.filter(i => (!state.cat || catOf(i) === state.cat) && (!cutoff || (i.trouve_le || "") >= cutoff)
+    const shown = items.filter(i => (!state.route || i.route) && (!state.cat || catOf(i) === state.cat) && (!cutoff || (i.trouve_le || "") >= cutoff)
       && (!q || norm([i.titre, i.reference, i.resume, i.source].join(" ")).includes(q)));
     const list = $("list"); list.replaceChildren();
     if (!shown.length) { list.append(el("div", "empty", items.length ? "Aucun élément pour ces filtres." : "Aucun élément pour l'instant. La prochaine collecte en ajoutera.")); return; }
@@ -161,6 +165,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
       for (const i of arr) {
         const art = el("article", "item"), meta = el("div", "meta");
         const chip = catOf(i); if (chip) meta.append(el("span", "chip", chip));
+        if (i.route) meta.append(el("span", "chip route", "Route"));
         meta.append(el("span", null, [i.reference, i.source, i.date ? (i.col === "decisions" ? "rendue le " : "publié le ") + i.date : ""].filter(Boolean).join(" · ")));
         const h = el("h3"), u = safeUrl(i.url);
         if (u) { const a = el("a", null, i.titre || "(sans titre)"); a.href = u; a.target = "_blank"; a.rel = "noopener"; h.append(a); }
@@ -199,6 +204,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
   $("cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
   $("range").addEventListener("change", e => { state.range = Number(e.target.value); render(); });
   $("q").addEventListener("input", e => { state.q = e.target.value; render(); });
+  $("route").addEventListener("change", e => { state.route = e.target.checked; render(); });
 
   fetch("data/items.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
     state.items = d.items || [];

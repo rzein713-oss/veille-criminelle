@@ -10,7 +10,8 @@
    "source": "Info-web",
    "id": "presse:la sq enquête sur un vol qualifié à matane",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -22,7 +23,8 @@
    "source": "Les Affaires",
    "id": "presse:fraude envers la municipalité de labrecque une ancienne employée accusée",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -34,7 +36,8 @@
    "source": "La Presse",
    "id": "presse:accident sur l a30 en 2025 le camionneur accusé de conduite dangereuse causant la mort",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": true
   },
   {
    "col": "presse",
@@ -46,7 +49,8 @@
    "source": "Journal de Québec",
    "id": "presse:tentative de meurtre à alma il attaque son coloc avec un bâton de baseball",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -58,7 +62,60 @@
    "source": "FM 103,3",
    "id": "presse:quatre arrestations lors d une frappe policière liée au crime organisé",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
+  },
+  {
+   "col": "juridique",
+   "categorie": "Législation",
+   "titre": "Projet de loi n° 694 — Loi modifiant le Code de la sécurité routière afin de lutter plus efficacement contre l’alcool au volant",
+   "date": "2026-11-18",
+   "resume": "Assemblée nationale du Québec · dernière étape franchie : Présentation · Public de député.",
+   "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-694-43-1.html",
+   "source": "Assemblée nationale du Québec",
+   "id": "juridique:assnat:43-3:694:Présentation",
+   "trouve_le": "2026-11-18",
+   "domaine": "penal",
+   "route": true
+  },
+  {
+   "col": "juridique",
+   "categorie": "Législation",
+   "titre": "Projet de loi n° 897 — Loi modifiant le Code de la sécurité routière afin de prévoir la délivrance obligatoire d’un avis de paiement au propriétaire d’un véhicule routier immatriculé ou au titulaire de certains permis",
+   "date": "2026-11-18",
+   "resume": "Assemblée nationale du Québec · dernière étape franchie : Présentation · Public de député.",
+   "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-897-43-1.html",
+   "source": "Assemblée nationale du Québec",
+   "id": "juridique:assnat:43-3:897:Présentation",
+   "trouve_le": "2026-11-18",
+   "domaine": "penal",
+   "route": true
+  },
+  {
+   "col": "juridique",
+   "categorie": "Législation",
+   "titre": "Projet de loi n° 899 — Loi modifiant le Code de la sécurité routière afin d’obliger la Société de l’assurance automobile du Québec à conclure des ententes avec des ministères ou organismes en vue de l’application de certaines lois",
+   "date": "2026-11-18",
+   "resume": "Assemblée nationale du Québec · dernière étape franchie : Présentation · Public de député.",
+   "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-899-43-1.html",
+   "source": "Assemblée nationale du Québec",
+   "id": "juridique:assnat:43-3:899:Présentation",
+   "trouve_le": "2026-11-18",
+   "domaine": "penal",
+   "route": true
+  },
+  {
+   "col": "juridique",
+   "categorie": "Législation",
+   "titre": "Projet de loi n° 395 — Loi modifiant la Loi sur la Société de l’assurance automobile du Québec et d’autres dispositions législatives concernant les droits consentis sur un véhicule",
+   "date": "2026-11-18",
+   "resume": "Assemblée nationale du Québec · dernière étape franchie : Présentation · Public de député.",
+   "url": "https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projet-loi-395-43-2.html",
+   "source": "Assemblée nationale du Québec",
+   "id": "juridique:assnat:43-3:395:Présentation",
+   "trouve_le": "2026-11-18",
+   "domaine": "penal",
+   "route": true
   },
   {
    "col": "juridique",
@@ -70,7 +127,8 @@
    "source": "Parlement du Canada (LEGISinfo)",
    "id": "juridique:S-8 (45-1) - Loi visant à lutter contre les crimes financiers et le trafic de drogues|Dernière activité: Débat à l’étape de la deuxième lecture le 17 novembre 2026 (Sénat)",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "juridique",
@@ -82,7 +140,8 @@
    "source": "Droit-inc",
    "id": "juridique:https://droit-inc.com/conseils-carriere/nouvelles/peine-de-mort-pour-la-pratique-dun-avocat",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -94,7 +153,8 @@
    "source": "Radio-Canada",
    "id": "presse:aide à mourir les libéraux accusés de limiter les débats",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -106,7 +166,8 @@
    "source": "FM93",
    "id": "presse:double meurtre de rivière du loup de plus en plus d adolescents et de femmes dans le crime",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -118,7 +179,8 @@
    "source": "Le Soleil",
    "id": "presse:uniformes en détention le projet pilote fonctionne bien à roberval",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -130,7 +192,8 @@
    "source": "Radio-Canada",
    "id": "presse:projet aurora du spvm 75 mineurs recrutés en ligne arrêtés pour des crimes majeurs",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -142,7 +205,8 @@
    "source": "Noovo Info",
    "id": "presse:projet aurora 75 arrestations pour des crimes commandités sur les réseaux sociaux",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -154,7 +218,8 @@
    "source": "Noovo Info",
    "id": "presse:projet aurora on fait de l infiltration sur les réseaux sociaux dit le spvm",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -166,7 +231,8 @@
    "source": "Radio-Canada",
    "id": "presse:guerre de territoire en abitibi la sq procède à quatre arrestations",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -178,7 +244,8 @@
    "source": "Journal Le Soir",
    "id": "presse:matane un commerce ciblé par un vol qualifié",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -190,7 +257,8 @@
    "source": "Noovo Info",
    "id": "presse:guerre des redevances la sq mène une opération en abitibi en montérégie et à montréal",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -202,7 +270,8 @@
    "source": "journallecitoyen.com",
    "id": "presse:vaste opération de la sq en lien avec une tentative de meurtre survenue à val d or",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -214,7 +283,8 @@
    "source": "Radio-Canada",
    "id": "presse:intervention mortelle à salluit aucune accusation contre les policiers impliqués",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -226,7 +296,8 @@
    "source": "Le Journal de Montréal",
    "id": "presse:son ex poignardée 62 fois l accusé trouvé coupable de meurtre en à peine 24 heures de déli",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -238,7 +309,8 @@
    "source": "Noovo Info",
    "id": "presse:le spvq démantèle un réseau de vol de sacs de golf et arrête six suspects",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -250,7 +322,8 @@
    "source": "Journal Le Soir",
    "id": "presse:agression à saint gabriel le dossier de mvogo reporté",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -262,7 +335,8 @@
    "source": "95.7 KYK",
    "id": "presse: s il était reconnu coupable ça serait une première au québec ",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -274,7 +348,8 @@
    "source": "Le Reflet",
    "id": "presse:féminicide à candiac david tota reconnu coupable",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -286,7 +361,8 @@
    "source": "Noovo Info",
    "id": "presse:menaces contre son école un élève de 15 ans arrêté à thetford mines",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -298,7 +374,8 @@
    "source": "TVA Nouvelles",
    "id": "presse:menaces envers son école un ado arrêté à thetford mines",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -310,19 +387,8 @@
    "source": "Courrier Frontenac",
    "id": "presse:un élève arrêté après des menaces envers la polyvalente de black lake",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
-  },
-  {
-   "col": "presse",
-   "categorie": "Droit pénal et réglementaire",
-   "titre": "13 épiceries et marchés à Montréal qui ont eu de 1000 à 4500 $ d’amendes du MAPAQ cet automne",
-   "date": "2026-11-17",
-   "resume": "",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzNralJuMEljeHpYcF9CYmhPVkppTE1fT08ycE5sYWdEMjJwOThfbUo5T1A5cE9MUXhST2lBcmcxYTdRUjFFQzR3VEQ2WnVkbGZyX0FVaTVNWUg1dTc0eDNKRkc1UERxNmcwQnA4T2F6UGdOdThha1hnV2RxblQtSlNTNHVQQ3FzSV91QnNrZjlKWWplWF9yVzlTMXd3T1l2Y3ZJZlFKYw?oc=5",
-   "source": "Narcity",
-   "id": "presse:13 épiceries et marchés à montréal qui ont eu de 1000 à 4500 d amendes du mapaq cet automn",
-   "trouve_le": "2026-11-18",
-   "domaine": "penal"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "juridique",
@@ -334,7 +400,8 @@
    "source": "Droit-inc",
    "id": "juridique:https://droit-inc.com/conseils-carriere/nouvelles/le-juge-laqaad-et-le-huis-clos",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -346,7 +413,8 @@
    "source": "Droit-inc",
    "id": "presse:le juge l aqaad et le huis clos",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -358,7 +426,8 @@
    "source": "SPVM",
    "id": "presse:enlèvement potentiel le spvm lance un appel à témoins",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -370,7 +439,8 @@
    "source": "TVA - CIMT-CHAU",
    "id": "presse:double meurtre à rivière du loup un des suspects n a que 15 ans",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -382,7 +452,8 @@
    "source": "Mon Temiscouata",
    "id": "presse:double meurtre à rivière du loup un suspect n aurait que 15 ans",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -394,7 +465,8 @@
    "source": "Radio-Canada",
    "id": "presse:procès devant jury pour le camping havana resort",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -406,7 +478,8 @@
    "source": "Radio-Canada",
    "id": "presse:agressions sexuelles depardieu renonce à son procès en appel et présente ses excuses",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -418,7 +491,8 @@
    "source": "Radio-Canada",
    "id": "presse:lindsay clancy subira un nouveau procès en mars pour la mort de ses 3 enfants",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -430,7 +504,8 @@
    "source": "TVA Nouvelles",
    "id": "presse:un américain en procès pour le meurtre d une britannique qui lui aurait confié vouloir êtr",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -442,19 +517,8 @@
    "source": "Noovo Info",
    "id": "presse:grève chez hydro québec la liste de services essentiels suffisante juge le tribunal",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
-  },
-  {
-   "col": "presse",
-   "categorie": "Droit pénal et réglementaire",
-   "titre": "Amendes du MAPAQ : 18 restos à Montréal condamnés à payer entre 1 300 et 12 250$ en octobre",
-   "date": "2026-11-16",
-   "resume": "",
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcWQyUzZiVmFkNGxSM1phWnlseTBoOE02em9fd2V1Y2x6cFJzZm1YMy1ad1ZYM1BCR1dxWndvaWpqeEJQeF9kam5fZnA5dVlqelVNQTRGc1J4cjlOcTRUMnNweWVDQkhjZ1B0ZjNyS05EVEJSQ3F4ajA1SHBOaFZ0M08xQmxjU1dlcS1Wcll5ZUFIOXZQSGtBZjd4dw?oc=5",
-   "source": "Narcity",
-   "id": "presse:amendes du mapaq 18 restos à montréal condamnés à payer entre 1 300 et 12 250 en octobre",
-   "trouve_le": "2026-11-18",
-   "domaine": "penal"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -466,7 +530,8 @@
    "source": "Le Devoir",
    "id": "presse:un homme est tué dans une fusillade à granby",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
@@ -478,7 +543,8 @@
    "source": "Radio-Canada",
    "id": "presse:le voisinage ébranlé au lendemain du meurtre à granby",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "decisions",
@@ -495,7 +561,8 @@
    "source_resume": "Infractions criminelles et réglementaires — Peine — Appel de la sentence — L’annulation des déclarations de culpabilité a-t-elle une incidence sur les peines infligées dans deux autres dossiers? — Nouveau procès ordonné — Peines ne tenant pas compte de la détention présentencielle — Appels selon les observations des parties — Peines fixées, Appels accueillis — Infractions criminelles et réglementaires — Détermination de la peine — Détention présentencielle — Code criminel, art. 719(3) — Code criminel, art. 719(3.1) — Le temps passé sous garde et le temps alloué ont-ils été évalués…",
    "questions": "L’annulation des déclarations de culpabilité a-t-elle une incidence sur les peines infligées dans deux autres dossiers?",
    "resultat": "Nouveau procès ordonné; Peines fixées, Appels accueillis",
-   "dispositions": "Code criminel, art. 719(3); Code criminel, art. 719(3.1)"
+   "dispositions": "Code criminel, art. 719(3); Code criminel, art. 719(3.1)",
+   "route": false
   },
   {
    "col": "decisions",
@@ -512,7 +579,8 @@
    "source_resume": "Infractions criminelles et réglementaires — Sentence — Crédit de détention préventive — Code criminel, art. 267b), art. 266a) — Erreur de principe dans le calcul de la détention préventive — La peine résiduelle devait-elle être réduite en raison d’un crédit erroné? — Suggestion commune entérinée sur informations incomplètes — Jugement infirmé, peine modifiée — Procédure — Appel — Prolongation du délai — Requête modifiée en prolongation du délai d’appel — La Cour devait-elle accueillir la prolongation du délai d’appel? — Conférence de facilitation pénale sollicitée — Requêtes modifiées…",
    "questions": "La peine résiduelle devait-elle être réduite en raison d’un crédit erroné? La Cour devait-elle accueillir la prolongation du délai d’appel?",
    "resultat": "Jugement infirmé, peine modifiée",
-   "dispositions": "Code criminel, art. 267b), art. 266a)"
+   "dispositions": "Code criminel, art. 267b), art. 266a)",
+   "route": false
   },
   {
    "col": "decisions",
@@ -529,7 +597,8 @@
    "source_resume": "Procédure — Permission d’appeler — Deuxième niveau d’appel — Code de procédure pénale, art. 291 — Comité paritaire de l’industrie de l’automobile des régions Lanaudière-Laurentides c. 9308-0588 Québec inc. — La permission d’appeler ne peut porter que sur une question de droit? — Question sérieuse, opportunité et chance raisonnable de succès examinées — Demande rejetée, avec frais — Droit administratif — Pouvoir habilitant — Portée du débat en appel — Loi sur la santé publique — Décret numéro 2-2021 — La requérante pouvait-elle faire considérer en appel la compatibilité du décret à sa loi…",
    "questions": "La permission d’appeler ne peut porter que sur une question de droit?",
    "resultat": "Demande rejetée, avec frais",
-   "dispositions": "Code de procédure pénale, art. 291; Loi sur la santé publique"
+   "dispositions": "Code de procédure pénale, art. 291; Loi sur la santé publique",
+   "route": false
   },
   {
    "col": "decisions",
@@ -546,7 +615,8 @@
    "source_resume": "Constitution — Droits garantis — Charte canadienne des droits et libertés — Le juge a-t-il erré sur l’al. 10a) (motifs « dans les plus brefs délais ») ? — Suspension invoquée pour raisons de sécurité — Délai de 11 minutes entre détention et arrestation — R. c. Stairs citée — Aucune violation retenue — Appel rejeté — Infractions criminelles et réglementaires — Arrestation sans mandat — Motifs raisonnables — C.cr., art. 495 — Possession conjointe alléguée — C.cr., art. 4(3) — Les motifs étaient-ils objectivement justifiables malgré l’absence d’accusation subséquente ? — R. c. Tim, R. c. Beaver…",
    "questions": "Le juge a-t-il erré sur l’al. 10a) (motifs « dans les plus brefs délais »)? Les motifs étaient-ils objectivement justifiables malgré l’absence d’accusation subséquente?",
    "resultat": "Aucune violation retenue; Appel rejeté",
-   "dispositions": "Charte canadienne des droits et libertés; C.cr., art. 495; C.cr., art. 4(3)"
+   "dispositions": "Charte canadienne des droits et libertés; C.cr., art. 495; C.cr., art. 4(3)",
+   "route": false
   },
   {
    "col": "decisions",
@@ -563,7 +633,8 @@
    "questions": "La Cour devait-elle rejeter le pourvoi essentiellement pour les motifs de la majorité? La Cour devait-elle rejeter le pourvoi essentiellement pour les motifs exposés par les juges majoritaires?",
    "resultat": "Pourvoi rejeté",
    "dispositions": "",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "decisions",
@@ -580,7 +651,8 @@
    "source_resume": "Infractions criminelles et réglementaires — Sécurité routière — Distractions au volant — Code de la sécurité routière, art. 443.1 — Règlement sur les distractions au volant, art. 1 — La consultation de l’écran d’un chargeur portatif est-elle un usage prohibé comme écran d’affichage ? — Présomption d’usage par appareil tenu en main — Conditions d’exception non respectées — Acquittement — Infractions criminelles et réglementaires — Sécurité routière — Appareil portatif — Code de la sécurité routière, art. 443.1 — DPCP c. Girard — Un chargeur portatif externe est-il un appareil portatif conçu…",
    "questions": "La consultation de l’écran d’un chargeur portatif est-elle un usage prohibé comme écran d’affichage?",
    "resultat": "Acquittement",
-   "dispositions": "Code de la sécurité routière, art. 443.1; Règlement sur les distractions au volant, art. 1"
+   "dispositions": "Code de la sécurité routière, art. 443.1; Règlement sur les distractions au volant, art. 1",
+   "route": true
   },
   {
    "col": "juridique",
@@ -592,8 +664,9 @@
    "source": "Association du Barreau canadien",
    "id": "juridique:https://cba.org/our-impact/submissions/a-missing-piece-of-the-financial-crimes-agency-act/",
    "trouve_le": "2026-11-18",
-   "domaine": "criminel"
+   "domaine": "criminel",
+   "route": false
   }
  ],
- "mis_a_jour": "2026-11-18T16:14+00:00"
+ "mis_a_jour": "2026-11-18T16:20+00:00"
 }

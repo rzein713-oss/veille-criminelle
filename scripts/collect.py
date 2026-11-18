@@ -60,14 +60,16 @@ NEWS = {
         'SPVM arrestation', '"Sûreté du Québec" enquête', '"Bureau des enquêtes indépendantes"', 'UPAC',
     ],
     "Crimes et procès": [
-        '"palais de justice" Québec accusé', '"reconnu coupable" Québec', 'procès meurtre Québec', '"Chambre de la jeunesse" OR LSJPA',
+        '"palais de justice" Québec accusé', '"capacités affaiblies" OR "alcool au volant" OR "conduite dangereuse" Québec', '"reconnu coupable" Québec', 'procès meurtre Québec', '"Chambre de la jeunesse" OR LSJPA',
     ],
     "Tendances et société": [
         '"crime organisé" Québec', '"violence conjugale" tribunal Québec', '"aide juridique" Québec',
     ],
-    "Droit pénal et réglementaire": [
-        '"constat d\'infraction" Québec tribunal', '"Code de la sécurité routière" cour OR amende',
-        '"poursuite pénale" OR "infraction pénale" Québec', '"cour municipale" Québec', 'DPCP amende entreprise',
+    "Sécurité routière et procédure pénale": [
+        'photo radar Québec', '"points d\'inaptitude" OR "suspension de permis" SAAQ', 'SAAQ permis de conduire amende',
+        '"Code de la sécurité routière" modification OR nouvelle règle', '"Code de la sécurité routière" cour OR tribunal',
+        '"constat d\'infraction" Québec', '"Code de procédure pénale"', '"excès de vitesse" amende Québec',
+        '"cellulaire au volant" OR "distraction au volant" Québec',
     ],
 }
 
@@ -244,6 +246,61 @@ def from_legisinfo():
     return out
 
 
+ASSNAT_KW = re.compile(
+    r"Code de la sécurité routière|Code de procédure pénale|sécurité routière|Société de l.assurance automobile|pénal|criminel|"
+    r"sécurité publique|police|policier|victime|services correctionnels|détention|carcéral|système de justice|poursuites|"
+    r"cour municipale|violence|armes? à feu|drogue|cannabis|alcool au volant|exploitation sexuelle|crime",
+    re.I)
+ASSNAT_STATE = os.path.join(ROOT, "data", "assnat.json")
+
+
+def assnat_session_page():
+    for leg in range(46, 42, -1):
+        for ses in range(5, 0, -1):
+            url = f"https://www.assnat.qc.ca/fr/travaux-parlementaires/projets-loi/projets-loi-{leg}-{ses}.html"
+            try:
+                return url, fetch(url, tries=1).decode("utf-8", "replace")
+            except Exception:  # noqa: BLE001
+                continue
+    return None, None
+
+
+def from_assnat():
+    """Projets de loi du Québec : un élément quand un projet pertinent est déposé ou franchit une étape."""
+    out = []
+    url, page = assnat_session_page()
+    if not page:
+        log("Assemblée nationale : page introuvable")
+        return out
+    try:
+        with open(ASSNAT_STATE, encoding="utf-8") as f:
+            state = json.load(f)
+    except FileNotFoundError:
+        state = {}
+    for row in re.findall(r"<tr>(.*?)</tr>", page, re.S):
+        tds = [re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", t))).strip() for t in re.findall(r"<td[^>]*>(.*?)</td>", row, re.S)]
+        if len(tds) < 4 or not tds[0].isdigit():
+            continue
+        num, stage, kind = tds[0], tds[3], tds[2]
+        m = re.search(r"<span[^>]*display:none[^>]*>(.*?)</span>", row, re.S)
+        titre = html.unescape(m.group(1)).strip() if m else tds[1]
+        if not ASSNAT_KW.search(titre):
+            continue
+        lien = re.search(r"href='(/fr/travaux-parlementaires/projets-loi/projet-loi-[^']+)'", row)
+        if state.get(num) == stage:
+            continue
+        state[num] = stage
+        out.append({
+            "col": "juridique", "categorie": "Législation", "titre": f"Projet de loi n° {num} — {titre}",
+            "date": TODAY.isoformat(), "resume": f"Assemblée nationale du Québec · dernière étape franchie : {stage} · {kind}.",
+            "url": "https://www.assnat.qc.ca" + lien.group(1) if lien else url,
+            "source": "Assemblée nationale du Québec", "key": f"assnat:{url[-9:-5]}:{num}:{stage}",
+        })
+    with open(ASSNAT_STATE, "w", encoding="utf-8") as f:
+        json.dump(state, f, ensure_ascii=False, indent=1, sort_keys=True)
+    return out
+
+
 def from_pro_feeds():
     out = []
     for url, source in [("https://droit-inc.com/rss", "Droit-inc"), ("https://www.cba.org/rss", "Association du Barreau canadien")]:
@@ -324,29 +381,47 @@ def ident(item):
     return item.pop("key", None) or item.get("reference") or item["url"]
 
 
+# « Pénal » = Code de procédure pénale et Code de la sécurité routière (SAAQ, points d'inaptitude, etc.) seulement.
 PENAL_RE = re.compile(
-    r"Code de procédure pénale|\bC\.\s?p\.\s?p\.|Code de la sécurité routière|\bC\.\s?s\.\s?r\.|constat d.infraction|"
-    r"infraction pénale|poursuite pénale|infractions? réglementaires?|amende|contravention|Règlement municipal|stationnement|"
-    r"Loi sur la santé et la sécurité du travail|Loi sur la qualité de l.environnement|Loi sur les impôts|Loi sur l.administration fiscale|"
-    r"Loi sur la protection du consommateur|Loi sur les valeurs mobilières|Loi sur les produits alimentaires|Loi sur la santé publique|"
-    r"Ville de |Municipalité de |Agence du revenu du Québec c\.|Commission des normes|Autorité des marchés financiers c\.|MAPAQ|CNESST",
+    r"Code de procédure pénale|\bC\.\s?p\.\s?p\.|Code de la sécurité routière|\bC\.\s?s\.\s?r\.|sécurité routière|"
+    r"SAAQ|Société de l.assurance automobile|points? d.inaptitude|constat d.infraction|photo.?radar|cinémomètre|"
+    r"permis de conduire|excès de vitesse|distractions? au volant|cellulaire au volant|Règlement sur les distractions",
     re.I)
-CRIMINAL_RE = re.compile(r"Code criminel|\bC\.\s?cr\.|(^|\s)R\. c\.|c\. R\.|LSJPA|Loi réglementant certaines drogues|criminel", re.I)
+CRIMINAL_RE = re.compile(
+    r"Code criminel|\bC\.\s?cr\.|(^|\s)R\. c\.|c\. R\.|LSJPA|justice pénale pour les adolescents|"
+    r"Loi réglementant certaines drogues|\bLRCDAS\b|criminel|crime", re.I)
+PENAL_NEWS_CAT = "Sécurité routière et procédure pénale"
+
+
+ROUTE_RE = re.compile(
+    r"sécurité routière|\bC\.\s?s\.\s?r\.|capacités affaiblies|alcool au volant|conduite (dangereuse|avec|automobile|d.un véhicule)|"
+    r"\bvolant\b|délit de fuite|véhicule routier|assurance automobile|routière|routier|radar|excès de vitesse|permis de conduire|points d.inaptitude|SAAQ|"
+    r"distraction|cellulaire au volant|camionneur|piéton|cycliste|accident de la route|art\. 320\.1\d",
+    re.I)
 
 
 def domaine(item):
-    """« criminel » ou « penal » : sert aux onglets du site."""
+    """« criminel », « penal » ou None (hors champ : retiré du site)."""
     if item.get("domaine_ia") in ("criminel", "penal"):
         return item["domaine_ia"]
+    titre = item.get("titre", "")
+    texte = " ".join(str(item.get(k, "")) for k in ("titre", "source_resume", "resume", "dispositions"))
     if item["col"] == "presse":
-        return "penal" if item.get("categorie") == "Droit pénal et réglementaire" else "criminel"
-    texte = " ".join(str(item.get(k, "")) for k in ("titre", "source_resume", "resume"))
-    if item["col"] == "decisions":
-        crim_titre = re.search(r"(^|\s)R\. c\.|c\. R\.|LSJPA", item.get("titre", ""))
-        if PENAL_RE.search(texte) and not crim_titre and not re.search(r"Code criminel|\bC\.\s?cr\.", texte):
-            return "penal"
+        if item.get("categorie") in (PENAL_NEWS_CAT, "Droit pénal et réglementaire"):
+            return "penal" if PENAL_RE.search(texte) else None
         return "criminel"
-    return "penal" if PENAL_RE.search(texte) and not CRIMINAL_RE.search(texte) else "criminel"
+    if item["col"] == "decisions":
+        if re.search(r"(^|\s)R\. c\.|c\. R\.|LSJPA|c\. Sa Majesté", titre) or re.search(r"Code criminel|\bC\.\s?cr\.|LSJPA|drogues", texte):
+            return "criminel"
+        if PENAL_RE.search(texte):
+            return "penal"
+        return None  # autres infractions réglementaires : hors champ
+    # législation et profession
+    if PENAL_RE.search(texte) and not re.search(r"Code criminel", texte):
+        return "penal"
+    if CRIMINAL_RE.search(texte) or item.get("categorie") == "Barreau et associations":
+        return "criminel"
+    return None
 
 
 def main():
@@ -362,7 +437,7 @@ def main():
     # Cour suprême : remplacée par le flux CanLII (plus complet) — retire les anciennes fiches du site de la CSC
     store["items"] = [i for i in store["items"] if not (i["col"] == "decisions" and i.get("source") == "Cour suprême du Canada")]
     known = {i["id"] for i in store["items"]}
-    for item in from_canlii() + from_legisinfo() + from_pro_feeds() + from_news():
+    for item in from_canlii() + from_legisinfo() + from_assnat() + from_pro_feeds() + from_news():
         iid = item["col"] + ":" + ident(item)
         if iid in known:
             continue
@@ -378,6 +453,9 @@ def main():
             i.setdefault("source_resume", i.get("resume", ""))
             i.update(decompose(i["source_resume"]))
         i["domaine"] = domaine(i)
+    store["items"] = [i for i in store["items"] if i["domaine"]]
+    for i in store["items"]:
+        i["route"] = bool(ROUTE_RE.search(" ".join(str(i.get(k, "")) for k in ("titre", "resume", "source_resume", "questions", "dispositions"))))
     store["items"].sort(key=lambda i: (i["trouve_le"], i.get("date", "")), reverse=True)
     if added or not os.path.exists(DATA):
         store["mis_a_jour"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes")

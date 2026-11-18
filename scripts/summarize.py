@@ -20,7 +20,7 @@ MODEL = "claude-opus-5-5"
 MAX_PAR_COLLECTE = int(os.environ.get("MAX_PAR_COLLECTE", "30"))
 
 SYSTEM = """Tu rédiges une revue juridique pour des avocats en droit criminel et pénal du Québec (défense et poursuite),
-incluant le droit pénal réglementaire (Code de procédure pénale, Code de la sécurité routière, lois statutaires, cours municipales).
+incluant le droit pénal au sens du Code de procédure pénale et du Code de la sécurité routière (SAAQ, points d'inaptitude, etc.).
 Pour chaque élément, tu reçois le titre, la source, la date et la description fournie par la source
 (pour les décisions : la classification CanLII/SOQUIJ). Rédige en français juridique québécois, précis et sobre.
 
@@ -35,8 +35,9 @@ Règles :
 - « questions » (décisions seulement) : la ou les questions en litige, en une phrase.
 - « resultat » (décisions seulement) : l'issue en quelques mots (ex. « Appel accueilli; nouveau procès ordonné »).
 - « impact » : 1 ou 2 phrases sur la portée pratique pour un avocat en droit criminel ou pénal (argument utile, point de vigilance, changement de pratique).
-- « domaine » : "criminel" (Code criminel, LSJPA, drogues, droit criminel en général) ou "penal" (Code de procédure pénale,
-  Code de la sécurité routière, infractions réglementaires et lois statutaires, cours municipales en matière pénale).
+- « domaine » : "penal" UNIQUEMENT si l'élément relève du Code de procédure pénale ou du Code de la sécurité routière
+  (SAAQ, points d'inaptitude, permis, constats d'infraction, cinémomètres, etc.); sinon "criminel" (Code criminel, LSJPA,
+  drogues, conduite avec capacités affaiblies et autres infractions criminelles de la route).
 - « important » : true seulement si l'élément change ou précise l'état du droit de façon notable, sinon false.
 - Chambre de la jeunesse / LSJPA : n'identifie jamais l'adolescent, une victime ou un témoin mineur; garde l'intitulé anonymisé.
 - Personnes accusées : rappelle la présomption d'innocence s'il n'y a pas de verdict de culpabilité."""
