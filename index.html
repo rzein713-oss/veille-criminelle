@@ -6,131 +6,201 @@
 <title>Revue en droit criminel et pénal | Sub Rosa Connect</title>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="description" content="Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec. Mise à jour quotidienne.">
 <meta property="og:title" content="Revue en droit criminel et pénal | Sub Rosa Connect">
-<meta property="og:description" content="Décisions, législation et actualités en droit criminel et pénal au Québec, mises à jour chaque jour.">
+<meta property="og:description" content="Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec. Mise à jour quotidienne.">
 <meta property="og:image" content="https://subrosaconnect.ca/assets/logo-sub-rosa-connect.png">
-<meta name="description" content="Décisions, législation et actualités en droit criminel et pénal au Québec, mises à jour chaque jour.">
+<meta name="theme-color" content="#1c263b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
-/* Layout: one reading column; tabs per section; items grouped by day found, newest first.
-   Palette tirée du logo Sub Rosa Connect : marine #1c263b, or #9d8764. */
+/* Mise en page : bandeau marine, barre de sections collante, fil de cartes groupées par jour.
+   Palette tirée du logo Sub Rosa Connect : marine #1c263b, or #b49a6c. */
 :root {
-  --bg: #f5f6f8; --surface: #ffffff; --fg: #1c263b; --muted: #596173; --line: #e3ded4;
-  --accent: #8a7350; --accent-soft: #f2ece1; --ok: #2d6a4f;
-  --f-brand: "Cormorant Garamond", Garamond, "Times New Roman", serif;
-  --f-display: "IBM Plex Serif", Georgia, serif;
+  --navy: #1c263b; --navy-2: #26334f; --navy-3: #33415f;
+  --gold: #b49a6c; --gold-ink: #85704c; --gold-soft: #f3eee4;
+  --ink: #1c263b; --muted: #5b6375; --faint: #8a91a0;
+  --bg: #f3f4f7; --card: #ffffff; --line: #e4e6eb; --tint: #eef1f6;
+  --ok: #2d6a4f;
+  --f-display: "Cormorant Garamond", Garamond, "Times New Roman", serif;
   --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(28, 38, 59, .05), 0 6px 24px -12px rgba(28, 38, 59, .18);
   color-scheme: light;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
-body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 15px; line-height: 1.55; }
-.wrap { max-width: 800px; margin: 0 auto; padding-block: 28px 64px;
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-header { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: center; margin-bottom: 26px; }
-header .emblem { width: clamp(64px, 14vw, 92px); height: auto; grid-row: span 2; }
-.brand { font-family: var(--f-brand); font-weight: 700; font-size: clamp(26px, 5.5vw, 36px); line-height: 1; color: var(--accent); letter-spacing: .01em; }
-h1 { font-family: var(--f-display); font-weight: 500; font-size: clamp(18px, 3.6vw, 22px); line-height: 1.2; margin: 0; text-wrap: balance; }
-header .lede { grid-column: 1 / -1; margin-top: 10px; }
-.lede { color: var(--muted); margin: 0; max-width: 62ch; }
-.tabs { display: flex; gap: 10px 28px; border-bottom: 1px solid var(--line); margin-bottom: 14px; flex-wrap: wrap; }
-.tgroup { display: grid; gap: 2px; }
-.glabel { font: 500 11.5px var(--f-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--accent); padding-left: 2px; }
-.tpair { display: flex; gap: 2px; }
-.tab { font: 500 14px var(--f-body); color: var(--muted); background: none; border: 0; padding: 8px 10px 10px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
-.tab[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--accent); }
-.tab .n { font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-left: 6px; }
-.tab:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; color: var(--muted); font-size: 13px; }
-select, input[type=search] { font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; }
-input[type=search] { min-width: 0; flex: 1 1 180px; }
-.status { margin-left: auto; font-family: var(--f-mono); font-size: 12px; }
-.day { margin-top: 26px; }
-.day h2 { font: 500 12px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
-.item { padding: 14px 0; border-bottom: 1px solid var(--line); display: grid; gap: 6px; min-width: 0; }
-.item:last-child { border-bottom: 0; }
-.meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 12.5px; color: var(--muted); }
-.chip { font: 500 11.5px var(--f-mono); background: var(--accent-soft); color: var(--accent); padding: 2px 7px; border-radius: 4px; }
-.item h3 { font-family: var(--f-display); font-weight: 500; font-size: 17px; line-height: 1.35; margin: 0; overflow-wrap: anywhere; }
-.item h3 a { color: inherit; text-decoration: none; }
-.item h3 a:hover { color: var(--accent); text-decoration: underline; }
-.item p { margin: 0; max-width: 70ch; overflow-wrap: anywhere; color: var(--muted); font-size: 14px; }
-.star { font: 600 11.5px var(--f-mono); color: var(--ok); }
-.chip.route { background: #e6ebf3; color: #1c263b; }
-.chk { display: inline-flex; gap: 6px; align-items: center; white-space: nowrap; color: var(--fg); }
-.chk input { accent-color: #1c263b; }
-.item p.line { color: var(--fg); }
-.item p.line b { font-weight: 600; }
-.item p.line.na { color: var(--muted); font-style: italic; }
-.item p.line.na b { font-style: normal; color: var(--fg); }
-.item p.dispo { font-size: 12.5px; }
-details.src { font-size: 12.5px; color: var(--muted); }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.container { max-width: 920px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 6px; }
+
+/* Bandeau */
+.hero { background: radial-gradient(120% 140% at 85% -20%, var(--navy-3) 0%, var(--navy) 55%); color: #fff; }
+.hero .container { padding-block: 44px 40px; display: grid; grid-template-columns: auto 1fr; gap: 10px 28px; align-items: center; }
+.medal { width: clamp(84px, 16vw, 116px); height: auto; grid-row: span 3; filter: drop-shadow(0 8px 20px rgba(0,0,0,.35)); }
+.brand { font: 500 12px var(--f-mono); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+.hero h1 { font-family: var(--f-display); font-weight: 600; font-size: clamp(30px, 5.4vw, 48px); line-height: 1.05; margin: 0; letter-spacing: .005em; text-wrap: balance; }
+.hero .lede { margin: 2px 0 0; color: #c9cfdb; max-width: 58ch; font-size: 15.5px; }
+.hero .rule { grid-column: 1 / -1; height: 1px; background: linear-gradient(90deg, var(--gold), rgba(180,154,108,0) 70%); margin-top: 18px; }
+.hero .stamp { grid-column: 1 / -1; display: flex; gap: 8px 22px; flex-wrap: wrap; font-size: 12.5px; color: #aab2c2; }
+.hero .stamp b { color: #fff; font-weight: 500; }
+
+/* Barre des sections */
+.sections { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 11; background: #fff; }
+.sections .container { display: flex; flex-wrap: wrap; gap: 12px 26px; padding-block: 12px; }
+.tgroup { display: grid; gap: 6px; }
+.glabel { font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold-ink); }
+.seg { display: inline-flex; background: var(--tint); border-radius: 999px; padding: 3px; gap: 2px; }
+.tab { font: 500 13.5px var(--f-body); color: var(--muted); background: none; border: 0; border-radius: 999px; padding: 6px 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; transition: background .15s, color .15s; }
+.tab:hover { color: var(--ink); }
+.tab[aria-selected="true"] { background: var(--navy); color: #fff; box-shadow: 0 2px 8px -2px rgba(28,38,59,.45); }
+.tab .n { font: 500 11px var(--f-mono); color: var(--faint); }
+.tab[aria-selected="true"] .n { color: var(--gold); }
+
+/* Outils */
+.tools { display: grid; gap: 12px; margin: 28px 0 8px; }
+.search { position: relative; }
+.search svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--faint); pointer-events: none; }
+.search input { width: 100%; font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px 12px 42px; box-shadow: var(--shadow); }
+.search input::placeholder { color: var(--faint); }
+.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.field { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 4px 6px 4px 14px; font-size: 13px; color: var(--muted); }
+.field select { font: 500 13px var(--f-body); color: var(--ink); background: transparent; border: 0; padding: 4px 6px; cursor: pointer; max-width: 46vw; }
+.toggle { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; font-size: 13px; color: var(--ink); cursor: pointer; user-select: none; }
+.toggle input { accent-color: var(--navy); margin: 0; }
+.toggle:has(input:checked) { background: var(--navy); color: #fff; border-color: var(--navy); }
+.status { margin-left: auto; font: 500 11.5px var(--f-mono); color: var(--faint); }
+
+/* Fil */
+main { padding-bottom: 56px; }
+.day { margin-top: 34px; }
+.day > h2 { display: flex; align-items: baseline; gap: 12px; margin: 0 0 14px; font-family: var(--f-display); font-weight: 600; font-size: 22px; color: var(--ink); }
+.day > h2::after { content: ""; flex: 1; height: 1px; background: var(--line); transform: translateY(-5px); }
+.day > h2 .count { font: 500 11.5px var(--f-mono); color: var(--faint); order: 2; }
+.cards { display: grid; gap: 14px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; box-shadow: var(--shadow); display: grid; gap: 10px; min-width: 0; transition: transform .2s, box-shadow .2s; }
+.card:hover { transform: translateY(-1px); box-shadow: 0 1px 2px rgba(28,38,59,.06), 0 14px 32px -16px rgba(28,38,59,.28); }
+.meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 12.5px; color: var(--faint); }
+.chip { font: 500 11px var(--f-mono); letter-spacing: .02em; background: var(--gold-soft); color: var(--gold-ink); padding: 3px 9px; border-radius: 999px; }
+.chip.route { background: var(--tint); color: var(--navy); }
+.chip.star { background: #e7f2ec; color: var(--ok); }
+.card h3 { font-family: var(--f-display); font-weight: 600; font-size: 23px; line-height: 1.2; margin: 0; overflow-wrap: anywhere; text-wrap: balance; }
+.card h3 a { text-decoration: none; background-image: linear-gradient(var(--gold), var(--gold)); background-size: 0 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .25s; }
+.card h3 a:hover { background-size: 100% 1px; }
+.card > p { margin: 0; color: var(--muted); max-width: 72ch; overflow-wrap: anywhere; }
+.facts { display: grid; grid-template-columns: 172px 1fr; gap: 0; margin: 4px 0 0; border-top: 1px solid var(--line); }
+.facts dt, .facts dd { padding: 11px 0; border-bottom: 1px solid var(--line); margin: 0; }
+.facts dt { font: 500 10.5px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-ink); padding-top: 14px; padding-right: 14px; }
+.facts dd { color: var(--ink); overflow-wrap: anywhere; min-width: 0; }
+.facts dd.na { color: var(--faint); font-style: italic; }
+.facts dt.impact, .facts dd.impact { background: var(--tint); }
+.facts dt.impact { padding-left: 14px; }
+.facts dd.impact { padding-right: 14px; }
+.facts dd.dispo { font-size: 13px; color: var(--muted); }
+.card .foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 2px; }
+.open { font: 500 12.5px var(--f-body); color: var(--navy); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; transition: background .15s, border-color .15s; }
+.open:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+details.src { font-size: 12.5px; color: var(--faint); }
 details.src summary { cursor: pointer; }
-details.src p { margin-top: 6px; font-size: 12.5px; }
-.empty { padding: 36px 0; color: var(--muted); max-width: 56ch; }
-footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; display: grid; gap: 6px; max-width: 70ch; }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+details.src p { margin: 8px 0 0; }
+.empty { margin-top: 34px; padding: 40px 24px; text-align: center; color: var(--muted); background: var(--card); border: 1px dashed var(--line); border-radius: var(--radius); }
+
+/* Pied de page */
+footer { background: var(--navy); color: #aab2c2; font-size: 13px; }
+footer .container { padding-block: 32px 36px; display: grid; gap: 6px; }
+footer .fbrand { font-family: var(--f-display); font-weight: 600; font-size: 20px; color: #fff; margin-bottom: 6px; }
+footer .fbrand span { color: var(--gold); font: 500 11px var(--f-mono); letter-spacing: .18em; text-transform: uppercase; margin-left: 10px; }
+
+@media (max-width: 640px) {
+  .hero .container { padding-block: 32px 30px; gap: 8px 18px; }
+  .medal { grid-row: span 2; }
+  .hero .lede { grid-column: 1 / -1; }
+  .sections { position: static; }
+  .sections .container { gap: 10px 16px; }
+  .card { padding: 18px 18px; }
+  .card h3 { font-size: 21px; }
+  .facts { grid-template-columns: 1fr; }
+  .facts dt { border-bottom: 0; padding-bottom: 2px; }
+  .facts dd { padding-top: 2px; }
+  .facts dt.impact { padding-left: 12px; }
+  .facts dd.impact { padding-left: 12px; padding-right: 12px; }
+  .status { margin-left: 0; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } .card:hover { transform: none; } }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <img class="emblem" src="assets/embleme.png" width="320" height="275" alt="Logo Sub Rosa Connect : balance de la justice surmontée d'une rose">
+<header class="hero">
+  <div class="container">
+    <img class="medal" src="assets/medaillon.png" width="210" height="210" alt="Logo Sub Rosa Connect : balance de la justice surmontée d'une rose">
     <div class="brand">Sub Rosa Connect</div>
     <h1>Revue en droit criminel et pénal</h1>
     <p class="lede">Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec. Mise à jour quotidienne.</p>
-  </header>
+    <div class="rule" aria-hidden="true"></div>
+    <div class="stamp"><span id="stamp-date">Chargement…</span><span id="stamp-count"></span></div>
+  </div>
+</header>
 
-  <nav class="tabs" role="tablist" aria-label="Sections">
+<nav class="sections" role="tablist" aria-label="Sections">
+  <div class="container">
     <div class="tgroup" role="group" aria-labelledby="g-decisions">
       <span class="glabel" id="g-decisions">Décisions</span>
-      <div class="tpair">
+      <div class="seg">
         <button class="tab" role="tab" data-col="decisions" data-dom="criminel" aria-selected="true">Criminel<span class="n" id="n-decisions-criminel">0</span></button>
         <button class="tab" role="tab" data-col="decisions" data-dom="penal" aria-selected="false">Pénal<span class="n" id="n-decisions-penal">0</span></button>
       </div>
     </div>
     <div class="tgroup" role="group" aria-labelledby="g-juridique">
       <span class="glabel" id="g-juridique">Législations et Barreau</span>
-      <div class="tpair">
+      <div class="seg">
         <button class="tab" role="tab" data-col="juridique" data-dom="criminel" aria-selected="false">Criminel<span class="n" id="n-juridique-criminel">0</span></button>
         <button class="tab" role="tab" data-col="juridique" data-dom="penal" aria-selected="false">Pénal<span class="n" id="n-juridique-penal">0</span></button>
       </div>
     </div>
     <div class="tgroup" role="group" aria-labelledby="g-presse">
       <span class="glabel" id="g-presse">Revue de presse</span>
-      <div class="tpair">
+      <div class="seg">
         <button class="tab" role="tab" data-col="presse" data-dom="criminel" aria-selected="false">Criminel<span class="n" id="n-presse-criminel">0</span></button>
         <button class="tab" role="tab" data-col="presse" data-dom="penal" aria-selected="false">Pénal<span class="n" id="n-presse-penal">0</span></button>
       </div>
     </div>
-  </nav>
-
-  <div class="bar">
-    <label for="cat" id="cat-label">Tribunal</label>
-    <select id="cat"><option value="">Tous</option></select>
-    <label for="range">Période</label>
-    <select id="range">
-      <option value="7">7 derniers jours</option>
-      <option value="30" selected>30 derniers jours</option>
-      <option value="0">Tout</option>
-    </select>
-    <label class="chk"><input type="checkbox" id="route"> Sécurité routière seulement</label>
-    <input type="search" id="q" placeholder="Rechercher (ex. Jordan, 10b), LSJPA)" aria-label="Rechercher">
-    <span class="status" id="status">Chargement…</span>
   </div>
+</nav>
 
-  <main id="list"><div class="empty">Chargement des éléments…</div></main>
+<main class="container">
+  <div class="tools">
+    <div class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="q" placeholder="Rechercher : Jordan, 10b), LSJPA, cinémomètre…" aria-label="Rechercher">
+    </div>
+    <div class="filters">
+      <label class="field"><span id="cat-label">Tribunal</span><select id="cat"><option value="">Tous</option></select></label>
+      <label class="field">Période
+        <select id="range">
+          <option value="7">7 derniers jours</option>
+          <option value="30" selected>30 derniers jours</option>
+          <option value="0">Tout</option>
+        </select>
+      </label>
+      <label class="toggle"><input type="checkbox" id="route"> Sécurité routière</label>
+      <span class="status" id="status"></span>
+    </div>
+  </div>
+  <div id="list"><div class="empty">Chargement des éléments…</div></div>
+</main>
 
-  <footer>
-    <div><b>Sub Rosa Connect</b> · subrosaconnect.ca</div>
+<footer>
+  <div class="container">
+    <div class="fbrand">Sub Rosa Connect <span>subrosaconnect.ca</span></div>
     <div>Les résumés proviennent des sources citées (notamment les classifications de CanLII et SOQUIJ) et sont rédigés par IA.</div>
     <div>Ce site est une revue d'information : il ne constitue pas un avis juridique.</div>
     <div>Consultez toujours la décision ou l'article original.</div>
-  </footer>
-</div>
+  </div>
+</footer>
 
 <script>
 (function () {
@@ -139,9 +209,56 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
   const safeUrl = (u) => (typeof u === "string" && /^https?:\/\//i.test(u)) ? u : null;
-  const fmtDay = (iso) => { try { return new Date(iso + "T12:00:00").toLocaleDateString("fr-CA", { weekday: "long", day: "numeric", month: "long", year: "numeric" }); } catch (e) { return iso; } };
+  const fmtDay = (iso) => { try { const s = new Date(iso + "T12:00:00").toLocaleDateString("fr-CA", { weekday: "long", day: "numeric", month: "long", year: "numeric" }); return s.charAt(0).toUpperCase() + s.slice(1); } catch (e) { return iso; } };
+  const fmtShort = (iso) => { try { return new Date(iso + "T12:00:00").toLocaleDateString("fr-CA", { day: "numeric", month: "short", year: "numeric" }); } catch (e) { return iso; } };
   const catOf = (i) => i.col === "decisions" ? i.tribunal : i.categorie;
   const norm = (s) => (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  const openLabel = { decisions: "Lire la décision", juridique: "Consulter la source", presse: "Lire l'article" };
+
+  function card(i) {
+    const art = el("article", "card"), meta = el("div", "meta");
+    if (i.important) meta.append(el("span", "chip star", "À retenir"));
+    const chip = catOf(i); if (chip) meta.append(el("span", "chip", chip));
+    if (i.route) meta.append(el("span", "chip route", "Route"));
+    const when = i.date ? (i.col === "decisions" ? "Rendue le " : "Publié le ") + fmtShort(i.date) : "";
+    meta.append(el("span", null, [i.reference, i.source, when].filter(Boolean).join(" · ")));
+    const h = el("h3"), u = safeUrl(i.url);
+    if (u) { const a = el("a", null, i.titre || "(sans titre)"); a.href = u; a.target = "_blank"; a.rel = "noopener"; h.append(a); }
+    else h.textContent = i.titre || "(sans titre)";
+    art.append(meta, h);
+
+    if (i.col === "decisions") {
+      const dl = el("dl", "facts");
+      const row = (label, txt, cls, fallback) => {
+        const dt = el("dt", cls || null, label), dd = el("dd", cls || null, txt || fallback);
+        if (!txt) dd.classList.add("na");
+        dl.append(dt, dd);
+      };
+      row("Questions en litige", i.questions, "", "Non précisé par la source");
+      row("Résumé", i.resume, "", "Non précisé par la source");
+      row("Résultat", i.resultat, "", "Non précisé par la source");
+      row("Impact pratique", i.impact, "impact", "Analyse à venir");
+      if (i.dispositions) row("Dispositions", i.dispositions, "dispo");
+      art.append(dl);
+    } else {
+      if (i.resume) art.append(el("p", null, i.resume));
+      if (i.impact) {
+        const dl = el("dl", "facts");
+        dl.append(el("dt", "impact", i.col === "presse" ? "Angle juridique" : "Impact pratique"), el("dd", "impact", i.impact));
+        art.append(dl);
+      }
+    }
+
+    const foot = el("div", "foot");
+    if (i.ia && i.source_resume) {
+      const d = el("details", "src");
+      d.append(el("summary", null, "Description d'origine de la source"), el("p", null, i.source_resume));
+      foot.append(d);
+    } else foot.append(el("span"));
+    if (u) { const a = el("a", "open", openLabel[i.col] + " ↗"); a.href = u; a.target = "_blank"; a.rel = "noopener"; foot.append(a); }
+    art.append(foot);
+    return art;
+  }
 
   function render() {
     for (const c of ["decisions", "juridique", "presse"]) for (const d of ["criminel", "penal"])
@@ -155,44 +272,18 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
     const cutoff = state.range ? new Date(Date.now() - state.range * 864e5).toISOString().slice(0, 10) : "";
     const q = norm(state.q);
     const shown = items.filter(i => (!state.route || i.route) && (!state.cat || catOf(i) === state.cat) && (!cutoff || (i.trouve_le || "") >= cutoff)
-      && (!q || norm([i.titre, i.reference, i.resume, i.source].join(" ")).includes(q)));
+      && (!q || norm([i.titre, i.reference, i.resume, i.questions, i.resultat, i.dispositions, i.source].join(" ")).includes(q)));
+    $("status").textContent = shown.length + (shown.length > 1 ? " éléments" : " élément");
     const list = $("list"); list.replaceChildren();
     if (!shown.length) { list.append(el("div", "empty", items.length ? "Aucun élément pour ces filtres." : "Aucun élément pour l'instant. La prochaine collecte en ajoutera.")); return; }
     const byDay = new Map();
     for (const i of shown) { const k = i.trouve_le || "—"; if (!byDay.has(k)) byDay.set(k, []); byDay.get(k).push(i); }
     for (const [day, arr] of byDay) {
-      const sec = el("section", "day");
-      sec.append(el("h2", null, "Ajouté le " + fmtDay(day) + " · " + arr.length));
-      for (const i of arr) {
-        const art = el("article", "item"), meta = el("div", "meta");
-        const chip = catOf(i); if (chip) meta.append(el("span", "chip", chip));
-        if (i.route) meta.append(el("span", "chip route", "Route"));
-        meta.append(el("span", null, [i.reference, i.source, i.date ? (i.col === "decisions" ? "rendue le " : "publié le ") + i.date : ""].filter(Boolean).join(" · ")));
-        const h = el("h3"), u = safeUrl(i.url);
-        if (u) { const a = el("a", null, i.titre || "(sans titre)"); a.href = u; a.target = "_blank"; a.rel = "noopener"; h.append(a); }
-        else h.textContent = i.titre || "(sans titre)";
-        art.append(meta, h);
-        if (i.important) meta.prepend(el("span", "star", "★ À retenir"));
-        const line = (label, txt, always) => {
-          if (!txt && !always) return;
-          const p = el("p", "line" + (txt ? "" : " na")); p.append(el("b", null, label + " : "), txt || (label === "Impact pratique" ? "analyse à venir" : "non précisé par la source")); art.append(p);
-        };
-        if (i.col === "decisions") {
-          line("Questions en litige", i.questions, true);
-          line("Résumé", i.resume, true);
-          line("Résultat", i.resultat, true);
-          line("Impact pratique", i.impact, true);
-          if (i.dispositions) { const p = el("p", "dispo"); p.append(el("b", null, "Dispositions : "), i.dispositions); art.append(p); }
-        } else {
-          if (i.resume) art.append(el("p", null, i.resume));
-          line("Impact pratique", i.impact);
-        }
-        if (i.ia && i.source_resume) {
-          const d = el("details", "src"); d.append(el("summary", null, "Résumé rédigé par IA à partir de la source · voir la description d'origine"), el("p", null, i.source_resume));
-          art.append(d);
-        }
-        sec.append(art);
-      }
+      const sec = el("section", "day"), h = el("h2", null, fmtDay(day));
+      h.append(el("span", "count", arr.length + (arr.length > 1 ? " ajouts" : " ajout")));
+      const cards = el("div", "cards");
+      for (const i of arr) cards.append(card(i));
+      sec.append(h, cards);
       list.append(sec);
     }
   }
@@ -209,9 +300,11 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 
   fetch("data/items.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
     state.items = d.items || [];
-    $("status").textContent = d.mis_a_jour ? "Mis à jour le " + new Date(d.mis_a_jour).toLocaleString("fr-CA", { dateStyle: "medium", timeStyle: "short" }) : "";
+    $("stamp-date").replaceChildren("Mise à jour : ", el("b", null, d.mis_a_jour ? new Date(d.mis_a_jour).toLocaleString("fr-CA", { dateStyle: "long", timeStyle: "short" }) : "—"));
+    const nd = state.items.filter(i => i.col === "decisions").length;
+    $("stamp-count").replaceChildren(el("b", null, String(state.items.length)), " éléments, dont ", el("b", null, String(nd)), " décisions");
     render();
-  }).catch(() => { $("status").textContent = "Données indisponibles"; $("list").replaceChildren(el("div", "empty", "Impossible de charger les données pour le moment.")); });
+  }).catch(() => { $("stamp-date").textContent = "Données indisponibles"; $("list").replaceChildren(el("div", "empty", "Impossible de charger les données pour le moment.")); });
 })();
 </script>
 </body>
