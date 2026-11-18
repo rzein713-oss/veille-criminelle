@@ -222,6 +222,25 @@ def from_pro_feeds():
     return out
 
 
+NEWS_SOURCES = re.compile(
+    r"Radio-Canada|ICI |La Presse|Le Devoir|Journal de Montréal|Journal de Québec|TVA|Noovo|QUB|98\.5|Cogeco|"
+    r"Le Soleil|La Tribune|Le Nouvelliste|Le Droit|La Voix de l.Est|Le Quotidien|Les Coops de l.information|"
+    r"CBC|Gazette|CTV|Global News|Globe and Mail|National Post|Toronto Star|Canadian Press|La Presse canadienne|"
+    r"Droit-inc|L.actualité|Métro|Info-web|Les Affaires|Narcity|Le Courrier|L.Écho|Néomédia|InfoSuroit|EST MEDIA|"
+    r"MonTerrebonne|MaTv|CHOI|FM93|Rouge FM|NRJ|Énergie|BLVD|Cool FM|O103|KYK|CKOI|"
+    r"SPVM|Sûreté du Québec|Barreau du Québec|\bJournal Le\b|Le Reflet|Courrier|Citoyen|\bMon [A-ZÉ]|\bFM \d|Zone911|"
+    r"Le Peuple|L.Avant-Poste|Le Progrès|L.Express|Le Canada Français|InfoDimanche|Le Guide|Le Charlevoisien|L.Hebdo", re.I)
+NEWS_TITLE = re.compile(
+    r"polic|policier|SPVM|\bSQ\b|Sûreté|GRC|\bBEI\b|UPAC|DPCP|accus|arrest|arrêté|procès|juge|jur[yé]|tribunal|cour\b|"
+    r"palais de justice|coupable|acquitt|peine|prison|pénitenci|détenu|détention|libération|caution|enquête|"
+    r"meurtre|homicide|crime|criminel|agression|violence|vol\b|fraude|drogue|stupéfiant|arme|fusillade|"
+    r"victime|plainte|poursuite|Code criminel|LSJPA|Jordan|aide juridique|avocat", re.I)
+
+
+def relevant_news(title, source):
+    return bool(NEWS_SOURCES.search(source or "") and NEWS_TITLE.search(title or ""))
+
+
 def from_news():
     out = []
     for cat, queries in NEWS.items():
@@ -241,6 +260,8 @@ def from_news():
                 src = clean(text(it, "source"))
                 if src and title.endswith(" - " + src):
                     title = title[: -len(src) - 3]
+                if not relevant_news(title, src):
+                    continue
                 out.append({
                     "col": "presse", "categorie": cat, "titre": title, "date": d.isoformat(),
                     "resume": "", "url": text(it, "link"), "source": src or "Google Actualités",
@@ -261,6 +282,8 @@ def main():
             store = json.load(f)
     except FileNotFoundError:
         store = {"items": []}
+    # applique les filtres actuels aux éléments déjà enregistrés
+    store["items"] = [i for i in store["items"] if i["col"] != "presse" or relevant_news(i["titre"], i.get("source"))]
     known = {i["id"] for i in store["items"]}
     added = 0
     for item in from_canlii() + from_scc() + from_legisinfo() + from_pro_feeds() + from_news():
