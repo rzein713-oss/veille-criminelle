@@ -295,10 +295,11 @@ body.locked { overflow: hidden; }
       if (i.dispositions) row("Dispositions", i.dispositions, "dispo");
       art.append(dl);
     } else {
-      if (i.resume) art.append(el("p", null, i.resume));
-      if (i.impact) {
+      art.append(el("p", null, i.resume || "Résumé à venir."));
+      if (i.etape || i.impact) {
         const dl = el("dl", "facts");
-        dl.append(el("dt", "impact", i.col === "presse" ? "Angle juridique" : "Impact pratique"), el("dd", "impact", i.impact));
+        if (i.etape) dl.append(el("dt", null, "Dernière étape"), el("dd", null, i.etape));
+        if (i.impact) dl.append(el("dt", "impact", i.col === "presse" ? "Angle juridique" : "Impact pratique"), el("dd", "impact", i.impact));
         art.append(dl);
       }
     }

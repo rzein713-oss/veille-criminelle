@@ -48,30 +48,6 @@ CANLII = [
     ("csc", "Cour suprême du Canada"),  # flux CanLII : contient la classification (questions, résultat)
 ]
 
-NEWS = {
-    "Politique et justice": [
-        '"Code criminel" projet de loi', '"ministre de la Justice" Québec criminel',
-        '"mise en liberté sous caution"', 'AQAAD OR "avocats de la défense" Québec', '"arrêt Jordan" OR "délais déraisonnables"',
-    ],
-    "Système carcéral": [
-        '"centre de détention" Québec', '"Service correctionnel" Canada détenu', '"libération conditionnelle" Québec',
-    ],
-    "Police et enquêtes": [
-        'SPVM arrestation', '"Sûreté du Québec" enquête', '"Bureau des enquêtes indépendantes"', 'UPAC',
-    ],
-    "Crimes et procès": [
-        '"palais de justice" Québec accusé', '"capacités affaiblies" OR "alcool au volant" OR "conduite dangereuse" Québec', '"reconnu coupable" Québec', 'procès meurtre Québec', '"Chambre de la jeunesse" OR LSJPA',
-    ],
-    "Tendances et société": [
-        '"crime organisé" Québec', '"violence conjugale" tribunal Québec', '"aide juridique" Québec',
-    ],
-    "Sécurité routière et procédure pénale": [
-        'photo radar Québec', '"points d\'inaptitude" OR "suspension de permis" SAAQ', 'SAAQ permis de conduire amende',
-        '"Code de la sécurité routière" modification OR nouvelle règle', '"Code de la sécurité routière" cour OR tribunal',
-        '"constat d\'infraction" Québec', '"Code de procédure pénale"', '"excès de vitesse" amende Québec',
-        '"cellulaire au volant" OR "distraction au volant" Québec',
-    ],
-}
 
 
 def log(*a):
@@ -238,9 +214,15 @@ def from_legisinfo():
         d = pub_date(text(it, "pubDate"))
         if not recent(d) or not LEGIS_KW.search(title):
             continue
+        lien = text(it, "link")
+        m = re.search(r"/(?:projet-de-loi|bill)/(\d+-\d+)/([a-z]-\d+)", lien, re.I)
+        doc = f"https://www.parl.ca/DocumentViewer/fr/{m.group(1)}/projet-loi/{m.group(2).upper()}/premiere-lecture" if m else ""
+        if m:
+            lien = f"https://www.parl.ca/legisinfo/fr/projet-de-loi/{m.group(1)}/{m.group(2).lower()}"
         out.append({
             "col": "juridique", "categorie": "Législation", "titre": title, "date": d.isoformat(),
-            "resume": desc, "url": text(it, "link"), "source": "Parlement du Canada (LEGISinfo)",
+            "resume": "", "etape": desc.replace("Dernière activité: ", ""), "url": lien, "doc": doc,
+            "source": "Parlement du Canada (LEGISinfo)",
             "key": title + "|" + desc,  # une nouvelle étape = un nouvel élément
         })
     return out
@@ -287,12 +269,14 @@ def from_assnat():
         if not ASSNAT_KW.search(titre):
             continue
         lien = re.search(r"href='(/fr/travaux-parlementaires/projets-loi/projet-loi-[^']+)'", row)
+        pdf = re.search(r"href='(https://www\.assnat\.qc\.ca/Media/Process\.aspx[^']+)'", row)
         if state.get(num) == stage:
             continue
         state[num] = stage
         out.append({
             "col": "juridique", "categorie": "Législation", "titre": f"Projet de loi n° {num} — {titre}",
-            "date": TODAY.isoformat(), "resume": f"Assemblée nationale du Québec · dernière étape franchie : {stage} · {kind}.",
+            "date": TODAY.isoformat(), "resume": "", "etape": f"{stage} · {kind}",
+            "doc": html.unescape(pdf.group(1)) if pdf else "",
             "url": "https://www.assnat.qc.ca" + lien.group(1) if lien else url,
             "source": "Assemblée nationale du Québec", "key": f"assnat:{url[-9:-5]}:{num}:{stage}",
         })
@@ -344,35 +328,104 @@ def relevant_news(title, source):
     return bool(NEWS_SOURCES.search(source or "") and NEWS_TITLE.search(title or ""))
 
 
+MEDIA_FEEDS = [
+    ("https://www.lapresse.ca/actualites/justice-et-faits-divers/rss", "La Presse", True),
+    ("https://www.lapresse.ca/actualites/rss", "La Presse", False),
+    ("https://ici.radio-canada.ca/rss/4159", "Radio-Canada", False),
+    ("https://ici.radio-canada.ca/rss/1000524", "Radio-Canada", False),
+    ("https://ici.radio-canada.ca/rss/96", "Radio-Canada", False),
+    ("https://www.ledevoir.com/rss/manchettes.xml", "Le Devoir", False),
+    ("https://www.journaldemontreal.com/rss.xml", "Journal de Montréal", False),
+    ("https://www.journaldequebec.com/rss.xml", "Journal de Québec", False),
+    ("https://globalnews.ca/montreal/feed/", "Global News", False),
+]
+NEWS_STRONG = re.compile(
+    r"accusée?s?\b|procès|coupable|acquitt|meurtre|homicide|agression|arrestation|arrêtée?s?\b|policier|SPVM|SPVQ|"
+    r"Sûreté du Québec|\bSQ\b|\bGRC\b|\bBEI\b|UPAC|DPCP|palais de justice|détenus?\b|prison|pénitencier|libération conditionnelle|"
+    r"Code criminel|LSJPA|crime organisé|fusillade|constat d.infraction|\bSAAQ\b|photo.?radar|points d.inaptitude|"
+    r"Code de la sécurité routière|capacités affaiblies|alcool au volant|délit de fuite|charged|trial|police|sentenced|guilty",
+    re.I)
+NEWS_CATS = [
+    (PENAL_NEWS_CAT_RE := re.compile(r"\bSAAQ\b|photo.?radar|cinémomètre|points d.inaptitude|constat d.infraction|excès de vitesse|"
+                                      r"Code de la sécurité routière|permis de conduire|cellulaire au volant|distraction au volant|"
+                                      r"Code de procédure pénale", re.I), "Sécurité routière et procédure pénale"),
+    (re.compile(r"prison|pénitencier|détenu|détention|carcéral|libération conditionnelle|Service correctionnel|Bordeaux|établissement de détention", re.I), "Système carcéral"),
+    (re.compile(r"procès|accusée?s?\b|coupable|acquitt|peine de|condamn|sentence|palais de justice|juge|jury|plaidoyer|trial|guilty|sentenced", re.I), "Crimes et procès"),
+    (re.compile(r"polic|SPVM|SPVQ|Sûreté du Québec|\bSQ\b|\bGRC\b|\bBEI\b|UPAC|enquête|perquisition|arrestation|arrêté", re.I), "Police et enquêtes"),
+    (re.compile(r"ministre|projet de loi|gouvernement|Code criminel|réforme|Assemblée nationale|Parlement|Ottawa", re.I), "Politique et justice"),
+]
+
+
+def news_category(text_):
+    for rx, cat in NEWS_CATS:
+        if rx.search(text_):
+            return cat
+    return "Tendances et société"
+
+
 def from_news():
+    """Revue de presse : fils RSS des médias (chaque article arrive avec son résumé)."""
     out = []
-    for cat, queries in NEWS.items():
-        for q in queries:
-            if os.environ.get("SKIP_NEWS"):
-                break
-            url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
-                {"q": q + " when:3d", "hl": "fr-CA", "gl": "CA", "ceid": "CA:fr"})
-            try:
-                its = items_of(fetch(url))
-            except Exception as e:  # noqa: BLE001
-                log("Actualités", q, "échec:", e)
+    if os.environ.get("SKIP_NEWS"):
+        return out
+    for url, source, justice_feed in MEDIA_FEEDS:
+        try:
+            its = items_of(fetch(url))
+        except Exception as e:  # noqa: BLE001
+            log("Média", source, "échec:", e)
+            continue
+        for it in its:
+            title, desc = clean(text(it, "title")), clean(text(it, "description"))
+            d = pub_date(text(it, "pubDate"))
+            if not recent(d) or not desc:
                 continue
-            for it in its[:8]:
-                title = clean(text(it, "title"))
-                d = pub_date(text(it, "pubDate"))
-                if not recent(d):
-                    continue
-                src = clean(text(it, "source"))
-                if src and title.endswith(" - " + src):
-                    title = title[: -len(src) - 3]
-                if not relevant_news(title, src):
-                    continue
-                out.append({
-                    "col": "presse", "categorie": cat, "titre": title, "date": d.isoformat(),
-                    "resume": "", "url": text(it, "link"), "source": src or "Google Actualités",
-                    "key": re.sub(r"\W+", " ", title.lower())[:90],
-                })
+            if not (justice_feed or NEWS_STRONG.search(title) or (NEWS_TITLE.search(title) and NEWS_STRONG.search(desc))):
+                continue
+            out.append({
+                "col": "presse", "categorie": news_category(title + " " + desc), "titre": title, "date": d.isoformat(),
+                "resume": cut(desc, 600), "url": text(it, "link"), "source": source,
+                "key": re.sub(r"\W+", " ", title.lower())[:90],
+            })
     return out
+
+
+# ---------- Sommaires des projets de loi ----------
+
+def sommaire_federal(url):
+    page = fetch(url).decode("utf-8", "replace")
+    m = re.search(r"<h2[^>]*>\s*SOMMAIRE\s*</h2>(.*?)<h2", page, re.S)
+    return cut(clean(m.group(1)), 900) if m else ""
+
+
+def sommaire_quebec(url):
+    from io import BytesIO
+    from pypdf import PdfReader  # installé par le flux de travail
+    reader = PdfReader(BytesIO(fetch(url)))
+    t = re.sub(r"\s+", " ", " ".join((p.extract_text() or "") for p in reader.pages[:3]))
+    k = t.upper().find("NOTES EXPLICATIVES")
+    if k < 0:
+        return ""
+    t = t[k + len("NOTES EXPLICATIVES"):]
+    t = re.split(r"LOIS? MODIFIÉES? PAR|LOIS? ÉDICTÉES? PAR|RÈGLEMENTS? MODIFIÉS? PAR|Projet de loi n", t)[0]
+    return cut(t.strip(" :–-"), 900)
+
+
+def enrich_bills(items, limit=20):
+    """Ajoute le sommaire officiel aux projets de loi qui n'en ont pas encore (quelques essais au plus)."""
+    done = 0
+    for i in items:
+        if done >= limit or i.get("col") != "juridique" or i.get("resume") or not i.get("doc") or i.get("essais", 0) >= 3:
+            continue
+        i["essais"] = i.get("essais", 0) + 1
+        try:
+            txt = sommaire_quebec(i["doc"]) if "assnat" in i["doc"] else sommaire_federal(i["doc"])
+        except Exception as e:  # noqa: BLE001
+            log("Sommaire échec:", i["titre"][:60], e)
+            continue
+        if txt:
+            i["resume"] = txt
+            i.pop("essais", None)
+        done += 1
 
 
 # ---------- Fusion ----------
@@ -442,6 +495,19 @@ def main():
         store["items"].append(item)
         known.add(iid)
         added += 1
+    for i in store["items"]:
+        if i["col"] == "juridique" and i.get("source") == "Parlement du Canada (LEGISinfo)" and not i.get("doc"):
+            m = re.search(r"/(?:projet-de-loi|bill)/(\d+-\d+)/([a-z]-\d+)", i.get("url", ""), re.I)
+            if m:
+                i["doc"] = f"https://www.parl.ca/DocumentViewer/fr/{m.group(1)}/projet-loi/{m.group(2).upper()}/premiere-lecture"
+                i["etape"], i["resume"] = i.get("resume", "").replace("Dernière activité: ", ""), ""
+                i["url"] = f"https://www.parl.ca/legisinfo/fr/projet-de-loi/{m.group(1)}/{m.group(2).lower()}"
+        if i["col"] == "juridique" and i.get("source") == "Assemblée nationale du Québec" and "dernière étape franchie" in i.get("resume", ""):
+            i["etape"] = i["resume"].split("dernière étape franchie : ")[-1].rstrip(".")
+            i["resume"] = ""
+    enrich_bills(store["items"])
+    # chaque article de la revue de presse doit avoir un résumé
+    store["items"] = [i for i in store["items"] if i["col"] != "presse" or i.get("resume")]
     for i in store["items"]:
         if i["col"] == "decisions" and not i.get("ia") and i.get("source") == "CanLII":
             i.setdefault("source_resume", i.get("resume", ""))

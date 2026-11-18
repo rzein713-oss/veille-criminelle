@@ -23,7 +23,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Collecter les nouveaux éléments
-        run: python scripts/collect.py
+        run: |
+          pip install --quiet "pypdf>=5,<7"
+          python scripts/collect.py
       - name: Résumés (seulement si la clé API est configurée)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
