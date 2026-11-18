@@ -382,14 +382,16 @@ body.locked { overflow: hidden; }
     $("gate").remove(); document.body.classList.remove("locked"); $("app").hidden = false; load();
   }
   let remembered = false;
-  try { remembered = localStorage.getItem(KEY) === ACCESS; } catch (e) { /* stockage indisponible */ }
+  // Accès valable pour l'onglet ouvert seulement : conservé si on actualise, redemandé si on ferme et rouvre.
+  try { localStorage.removeItem(KEY); } catch (e) { /* ancienne mémorisation permanente */ }
+  try { remembered = sessionStorage.getItem(KEY) === ACCESS; } catch (e) { /* stockage indisponible */ }
   if (remembered) unlock();
   else {
     $("pw").focus();
     $("gate-form").addEventListener("submit", (e) => {
       e.preventDefault();
       if (sha256($("pw").value.trim()) === ACCESS) {
-        try { localStorage.setItem(KEY, ACCESS); } catch (err) { /* stockage indisponible */ }
+        try { sessionStorage.setItem(KEY, ACCESS); } catch (err) { /* stockage indisponible */ }
         unlock();
       } else {
         $("gate-err").textContent = "Mot de passe incorrect.";
