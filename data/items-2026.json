@@ -76,7 +76,7 @@
   },
   {
    "col": "presse",
-   "categorie": "Police et enquêtes",
+   "categorie": "Crimes et procès",
    "titre": "Meurtre à Granby | Appel au public pour retrouver trois suspects",
    "date": "2026-11-18",
    "resume": "Quatre jours après un meurtre sordide dans une résidence de Granby, les policiers demandent l’aide de la population pour identifier trois suspects, « deux hommes de race blanche et un homme de race noire qui auraient été aperçus alors qu’ils s’enfuyaient du secteur ».",
@@ -102,26 +102,13 @@
   },
   {
    "col": "presse",
-   "categorie": "Tendances et société",
+   "categorie": "Crimes et procès",
    "titre": "Brossard | Un homme de 67 ans aurait été tué par son colocataire",
    "date": "2026-11-18",
    "resume": "Un appartement de la rue Beaulac, à Brossard, a été le théâtre du troisième meurtre de 2026 dans l’agglomération de Longueuil quand un conflit entre colocataires aurait dégénéré.",
    "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-18/brossard/un-homme-de-67-ans-aurait-ete-tue-par-son-colocataire.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
    "source": "La Presse",
    "id": "presse:brossard un homme de 67 ans aurait été tué par son colocataire",
-   "trouve_le": "2026-11-18",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Tendances et société",
-   "titre": "Accessibilité de la justice | Le Barreau propose un crédit d’impôt et un 811",
-   "date": "2026-11-18",
-   "resume": "Devant un système de justice de plus en plus inaccessible et coûteux, le Barreau du Québec propose des solutions, notamment une ligne d’information juridique de type 811 et un crédit d’impôt remboursable pour des honoraires juridiques en matière familiale.",
-   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-18/accessibilite-de-la-justice/le-barreau-propose-un-credit-d-impot-et-un-811.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
-   "source": "La Presse",
-   "id": "presse:accessibilité de la justice le barreau propose un crédit d impôt et un 811",
    "trouve_le": "2026-11-18",
    "domaine": "criminel",
    "route": false
@@ -154,7 +141,7 @@
   },
   {
    "col": "presse",
-   "categorie": "Police et enquêtes",
+   "categorie": "Crimes et procès",
    "titre": "Meurtre à Granby : la SQ installe son poste de commandement",
    "date": "2026-11-18",
    "resume": "Le corps policier souhaite rencontrer tout témoin qui aurait des informations concernant l'événement.",
@@ -180,7 +167,7 @@
   },
   {
    "col": "presse",
-   "categorie": "Police et enquêtes",
+   "categorie": "Crimes et procès",
    "titre": "Un camionneur arrêté plus d’un an après la collision ayant tué une mère et son fils sur l’A-30",
    "date": "2026-11-18",
    "resume": "Tanya Lalonde et son enfant sont morts quand le poids lourd a embouti leur voiture, en août 2025, sur la Rive-Sud de Montréal.",
@@ -200,6 +187,19 @@
    "url": "https://www.journaldequebec.com/2026/11/18/enquete-ouverte-sur-le-chanteur-julio-iglesias-apres-des-plaintes-pour-agressions-sexuelles",
    "source": "Journal de Québec",
    "id": "presse:enquête ouverte sur le chanteur julio iglesias après des plaintes pour agressions sexuelle",
+   "trouve_le": "2026-11-18",
+   "domaine": "criminel",
+   "route": false
+  },
+  {
+   "col": "presse",
+   "categorie": "Tendances et société",
+   "titre": "Accessibilité de la justice | Le Barreau propose un crédit d’impôt et un 811",
+   "date": "2026-11-18",
+   "resume": "Devant un système de justice de plus en plus inaccessible et coûteux, le Barreau du Québec propose des solutions, notamment une ligne d’information juridique de type 811 et un crédit d’impôt remboursable pour des honoraires juridiques en matière familiale.",
+   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-18/accessibilite-de-la-justice/le-barreau-propose-un-credit-d-impot-et-un-811.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
+   "source": "La Presse",
+   "id": "presse:accessibilité de la justice le barreau propose un crédit d impôt et un 811",
    "trouve_le": "2026-11-18",
    "domaine": "criminel",
    "route": false
@@ -234,7 +234,7 @@
   },
   {
    "col": "presse",
-   "categorie": "Police et enquêtes",
+   "categorie": "Crimes et procès",
    "titre": "Tentative de meurtre à Val-d’Or en août | Quatre arrestations et de grandes quantités de drogue saisies",
    "date": "2026-11-17",
    "resume": "La Sûreté du Québec (SQ) a annoncé l’arrestation de quatre individus et la saisie de plusieurs drogues dures lors de perquisitions en Abitibi-Témiscamingue et dans le Grand Montréal, mardi. Cette vaste opération est reliée à une tentative de meurtre à Val-d’Or en août dernier.",
@@ -273,19 +273,6 @@
   },
   {
    "col": "presse",
-   "categorie": "Tendances et société",
-   "titre": "Poursuivie pour 350 000 $ | Station Mont-Tremblant jette le blâme sur la skieuse blessée et son club de ski",
-   "date": "2026-11-17",
-   "resume": "Poursuivie pour 350 000 $ après l’accident d’une skieuse de 12 ans, Station Mont-Tremblant nie toute responsabilité. Elle rejette la faute sur l’adolescente elle-même, ou autrement, sur le Club de ski Mont Tremblant.",
-   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-17/poursuivie-pour-350-000/station-mont-tremblant-jette-le-blame-sur-la-skieuse-blessee-et-son-club-de-ski.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
-   "source": "La Presse",
-   "id": "presse:poursuivie pour 350 000 station mont tremblant jette le blâme sur la skieuse blessée et so",
-   "trouve_le": "2026-11-18",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
    "categorie": "Crimes et procès",
    "titre": "Coupable de meurtre: «Ça ne nous ramènera pas Josianne», témoigne la sœur de la victime",
    "date": "2026-11-17",
@@ -312,7 +299,7 @@
   },
   {
    "col": "presse",
-   "categorie": "Système carcéral",
+   "categorie": "Crimes et procès",
    "titre": "Lanaudière | Un ex-enseignant coupable d’avoir agressé sexuellement un ancien élève",
    "date": "2026-11-16",
    "resume": "Un ex-enseignant au secondaire de Lanaudière a été déclaré coupable lundi d’avoir agressé sexuellement un ancien élève. Déjà condamné à trois ans de pénitencier pour des crimes sexuels à l’égard de trois jeunes, Bryan Mayer risque de voir sa peine s’alourdir.",
@@ -338,7 +325,7 @@
   },
   {
    "col": "presse",
-   "categorie": "Système carcéral",
+   "categorie": "Crimes et procès",
    "titre": "Agressions sexuelles : Depardieu renonce à son procès en appel et présente ses excuses",
    "date": "2026-11-16",
    "resume": "Sa condamnation à 18 mois de prison avec sursis prononcée en mai 2025 est ainsi définitive.",
