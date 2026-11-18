@@ -18,6 +18,17 @@ jobs:
           done
           echo "Attendu pour subrosaconnect.ca (A) : 185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153"
           echo "Attendu pour www (CNAME) : rzein713-oss.github.io."
+      - name: Détails (serveurs GoDaddy, autres résolveurs, CAA)
+        run: |
+          echo "NS: $(dig +short NS subrosaconnect.ca @1.1.1.1 | tr '\n' ' ')"
+          for ns in $(dig +short NS subrosaconnect.ca @1.1.1.1); do
+            echo "auth $ns A: $(dig +short A subrosaconnect.ca @$ns | tr '\n' ' ') | www: $(dig +short CNAME www.subrosaconnect.ca @$ns | tr '\n' ' ')"
+          done
+          for r in 8.8.8.8 9.9.9.9 208.67.222.222; do
+            echo "resolveur $r A: $(dig +short A subrosaconnect.ca @$r | tr '\n' ' ')"
+          done
+          echo "CAA: $(dig +short CAA subrosaconnect.ca @1.1.1.1 | tr '\n' ' ')"
+          echo "TTL: $(dig +noall +answer A subrosaconnect.ca @1.1.1.1 | awk '{print $2}' | head -1)"
       - name: Réponse du site
         run: |
           for u in http://subrosaconnect.ca https://subrosaconnect.ca https://www.subrosaconnect.ca https://subrosaconnect.ca/data/items.json; do
