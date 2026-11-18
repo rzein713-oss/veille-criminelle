@@ -1,0 +1,27 @@
+name: Vérifier le domaine
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Enregistrements DNS
+        run: |
+          for h in subrosaconnect.ca www.subrosaconnect.ca; do
+            echo "== $h"
+            echo "A:     $(dig +short A $h @1.1.1.1 | tr '\n' ' ')"
+            echo "AAAA:  $(dig +short AAAA $h @1.1.1.1 | tr '\n' ' ')"
+            echo "CNAME: $(dig +short CNAME $h @1.1.1.1 | tr '\n' ' ')"
+          done
+          echo "Attendu pour subrosaconnect.ca (A) : 185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153"
+          echo "Attendu pour www (CNAME) : rzein713-oss.github.io."
+      - name: Réponse du site
+        run: |
+          for u in http://subrosaconnect.ca https://subrosaconnect.ca https://www.subrosaconnect.ca https://subrosaconnect.ca/data/items.json; do
+            echo "$(curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}' --max-time 20 "$u" || echo 'échec') $u"
+          done
+          echo "--- titre de la page :"
+          curl -sL --max-time 20 https://subrosaconnect.ca | grep -o '<title>[^<]*' || curl -sL --max-time 20 http://subrosaconnect.ca | grep -o '<title>[^<]*' || true
