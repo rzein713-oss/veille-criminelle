@@ -31,7 +31,7 @@ jobs:
           echo "TTL: $(dig +noall +answer A subrosaconnect.ca @1.1.1.1 | awk '{print $2}' | head -1)"
       - name: Réponse du site
         run: |
-          for u in http://subrosaconnect.ca https://subrosaconnect.ca https://www.subrosaconnect.ca https://subrosaconnect.ca/data/items.json; do
+          for u in http://subrosaconnect.ca https://subrosaconnect.ca https://www.subrosaconnect.ca https://subrosaconnect.ca/data/index.json; do
             echo "$(curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}' --max-time 20 "$u" || echo 'échec') $u"
           done
           echo "--- titre de la page :"
