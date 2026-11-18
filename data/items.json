@@ -118,6 +118,58 @@
    "route": true
   },
   {
+   "col": "presse",
+   "categorie": "Police et enquêtes",
+   "titre": "Des stupéfiants et des armes saisis sur la rue Cyr Nord à Thetford Mines",
+   "date": "2026-11-18",
+   "resume": "",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPN0xkVjd4a3FYR1I0a2F4cUR0aHhtYkFZS1JTSUNOZlluZzZBOXp2enRzaU4yU05LWXBnVk5Pb1NOZTFvcFlLYzdkd3VNNmdfTGo3cVJNc0J5U0pydWp0NEJVLUtZTDQ3ZGN5aldyTy1FWHZhRnJFS2VqM1M3anZoT2c5bHA4bk4xYl9LWG5PWXB2dHNhNEZhbkdValM1QlpiSE5YT0pDeHFaMHpyVDdRWE9fM05LdW96UHVwdV8zdw?oc=5",
+   "source": "Courrier Frontenac",
+   "id": "presse:des stupéfiants et des armes saisis sur la rue cyr nord à thetford mines",
+   "trouve_le": "2026-11-18",
+   "domaine": "criminel",
+   "route": false
+  },
+  {
+   "col": "presse",
+   "categorie": "Police et enquêtes",
+   "titre": "Déjà blâmée par le TAT, une ex-employée de Labrecque est accusée au criminel pour fraude",
+   "date": "2026-11-18",
+   "resume": "",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQQXdFTDNKUGg4enFOcEpYWHBxT19hWEpZdEV0OENBUjhmVi1qaFF5VF9OdDVCUnA5VFZSUXpQcU9vR0VkdHVCSjE4V1NGelVvelRkMG8wLU5HM293RGt1WnZFaWVKU1RTcmZsZjczSnlZRUdDWHBiZlRndzlTczh5ZA?oc=5",
+   "source": "Radio-Canada",
+   "id": "presse:déjà blâmée par le tat une ex employée de labrecque est accusée au criminel pour fraude",
+   "trouve_le": "2026-11-18",
+   "domaine": "criminel",
+   "route": false
+  },
+  {
+   "col": "presse",
+   "categorie": "Crimes et procès",
+   "titre": "Conduite avec les capacités affaiblies : trois arrestations en quelques jours dans la MRC de La Vallée-de-la-Gatineau",
+   "date": "2026-11-18",
+   "resume": "",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNcEJ1UGkzVVZsLUE0czhua2R6Rkk1MndZYkdUd3p1R2lTbnNkSUlpU08zOGpmdGJfV3k1RURoZUlfTzkwejZCVHNhTTlrN0M2UVVFRDdGQ3djZFBKZ1lwVE10Wm9GUDVOSnFpRnFqRTI1UllwX0JWZ3ZDMWdRVGNjakF3ZHZqQUoyemNRTDVYVXpzdXRnTlh1TUFhU05YQktyY3ZKYVRMdlRpazNxWEFncXU4b2ZMYUR3dkZ1WjcyZk9iUVRidFQ2Zkh6Tmc0emt5V3hManp3?oc=5",
+   "source": "TVA Gatineau",
+   "id": "presse:conduite avec les capacités affaiblies trois arrestations en quelques jours dans la mrc de",
+   "trouve_le": "2026-11-18",
+   "domaine": "criminel",
+   "route": true
+  },
+  {
+   "col": "presse",
+   "categorie": "Crimes et procès",
+   "titre": "Les vies d’une mère et son fils fauchées: la SQ arrête un camionneur après une collision mortelle sur l’A-30",
+   "date": "2026-11-18",
+   "resume": "",
+   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPMEE5SnYwaW44WHFmMGFobGlEckpQY3Z5cVUzS2ktZTZjNkxycVJOR21sdDYxNERzTmFIakJXbkxMaVpXX2hMRHBpcTY0ZTJFX1ZNdnFNZ0l2c3lwZk5JYUlKVG5vRkZpcjdKQnVXTW5DcWZLTFRGVTNRSUpWUWt4NG92MWc2dEVEbklTX0lPazJtT0lQTkpvNXZ1MFloU0lQdkZ4UFVSV2tJT21DRTh6cmI4R0xjV3pyREs4emUwejFJM1pLdFZUWlgxVEhydHR2SmNHNnJ4X0tGckZsNDY1WTVxU1Frbmc3Mzhv?oc=5",
+   "source": "Noovo Info",
+   "id": "presse:les vies d une mère et son fils fauchées la sq arrête un camionneur après une collision mo",
+   "trouve_le": "2026-11-18",
+   "domaine": "criminel",
+   "route": true
+  },
+  {
    "col": "juridique",
    "categorie": "Législation",
    "titre": "S-8 (45-1) - Loi visant à lutter contre les crimes financiers et le trafic de drogues",
@@ -522,6 +574,32 @@
   },
   {
    "col": "presse",
+   "categorie": "Crimes et procès",
+   "titre": "Alcool au volant | Souffler dans l'antidémarreur d'autrui: une peine qui fait réagir",
+   "date": "2026-11-16",
+   "resume": "",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSU1VWkhPblEyTjNma3kwVmRRcGFyanVOSE9iMEFHVkVrcUJUanU0eGRWS3pXYXUyandPM3RBOFV0ZFNBc2VCVDM0SzlWeVlQempTR2dxVkxSbi10NXExOTc3WnE2VU1hMDdhSmkzcWt0YmdpcGpteUNpY1BJZTNWeGNwaW1jeDd3OTZnRVRYMnNIUVJJVldGSjFYN2RMcW8?oc=5",
+   "source": "98.5 Montréal",
+   "id": "presse:alcool au volant souffler dans l antidémarreur d autrui une peine qui fait réagir",
+   "trouve_le": "2026-11-18",
+   "domaine": "criminel",
+   "route": true
+  },
+  {
+   "col": "presse",
+   "categorie": "Sécurité routière et procédure pénale",
+   "titre": "Vitesse un conducteur de 22 ans a reçu un constat d’infraction de 1 993 $",
+   "date": "2026-11-16",
+   "resume": "",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPY2VkdG5RQkFTZlZpNFZFZS1WZnVHY1pPTTA1NUVMM2VlOHhWdUNnSmQ5YWZVTHpnYVgwbTNjLThNTy1qMEUxaWprT3FBTnBnWkluNzNGR3RReENpSDFfWmZWLVVnY3VjTTQyLWdnY0xaTDZza19tZm5zYlVCSnM5VnotdXBOWWpETmhqNHlEWHVNeENhVGh0Nl80TF9NVkphWHJxdkVkdVZKOGpE?oc=5",
+   "source": "Zone911",
+   "id": "presse:vitesse un conducteur de 22 ans a reçu un constat d infraction de 1 993 ",
+   "trouve_le": "2026-11-18",
+   "domaine": "penal",
+   "route": false
+  },
+  {
+   "col": "presse",
    "categorie": "Police et enquêtes",
    "titre": "Un homme est tué dans une fusillade à Granby",
    "date": "2026-11-15",
@@ -668,5 +746,5 @@
    "route": false
   }
  ],
- "mis_a_jour": "2026-11-18T16:20+00:00"
+ "mis_a_jour": "2026-11-18T16:22+00:00"
 }
