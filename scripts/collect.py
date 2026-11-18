@@ -21,17 +21,19 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data", "items.json")
 KEEP_DAYS = 120          # durée de conservation sur le site
 WINDOW_DAYS = 14         # n'ajoute que des éléments récents
-UA = "Mozilla/5.0 (compatible; VeilleCriminelleQC/1.0; +https://subrosaconnect.ca)"
+UA = "Mozilla/5.0 (compatible; RevueCriminellePenaleQC/1.0; +https://subrosaconnect.ca)"
 TODAY = dt.datetime.now(dt.timezone(dt.timedelta(hours=-5))).date()  # heure de l'Est (approx.)
 
 CRIM_DESC = re.compile(
     r"Infractions criminelles|Droit criminel|Code criminel|C\.cr\.|LSJPA|justice pénale pour les adolescents"
-    r"|Code de procédure pénale|Charte canadienne|Détermination de la peine|Mise en liberté provisoire",
+    r"|Code de procédure pénale|Charte canadienne|Détermination de la peine|Mise en liberté provisoire"
+    r"|Infractions réglementaires|infraction pénale|poursuite pénale|droit pénal|constat d.infraction|Code de la sécurité routière",
     re.I)
 CRIM_TITLE = re.compile(r"(^|\s)R\. c\.|c\. R\.|LSJPA|Directeur des poursuites criminelles|\bDPCP\b|c\. Sa Majesté", re.I)
 LEGIS_KW = re.compile(
     r"criminel|pénal|peine|casier|libération|mise en liberté|caution|drogue|stupéfiant|arme|"
-    r"adolescent|victime|terroris|exploitation|traite|violence|police|correctionnel|blanchiment|fraude",
+    r"adolescent|victime|terroris|exploitation|traite|violence|police|correctionnel|blanchiment|fraude|"
+    r"infraction|amende|contravention|sanction",
     re.I)
 PRO_KW = re.compile(
     r"criminel|pénal|\bDPCP\b|AQAAD|avocats? de la défense|accusée?s?\b|procès|détention|prison|détenu|"
@@ -61,6 +63,10 @@ NEWS = {
     ],
     "Tendances et société": [
         '"crime organisé" Québec', '"violence conjugale" tribunal Québec', '"aide juridique" Québec',
+    ],
+    "Droit pénal et réglementaire": [
+        '"constat d\'infraction" Québec tribunal', '"Code de la sécurité routière" cour OR amende',
+        '"poursuite pénale" OR "infraction pénale" Québec', '"cour municipale" Québec', 'DPCP amende entreprise',
     ],
 }
 
@@ -132,15 +138,11 @@ def from_canlii():
             if "Droit de la famille" in title:
                 continue
             crim = CRIM_TITLE.search(title) or CRIM_DESC.search(desc)
-            if db == "qccm" and not re.search(r"(^|\s)R\. c\.", title):
-                continue  # cour municipale : seulement les dossiers criminels
             if not crim:
                 continue
             tribunal = court
             if db == "qccq" and re.search(r"LSJPA|adolescent", title + desc, re.I):
                 tribunal = "Chambre de la jeunesse"
-            if db == "qccm":
-                tribunal = "Autre tribunal"
             m = re.search(r"(\d{4} QC[A-Z]+ \d+)", title)
             name = re.sub(r",?\s*\d{4} QC[A-Z]+ \d+.*$", "", title).strip()
             out.append({
@@ -234,7 +236,8 @@ NEWS_TITLE = re.compile(
     r"polic|policier|SPVM|\bSQ\b|Sûreté|GRC|\bBEI\b|UPAC|DPCP|accus|arrest|arrêté|procès|juge|jur[yé]|tribunal|cour\b|"
     r"palais de justice|coupable|acquitt|peine|prison|pénitenci|détenu|détention|libération|caution|enquête|"
     r"meurtre|homicide|crime|criminel|agression|violence|vol\b|fraude|drogue|stupéfiant|arme|fusillade|"
-    r"victime|plainte|poursuite|Code criminel|LSJPA|Jordan|aide juridique|avocat", re.I)
+    r"victime|plainte|poursuite|Code criminel|LSJPA|Jordan|aide juridique|avocat|"
+    r"amende|constat|infraction|contravention|pénal|cour municipale", re.I)
 
 
 def relevant_news(title, source):
@@ -245,6 +248,8 @@ def from_news():
     out = []
     for cat, queries in NEWS.items():
         for q in queries:
+            if os.environ.get("SKIP_NEWS"):
+                break
             url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
                 {"q": q + " when:3d", "hl": "fr-CA", "gl": "CA", "ceid": "CA:fr"})
             try:

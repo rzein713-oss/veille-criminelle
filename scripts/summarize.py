@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Résumés en français, destinés aux criminalistes, pour les nouveaux éléments.
+"""Résumés en français, destinés aux avocats en droit criminel et pénal, pour les nouveaux éléments.
 
 Utilise l'API Claude si la variable ANTHROPIC_API_KEY est définie (secret GitHub).
 Sans clé, le script ne fait rien : le site continue de fonctionner avec les
@@ -19,7 +19,8 @@ DATA = os.path.join(ROOT, "data", "items.json")
 MODEL = "claude-opus-5-5"
 MAX_PAR_COLLECTE = int(os.environ.get("MAX_PAR_COLLECTE", "30"))
 
-SYSTEM = """Tu rédiges une veille juridique pour des avocats criminalistes du Québec (défense et poursuite).
+SYSTEM = """Tu rédiges une revue juridique pour des avocats en droit criminel et pénal du Québec (défense et poursuite),
+incluant le droit pénal réglementaire (Code de procédure pénale, Code de la sécurité routière, lois statutaires, cours municipales).
 Pour chaque élément, tu reçois le titre, la source, la date et la description fournie par la source
 (pour les décisions : la classification CanLII/SOQUIJ). Rédige en français juridique québécois, précis et sobre.
 
@@ -29,7 +30,7 @@ Règles :
 - « resume » : 2 ou 3 phrases sur les faits et le raisonnement (ou le contenu du projet de loi / de la nouvelle).
 - « questions » (décisions seulement) : la ou les questions en litige, en une phrase.
 - « resultat » (décisions seulement) : l'issue en quelques mots (ex. « Appel accueilli; nouveau procès ordonné »).
-- « impact » : 1 ou 2 phrases sur la portée pratique pour un criminaliste (argument utile, point de vigilance, changement de pratique).
+- « impact » : 1 ou 2 phrases sur la portée pratique pour un avocat en droit criminel ou pénal (argument utile, point de vigilance, changement de pratique).
 - « important » : true seulement si l'élément change ou précise l'état du droit de façon notable, sinon false.
 - Chambre de la jeunesse / LSJPA : n'identifie jamais l'adolescent, une victime ou un témoin mineur; garde l'intitulé anonymisé.
 - Personnes accusées : rappelle la présomption d'innocence s'il n'y a pas de verdict de culpabilité."""

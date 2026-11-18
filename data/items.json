@@ -479,6 +479,18 @@
    "trouve_le": "2026-11-18"
   },
   {
+   "col": "decisions",
+   "titre": "Ville de Montréal c. Sarfati",
+   "reference": "2026 QCCM 47",
+   "tribunal": "Cour municipale",
+   "date": "2026-11-09",
+   "resume": "Infractions criminelles et réglementaires — Sécurité routière — Distractions au volant — Code de la sécurité routière, art. 443.1 — Règlement sur les distractions au volant, art. 1 — La consultation de l’écran d’un chargeur portatif est-elle un usage prohibé comme écran d’affichage ? — Présomption d’usage par appareil tenu en main — Conditions d’exception non respectées — Acquittement — Infractions criminelles et réglementaires — Sécurité routière — Appareil portatif — Code de la sécurité routière, art. 443.1 — DPCP c. Girard — Un chargeur portatif externe est-il un appareil portatif conçu…",
+   "url": "https://www.canlii.org/fr/qc/qccm/doc/2026/2026qccm47/2026qccm47.html",
+   "source": "CanLII",
+   "id": "decisions:2026 QCCM 47",
+   "trouve_le": "2026-11-18"
+  },
+  {
    "col": "juridique",
    "categorie": "Barreau et associations",
    "titre": "A missing piece of the Financial Crimes Agency Act",
@@ -490,5 +502,5 @@
    "trouve_le": "2026-11-18"
   }
  ],
- "mis_a_jour": "2026-11-18T15:35+00:00"
+ "mis_a_jour": "2026-11-18T16:02+00:00"
 }

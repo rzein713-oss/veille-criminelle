@@ -1,6 +1,6 @@
-# Veille criminelle Québec
+# Revue en droit criminel et pénal — Sub Rosa Connect
 
-Site public de veille en droit criminel québécois : décisions, législation, nouvelles de la profession et revue de presse.
+Site public de Sub Rosa Connect : décisions, législation, nouvelles de la profession et revue de presse en droit criminel et pénal au Québec (incluant le pénal réglementaire et les cours municipales).
 Il fonctionne entièrement sur GitHub, gratuitement, sans abonnement Claude.
 
 - **Site** : `index.html`, publié par GitHub Pages à l'adresse `subrosaconnect.ca` (fichier `CNAME`).
