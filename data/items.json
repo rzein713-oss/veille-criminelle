@@ -287,6 +287,17 @@
    "trouve_le": "2026-11-18"
   },
   {
+   "col": "presse",
+   "categorie": "Droit pénal et réglementaire",
+   "titre": "13 épiceries et marchés à Montréal qui ont eu de 1000 à 4500 $ d’amendes du MAPAQ cet automne",
+   "date": "2026-11-17",
+   "resume": "",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSzNralJuMEljeHpYcF9CYmhPVkppTE1fT08ycE5sYWdEMjJwOThfbUo5T1A5cE9MUXhST2lBcmcxYTdRUjFFQzR3VEQ2WnVkbGZyX0FVaTVNWUg1dTc0eDNKRkc1UERxNmcwQnA4T2F6UGdOdThha1hnV2RxblQtSlNTNHVQQ3FzSV91QnNrZjlKWWplWF9yVzlTMXd3T1l2Y3ZJZlFKYw?oc=5",
+   "source": "Narcity",
+   "id": "presse:13 épiceries et marchés à montréal qui ont eu de 1000 à 4500 d amendes du mapaq cet automn",
+   "trouve_le": "2026-11-18"
+  },
+  {
    "col": "juridique",
    "categorie": "Barreau et associations",
    "titre": "Le juge, l’AQAAD et le huis clos",
@@ -398,6 +409,17 @@
   },
   {
    "col": "presse",
+   "categorie": "Droit pénal et réglementaire",
+   "titre": "Amendes du MAPAQ : 18 restos à Montréal condamnés à payer entre 1 300 et 12 250$ en octobre",
+   "date": "2026-11-16",
+   "resume": "",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcWQyUzZiVmFkNGxSM1phWnlseTBoOE02em9fd2V1Y2x6cFJzZm1YMy1ad1ZYM1BCR1dxWndvaWpqeEJQeF9kam5fZnA5dVlqelVNQTRGc1J4cjlOcTRUMnNweWVDQkhjZ1B0ZjNyS05EVEJSQ3F4ajA1SHBOaFZ0M08xQmxjU1dlcS1Wcll5ZUFIOXZQSGtBZjd4dw?oc=5",
+   "source": "Narcity",
+   "id": "presse:amendes du mapaq 18 restos à montréal condamnés à payer entre 1 300 et 12 250 en octobre",
+   "trouve_le": "2026-11-18"
+  },
+  {
+   "col": "presse",
    "categorie": "Police et enquêtes",
    "titre": "Un homme est tué dans une fusillade à Granby",
    "date": "2026-11-15",
@@ -502,5 +524,5 @@
    "trouve_le": "2026-11-18"
   }
  ],
- "mis_a_jour": "2026-11-18T16:02+00:00"
+ "mis_a_jour": "2026-11-18T16:03+00:00"
 }
