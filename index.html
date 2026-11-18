@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Veille criminelle Québec</title>
+<meta name="description" content="Décisions, législation et actualités en droit criminel au Québec, mises à jour chaque jour.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; tabs per section; items grouped by day found, newest first. */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #1a2230; --muted: #5d6879; --line: #dde2ea;
+  --accent: #6b2236; --accent-soft: #f3e6ea; --ok: #2d6a4f;
+  --f-display: "IBM Plex Serif", Georgia, serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #12161d; --surface: #1a2029; --fg: #e5e9f0; --muted: #9aa5b5; --line: #2c3440;
+  --accent: #e3a1b2; --accent-soft: #3a2229; --ok: #7cc3a0; color-scheme: dark } }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 800px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: 6px; margin-bottom: 22px; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--f-display); font-weight: 600; font-size: clamp(26px, 5vw, 34px); line-height: 1.15; margin: 0; text-wrap: balance; }
+.lede { color: var(--muted); margin: 0; max-width: 62ch; }
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 14px; flex-wrap: wrap; }
+.tab { font: 500 14px var(--f-body); color: var(--muted); background: none; border: 0; padding: 10px 14px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tab[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--accent); }
+.tab .n { font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-left: 6px; }
+.tab:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; color: var(--muted); font-size: 13px; }
+select, input[type=search] { font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; }
+input[type=search] { min-width: 0; flex: 1 1 180px; }
+.status { margin-left: auto; font-family: var(--f-mono); font-size: 12px; }
+.day { margin-top: 26px; }
+.day h2 { font: 500 12px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.item { padding: 14px 0; border-bottom: 1px solid var(--line); display: grid; gap: 6px; min-width: 0; }
+.item:last-child { border-bottom: 0; }
+.meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 12.5px; color: var(--muted); }
+.chip { font: 500 11.5px var(--f-mono); background: var(--accent-soft); color: var(--accent); padding: 2px 7px; border-radius: 4px; }
+.item h3 { font-family: var(--f-display); font-weight: 500; font-size: 17px; line-height: 1.35; margin: 0; overflow-wrap: anywhere; }
+.item h3 a { color: inherit; text-decoration: none; }
+.item h3 a:hover { color: var(--accent); text-decoration: underline; }
+.item p { margin: 0; max-width: 70ch; overflow-wrap: anywhere; color: var(--muted); font-size: 14px; }
+.empty { padding: 36px 0; color: var(--muted); max-width: 56ch; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; display: grid; gap: 6px; max-width: 70ch; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Droit criminel · Québec</div>
+    <h1>Veille criminelle Québec</h1>
+    <p class="lede">Décisions, législation, nouvelles de la profession et actualités liées au droit criminel au Québec. Mise à jour automatique deux fois par jour, avec un lien vers chaque source.</p>
+  </header>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-col="decisions" aria-selected="true">Décisions<span class="n" id="n-decisions">0</span></button>
+    <button class="tab" role="tab" data-col="juridique" aria-selected="false">Législation et Barreau<span class="n" id="n-juridique">0</span></button>
+    <button class="tab" role="tab" data-col="presse" aria-selected="false">Revue de presse<span class="n" id="n-presse">0</span></button>
+  </div>
+
+  <div class="bar">
+    <label for="cat" id="cat-label">Tribunal</label>
+    <select id="cat"><option value="">Tous</option></select>
+    <label for="range">Période</label>
+    <select id="range">
+      <option value="7">7 derniers jours</option>
+      <option value="30" selected>30 derniers jours</option>
+      <option value="0">Tout</option>
+    </select>
+    <input type="search" id="q" placeholder="Rechercher (ex. Jordan, 10b), LSJPA)" aria-label="Rechercher">
+    <span class="status" id="status">Chargement…</span>
+  </div>
+
+  <main id="list"><div class="empty">Chargement des éléments…</div></main>
+
+  <footer>
+    <div>Les résumés proviennent des sources citées (notamment les classifications de CanLII/SOQUIJ). Ce site est un outil de veille : il ne constitue pas un avis juridique. Consultez toujours la décision ou l'article original.</div>
+    <div>Les personnes accusées sont présumées innocentes tant que leur culpabilité n'a pas été établie. Les décisions de la Chambre de la jeunesse sont présentées sous leur intitulé anonymisé.</div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  const state = { col: "decisions", items: [], cat: "", range: 30, q: "" };
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  const safeUrl = (u) => (typeof u === "string" && /^https?:\/\//i.test(u)) ? u : null;
+  const fmtDay = (iso) => { try { return new Date(iso + "T12:00:00").toLocaleDateString("fr-CA", { weekday: "long", day: "numeric", month: "long", year: "numeric" }); } catch (e) { return iso; } };
+  const catOf = (i) => i.col === "decisions" ? i.tribunal : i.categorie;
+  const norm = (s) => (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+  function render() {
+    for (const c of ["decisions", "juridique", "presse"]) $("n-" + c).textContent = state.items.filter(i => i.col === c).length;
+    const items = state.items.filter(i => i.col === state.col);
+    $("cat-label").textContent = state.col === "decisions" ? "Tribunal" : "Catégorie";
+    const cats = [...new Set(items.map(catOf).filter(Boolean))].sort();
+    const sel = $("cat"), keep = state.cat;
+    sel.replaceChildren(new Option("Tous", ""), ...cats.map(c => new Option(c, c)));
+    sel.value = cats.includes(keep) ? keep : ""; state.cat = sel.value;
+    const cutoff = state.range ? new Date(Date.now() - state.range * 864e5).toISOString().slice(0, 10) : "";
+    const q = norm(state.q);
+    const shown = items.filter(i => (!state.cat || catOf(i) === state.cat) && (!cutoff || (i.trouve_le || "") >= cutoff)
+      && (!q || norm([i.titre, i.reference, i.resume, i.source].join(" ")).includes(q)));
+    const list = $("list"); list.replaceChildren();
+    if (!shown.length) { list.append(el("div", "empty", items.length ? "Aucun élément pour ces filtres." : "Aucun élément pour l'instant. La prochaine collecte en ajoutera.")); return; }
+    const byDay = new Map();
+    for (const i of shown) { const k = i.trouve_le || "—"; if (!byDay.has(k)) byDay.set(k, []); byDay.get(k).push(i); }
+    for (const [day, arr] of byDay) {
+      const sec = el("section", "day");
+      sec.append(el("h2", null, "Ajouté le " + fmtDay(day) + " · " + arr.length));
+      for (const i of arr) {
+        const art = el("article", "item"), meta = el("div", "meta");
+        const chip = catOf(i); if (chip) meta.append(el("span", "chip", chip));
+        meta.append(el("span", null, [i.reference, i.source, i.date ? (i.col === "decisions" ? "rendue le " : "publié le ") + i.date : ""].filter(Boolean).join(" · ")));
+        const h = el("h3"), u = safeUrl(i.url);
+        if (u) { const a = el("a", null, i.titre || "(sans titre)"); a.href = u; a.target = "_blank"; a.rel = "noopener"; h.append(a); }
+        else h.textContent = i.titre || "(sans titre)";
+        art.append(meta, h);
+        if (i.resume) art.append(el("p", null, i.resume));
+        sec.append(art);
+      }
+      list.append(sec);
+    }
+  }
+
+  document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
+    state.col = t.dataset.col; state.cat = "";
+    document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected", String(x === t)));
+    render();
+  }));
+  $("cat").addEventListener("change", e => { state.cat = e.target.value; render(); });
+  $("range").addEventListener("change", e => { state.range = Number(e.target.value); render(); });
+  $("q").addEventListener("input", e => { state.q = e.target.value; render(); });
+
+  fetch("data/items.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
+    state.items = d.items || [];
+    $("status").textContent = d.mis_a_jour ? "Mis à jour le " + new Date(d.mis_a_jour).toLocaleString("fr-CA", { dateStyle: "medium", timeStyle: "short" }) : "";
+    render();
+  }).catch(() => { $("status").textContent = "Données indisponibles"; $("list").replaceChildren(el("div", "empty", "Impossible de charger les données pour le moment.")); });
+})();
+</script>
+</body>
+</html>

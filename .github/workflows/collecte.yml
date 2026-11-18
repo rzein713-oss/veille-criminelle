@@ -1,0 +1,37 @@
+name: Collecte quotidienne
+
+on:
+  schedule:
+    - cron: "17 10 * * *"   # ~5 h 17 (heure de l'Est)
+    - cron: "17 22 * * *"   # ~17 h 17 (heure de l'Est)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collecte
+  cancel-in-progress: false
+
+jobs:
+  collecte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collecter les nouveaux éléments
+        run: python scripts/collect.py
+      - name: Publier s'il y a du nouveau
+        run: |
+          if git diff --quiet -- data/items.json; then
+            echo "Rien de nouveau."
+            exit 0
+          fi
+          git config user.name "veille-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/items.json
+          git commit -m "Collecte du $(date -u +%Y-%m-%d)"
+          git push
