@@ -319,13 +319,14 @@ NEWS_SOURCES = re.compile(
 NEWS_TITLE = re.compile(
     r"polic|policier|SPVM|\bSQ\b|Sûreté|GRC|\bBEI\b|UPAC|DPCP|accus|arrest|arrêté|procès|juge|jur[yé]|tribunal|cour\b|"
     r"palais de justice|coupable|acquitt|peine|prison|pénitenci|détenu|détention|libération|caution|enquête|"
-    r"meurtre|homicide|crime|criminel|agression|violence|vol\b|fraude|drogue|stupéfiant|arme|fusillade|"
+    r"meurtre|homicide|tuée?s?\b|crime|criminel|agression|violence|vol\b|vandalis|fraude|drogue|stupéfiant|arme|fusillade|"
     r"victime|plainte|poursuite|Code criminel|LSJPA|Jordan|aide juridique|avocat|"
     r"amende|constat|infraction|contravention|pénal|cour municipale", re.I)
 
 
-def relevant_news(title, source):
-    return bool(NEWS_SOURCES.search(source or "") and NEWS_TITLE.search(title or ""))
+def relevant_news(title, source, resume=""):
+    texte = (title or "") + " " + (resume or "")
+    return bool(NEWS_SOURCES.search(source or "") and (NEWS_TITLE.search(texte) or NEWS_STRONG.search(texte)))
 
 
 MEDIA_FEEDS = [
@@ -349,11 +350,14 @@ NEWS_CATS = [
     (PENAL_NEWS_CAT_RE := re.compile(r"\bSAAQ\b|photo.?radar|cinémomètre|points d.inaptitude|constat d.infraction|excès de vitesse|"
                                       r"Code de la sécurité routière|permis de conduire|cellulaire au volant|distraction au volant|"
                                       r"Code de procédure pénale", re.I), "Sécurité routière et procédure pénale"),
+    (re.compile(r"procès|meurtre|homicide|tuée?s?\b|poignard|accusée?s?\b|coupable|acquitt|peine de|condamn|sentence|palais de justice|juge|jury|plaidoyer|trial|guilty|sentenced", re.I), "Crimes et procès"),
     (re.compile(r"prison|pénitencier|détenu|détention|carcéral|libération conditionnelle|Service correctionnel|Bordeaux|établissement de détention", re.I), "Système carcéral"),
-    (re.compile(r"procès|accusée?s?\b|coupable|acquitt|peine de|condamn|sentence|palais de justice|juge|jury|plaidoyer|trial|guilty|sentenced", re.I), "Crimes et procès"),
     (re.compile(r"polic|SPVM|SPVQ|Sûreté du Québec|\bSQ\b|\bGRC\b|\bBEI\b|UPAC|enquête|perquisition|arrestation|arrêté", re.I), "Police et enquêtes"),
     (re.compile(r"ministre|projet de loi|gouvernement|Code criminel|réforme|Assemblée nationale|Parlement|Ottawa", re.I), "Politique et justice"),
 ]
+
+
+CIVIL_RE = re.compile(r"poursuivie?s? pour [\d  ]+|action collective|recours collectif|poursuite civile|dommages-intérêts", re.I)
 
 
 def news_category(text_):
@@ -380,6 +384,8 @@ def from_news():
             if not recent(d) or not desc:
                 continue
             if not (justice_feed or NEWS_STRONG.search(title) or (NEWS_TITLE.search(title) and NEWS_STRONG.search(desc))):
+                continue
+            if CIVIL_RE.search(title + " " + desc) and not NEWS_STRONG.search(title):
                 continue
             out.append({
                 "col": "presse", "categorie": news_category(title + " " + desc), "titre": title, "date": d.isoformat(),
@@ -480,7 +486,7 @@ def domaine(item):
 def main():
     store = datastore.load()
     # applique les filtres actuels aux éléments déjà enregistrés
-    store["items"] = [i for i in store["items"] if i["col"] != "presse" or relevant_news(i["titre"], i.get("source"))]
+    store["items"] = [i for i in store["items"] if i["col"] != "presse" or relevant_news(i["titre"], i.get("source"), i.get("resume", ""))]
     known = {i["id"] for i in store["items"]}
     added = 0
     # Cour suprême : remplacée par le flux CanLII (plus complet) — retire les anciennes fiches du site de la CSC
@@ -506,6 +512,10 @@ def main():
             i["etape"] = i["resume"].split("dernière étape franchie : ")[-1].rstrip(".")
             i["resume"] = ""
     enrich_bills(store["items"])
+    for i in store["items"]:
+        if i["col"] == "presse" and i.get("categorie") != "Sécurité routière et procédure pénale":
+            i["categorie"] = news_category(i["titre"] + " " + i.get("resume", ""))
+    store["items"] = [i for i in store["items"] if i["col"] != "presse" or not CIVIL_RE.search(i["titre"] + " " + i.get("resume", "")) or NEWS_STRONG.search(i["titre"])]
     # chaque article de la revue de presse doit avoir un résumé
     store["items"] = [i for i in store["items"] if i["col"] != "presse" or i.get("resume")]
     for i in store["items"]:
