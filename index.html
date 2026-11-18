@@ -6,9 +6,9 @@
 <title>Revue en droit criminel et pénal | Sub Rosa Connect</title>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<meta name="description" content="Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec. Mise à jour quotidienne.">
+<meta name="description" content="Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec.">
 <meta property="og:title" content="Revue en droit criminel et pénal | Sub Rosa Connect">
-<meta property="og:description" content="Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec. Mise à jour quotidienne.">
+<meta property="og:description" content="Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec.">
 <meta property="og:image" content="https://subrosaconnect.ca/assets/logo-sub-rosa-connect.png">
 <meta name="theme-color" content="#1c263b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,20 +38,21 @@ a { color: inherit; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 6px; }
 
 /* Bandeau */
-.hero { background: radial-gradient(120% 140% at 85% -20%, var(--navy-3) 0%, var(--navy) 55%); color: #fff; }
-.hero .container { padding-block: 44px 40px; display: grid; grid-template-columns: auto 1fr; gap: 10px 28px; align-items: center; }
-.medal { width: clamp(84px, 16vw, 116px); height: auto; grid-row: span 3; filter: drop-shadow(0 8px 20px rgba(0,0,0,.35)); }
-.brand { font: 500 12px var(--f-mono); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
-.hero h1 { font-family: var(--f-display); font-weight: 600; font-size: clamp(30px, 5.4vw, 48px); line-height: 1.05; margin: 0; letter-spacing: .005em; text-wrap: balance; }
-.hero .lede { margin: 2px 0 0; color: #c9cfdb; max-width: 58ch; font-size: 15.5px; }
-.hero .rule { grid-column: 1 / -1; height: 1px; background: linear-gradient(90deg, var(--gold), rgba(180,154,108,0) 70%); margin-top: 18px; }
-.hero .stamp { grid-column: 1 / -1; display: flex; gap: 8px 22px; flex-wrap: wrap; font-size: 12.5px; color: #aab2c2; }
+.hero { background: radial-gradient(90% 120% at 50% -10%, var(--navy-3) 0%, var(--navy) 60%); color: #fff; text-align: center; }
+.hero .container { padding-block: 48px 36px; display: grid; justify-items: center; gap: 10px; }
+.medal { width: clamp(150px, 30vw, 210px); height: auto; margin-bottom: 10px; filter: drop-shadow(0 14px 32px rgba(0,0,0,.45)); }
+.brand { font-family: var(--f-display); font-weight: 600; font-size: clamp(30px, 5.6vw, 44px); line-height: 1; color: var(--gold); letter-spacing: .02em; }
+.hero h1 { font: 500 12.5px var(--f-mono); letter-spacing: .28em; text-transform: uppercase; color: #fff; margin: 4px 0 0; }
+.hero .lede { margin: 6px 0 0; color: #c9cfdb; max-width: 56ch; font-size: 15.5px; }
+.hero .rule { width: min(360px, 70%); height: 1px; background: linear-gradient(90deg, rgba(180,154,108,0), var(--gold), rgba(180,154,108,0)); margin-top: 14px; }
+.hero .stamp { display: flex; justify-content: center; gap: 6px 22px; flex-wrap: wrap; font-size: 12.5px; color: #aab2c2; }
 .hero .stamp b { color: #fff; font-weight: 500; }
 
 /* Barre des sections */
 .sections { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 11; background: #fff; }
-.sections .container { display: flex; flex-wrap: wrap; gap: 12px 26px; padding-block: 12px; }
+.sections .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; padding-block: 14px; }
+.tgroup { justify-items: center; }
 .tgroup { display: grid; gap: 6px; }
 .glabel { font: 500 10.5px var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold-ink); }
 .seg { display: inline-flex; background: var(--tint); border-radius: 999px; padding: 3px; gap: 2px; }
@@ -116,10 +117,11 @@ footer .fbrand { font-family: var(--f-display); font-weight: 600; font-size: 20p
 footer .fbrand span { color: var(--gold); font: 500 11px var(--f-mono); letter-spacing: .18em; text-transform: uppercase; margin-left: 10px; }
 
 @media (max-width: 640px) {
-  .hero .container { padding-block: 32px 30px; gap: 8px 18px; }
-  .medal { grid-row: span 2; }
-  .hero .lede { grid-column: 1 / -1; }
+  .hero .container { padding-block: 36px 28px; }
+  .hero h1 { letter-spacing: .18em; font-size: 11.5px; }
   .sections { position: static; }
+  .sections .container { justify-content: flex-start; }
+  .tgroup { justify-items: start; }
   .sections .container { gap: 10px 16px; }
   .card { padding: 18px 18px; }
   .card h3 { font-size: 21px; }
@@ -136,10 +138,10 @@ footer .fbrand span { color: var(--gold); font: 500 11px var(--f-mono); letter-s
 <body>
 <header class="hero">
   <div class="container">
-    <img class="medal" src="assets/medaillon.png" width="210" height="210" alt="Logo Sub Rosa Connect : balance de la justice surmontée d'une rose">
+    <img class="medal" src="assets/medaillon.png" width="440" height="440" alt="Logo Sub Rosa Connect : balance de la justice surmontée d'une rose">
     <div class="brand">Sub Rosa Connect</div>
     <h1>Revue en droit criminel et pénal</h1>
-    <p class="lede">Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec. Mise à jour quotidienne.</p>
+    <p class="lede">Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec.</p>
     <div class="rule" aria-hidden="true"></div>
     <div class="stamp"><span id="stamp-date">Chargement…</span><span id="stamp-count"></span></div>
   </div>
