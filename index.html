@@ -3,32 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Veille criminelle Québec</title>
+<title>Veille criminelle Québec | Sub Rosa Connect</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Veille criminelle Québec | Sub Rosa Connect">
+<meta property="og:description" content="Décisions, législation et actualités en droit criminel au Québec, mises à jour chaque jour.">
+<meta property="og:image" content="https://subrosaconnect.ca/assets/logo-sub-rosa-connect.png">
 <meta name="description" content="Décisions, législation et actualités en droit criminel au Québec, mises à jour chaque jour.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one reading column; tabs per section; items grouped by day found, newest first. */
+/* Layout: one reading column; tabs per section; items grouped by day found, newest first.
+   Palette tirée du logo Sub Rosa Connect : marine #1c263b, or #9d8764. */
 :root {
-  --bg: #f6f7f9; --surface: #ffffff; --fg: #1a2230; --muted: #5d6879; --line: #dde2ea;
-  --accent: #6b2236; --accent-soft: #f3e6ea; --ok: #2d6a4f;
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #1c263b; --muted: #596173; --line: #e3ded4;
+  --accent: #8a7350; --accent-soft: #f2ece1; --ok: #2d6a4f;
+  --f-brand: "Cormorant Garamond", Garamond, "Times New Roman", serif;
   --f-display: "IBM Plex Serif", Georgia, serif;
   --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) { :root {
-  --bg: #12161d; --surface: #1a2029; --fg: #e5e9f0; --muted: #9aa5b5; --line: #2c3440;
-  --accent: #e3a1b2; --accent-soft: #3a2229; --ok: #7cc3a0; color-scheme: dark } }
+  --bg: #121826; --surface: #1a2233; --fg: #ece8df; --muted: #a3a9b7; --line: #2c3548;
+  --accent: #c9ae7f; --accent-soft: #2b2a28; --ok: #7cc3a0; color-scheme: dark } }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 15px; line-height: 1.55; }
 .wrap { max-width: 800px; margin: 0 auto; padding-block: 28px 64px;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-header { display: grid; gap: 6px; margin-bottom: 22px; }
-.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
-h1 { font-family: var(--f-display); font-weight: 600; font-size: clamp(26px, 5vw, 34px); line-height: 1.15; margin: 0; text-wrap: balance; }
+header { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: center; margin-bottom: 26px; }
+header .emblem { width: clamp(64px, 14vw, 92px); height: auto; grid-row: span 2; }
+.brand { font-family: var(--f-brand); font-weight: 700; font-size: clamp(26px, 5.5vw, 36px); line-height: 1; color: var(--accent); letter-spacing: .01em; }
+h1 { font-family: var(--f-display); font-weight: 500; font-size: clamp(18px, 3.6vw, 22px); line-height: 1.2; margin: 0; text-wrap: balance; }
+header .lede { grid-column: 1 / -1; margin-top: 10px; }
 .lede { color: var(--muted); margin: 0; max-width: 62ch; }
 .tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 14px; flex-wrap: wrap; }
 .tab { font: 500 14px var(--f-body); color: var(--muted); background: none; border: 0; padding: 10px 14px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
@@ -63,8 +72,9 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Droit criminel · Québec</div>
-    <h1>Veille criminelle Québec</h1>
+    <img class="emblem" src="assets/embleme.png" width="320" height="275" alt="Logo Sub Rosa Connect : balance de la justice surmontée d'une rose">
+    <div class="brand">Sub Rosa Connect</div>
+    <h1>Veille en droit criminel · Québec</h1>
     <p class="lede">Décisions, législation, nouvelles de la profession et actualités liées au droit criminel au Québec. Mise à jour automatique deux fois par jour, avec un lien vers chaque source.</p>
   </header>
 
@@ -90,6 +100,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
   <main id="list"><div class="empty">Chargement des éléments…</div></main>
 
   <footer>
+    <div><b>Sub Rosa Connect</b> · subrosaconnect.ca</div>
     <div>Les résumés proviennent des sources citées (notamment les classifications de CanLII/SOQUIJ) ou sont rédigés par IA à partir de celles-ci, comme indiqué sous chaque élément. Ce site est un outil de veille : il ne constitue pas un avis juridique. Consultez toujours la décision ou l'article original.</div>
     <div>Les personnes accusées sont présumées innocentes tant que leur culpabilité n'a pas été établie. Les décisions de la Chambre de la jeunesse sont présentées sous leur intitulé anonymisé.</div>
   </footer>
