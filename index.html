@@ -49,6 +49,12 @@ input[type=search] { min-width: 0; flex: 1 1 180px; }
 .item h3 a { color: inherit; text-decoration: none; }
 .item h3 a:hover { color: var(--accent); text-decoration: underline; }
 .item p { margin: 0; max-width: 70ch; overflow-wrap: anywhere; color: var(--muted); font-size: 14px; }
+.star { font: 600 11.5px var(--f-mono); color: var(--ok); }
+.item p.line { color: var(--fg); }
+.item p.line b { font-weight: 600; }
+details.src { font-size: 12.5px; color: var(--muted); }
+details.src summary { cursor: pointer; }
+details.src p { margin-top: 6px; font-size: 12.5px; }
 .empty { padding: 36px 0; color: var(--muted); max-width: 56ch; }
 footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; display: grid; gap: 6px; max-width: 70ch; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -84,7 +90,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
   <main id="list"><div class="empty">Chargement des éléments…</div></main>
 
   <footer>
-    <div>Les résumés proviennent des sources citées (notamment les classifications de CanLII/SOQUIJ). Ce site est un outil de veille : il ne constitue pas un avis juridique. Consultez toujours la décision ou l'article original.</div>
+    <div>Les résumés proviennent des sources citées (notamment les classifications de CanLII/SOQUIJ) ou sont rédigés par IA à partir de celles-ci, comme indiqué sous chaque élément. Ce site est un outil de veille : il ne constitue pas un avis juridique. Consultez toujours la décision ou l'article original.</div>
     <div>Les personnes accusées sont présumées innocentes tant que leur culpabilité n'a pas été établie. Les décisions de la Chambre de la jeunesse sont présentées sous leur intitulé anonymisé.</div>
   </footer>
 </div>
@@ -126,7 +132,16 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
         if (u) { const a = el("a", null, i.titre || "(sans titre)"); a.href = u; a.target = "_blank"; a.rel = "noopener"; h.append(a); }
         else h.textContent = i.titre || "(sans titre)";
         art.append(meta, h);
+        if (i.important) meta.prepend(el("span", "star", "★ À retenir"));
+        const line = (label, txt) => { if (!txt) return; const p = el("p", "line"); p.append(el("b", null, label + " : "), txt); art.append(p); };
+        if (i.col === "decisions") line("Questions en litige", i.questions);
         if (i.resume) art.append(el("p", null, i.resume));
+        if (i.col === "decisions") line("Résultat", i.resultat);
+        line("Impact pratique", i.impact);
+        if (i.ia && i.source_resume) {
+          const d = el("details", "src"); d.append(el("summary", null, "Résumé rédigé par IA à partir de la source · voir la description d'origine"), el("p", null, i.source_resume));
+          art.append(d);
+        }
         sec.append(art);
       }
       list.append(sec);
