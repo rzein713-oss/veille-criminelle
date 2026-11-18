@@ -171,6 +171,32 @@
    "route": true
   },
   {
+   "col": "presse",
+   "categorie": "Crimes et procès",
+   "titre": "Un camionneur arrêté plus d’un an après la collision ayant tué une mère et son fils de 5 ans sur l’A-30",
+   "date": "2026-11-18",
+   "resume": "",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOLTZzWW1qbFgtaTBCR3Q5ZDZLSkNoUFk5VDNnNmpON1pHeUM4MnMyWU94blFsenhHNFRoOV9lVHFOcmZLSXg2Njg1VDlEcGV1bVhXdUpYcmM4OUZEV2ViWWNDREdrMXA0ZkJDODZVeVR3S1RJZExuR0xMYklkdmkzMmNUdUxLTnBSVEhULVVHc3d5bUVtenFBbjhObkJnSGR3azMwUkVYbllqajhlbWc0UWItMUlobl9ieFFXcVBJTQ?oc=5",
+   "source": "Le Devoir",
+   "id": "presse:un camionneur arrêté plus d un an après la collision ayant tué une mère et son fils de 5 a",
+   "trouve_le": "2026-11-18",
+   "domaine": "criminel",
+   "route": true
+  },
+  {
+   "col": "presse",
+   "categorie": "Crimes et procès",
+   "titre": "Mort d'une mère et son fils de 5 ans lors d'une collision sur l'A-30: le camionneur arrêté plus d'un an plus tard",
+   "date": "2026-11-18",
+   "resume": "",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQTlZwMGtqbVdoM3lyXzBGNFVuRmJESjF2NDdzMm96S0ZPTHQzVWtvUEtiV3cyV1AxeGNMTml5cjBhTHNleG45aXdyNEdMeXRfdWhybmM3ckQtYWxUa1ZBTEl0cWVINFRZaHBDVjVVWTQxRGdCSXRzRjl3V05yN0hfNEtaWEpneENhMkpLUExZaVBlRVdGUEhvZ01TUjk5TUhXZEowNlFyQ3Q3OEM5Qm5QNmNJbGd1Y0M1OVEzUWlkSnhhU09qZ1IwY196MlVoM2lRRXJhaVc5a2FLdVlzTkYyOA?oc=5",
+   "source": "TVA Nouvelles",
+   "id": "presse:mort d une mère et son fils de 5 ans lors d une collision sur l a 30 le camionneur arrêté ",
+   "trouve_le": "2026-11-18",
+   "domaine": "criminel",
+   "route": true
+  },
+  {
    "col": "juridique",
    "categorie": "Législation",
    "titre": "S-8 (45-1) - Loi visant à lutter contre les crimes financiers et le trafic de drogues",
