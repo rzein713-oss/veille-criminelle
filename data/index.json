@@ -1,11 +1,11 @@
 {
- "mis_a_jour": "2026-11-20T11:16+00:00",
- "total": 75,
+ "mis_a_jour": "2026-11-20T22:55+00:00",
+ "total": 101,
  "annees": [
   {
    "annee": "2026",
-   "n": 75,
-   "decisions": 10
+   "n": 101,
+   "decisions": 14
   }
  ]
 }
