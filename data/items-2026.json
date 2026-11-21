@@ -3,6 +3,71 @@
  "items": [
   {
    "col": "presse",
+   "categorie": "Crimes et procès",
+   "titre": "Un professeur de l’Université d’Ottawa accusé de voyeurisme",
+   "date": "2026-11-21",
+   "resume": "L'accusé fait face à huit chefs d’accusation ; l'établissement lui a interdit l'accès au campus.",
+   "url": "https://ici.radio-canada.ca/article/info/2302253/professeur-uottawa-accusations-voyeurisme",
+   "source": "Radio-Canada",
+   "id": "presse:un professeur de l université d ottawa accusé de voyeurisme",
+   "trouve_le": "2026-11-21",
+   "domaine": "criminel",
+   "route": false
+  },
+  {
+   "col": "presse",
+   "categorie": "Tendances et société",
+   "titre": "Ahuntsic-Cartierville | Un conducteur percute un bar après un conflit qui aurait dégénéré",
+   "date": "2026-11-20",
+   "resume": "La soirée dans un bar d’Ahuntsic-Cartierville a pris une tournure dramatique vendredi après qu’un client a foncé dans la devanture de l’établissement, dans lequel plusieurs clients se trouvaient. Ce serait le résultat d’un conflit qui aurait dégénéré.",
+   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-20/ahuntsic-cartierville/un-conducteur-percute-un-bar-apres-un-conflit-qui-aurait-degenere.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
+   "source": "La Presse",
+   "id": "presse:ahuntsic cartierville un conducteur percute un bar après un conflit qui aurait dégénéré",
+   "trouve_le": "2026-11-21",
+   "domaine": "criminel",
+   "route": false
+  },
+  {
+   "col": "presse",
+   "categorie": "Tendances et société",
+   "titre": "Collision avec une voiture | Un piéton meurt des suites de ses blessures",
+   "date": "2026-11-20",
+   "resume": "Un piéton de 92 ans, happé par un automobiliste il y a quatre jours, a perdu la vie des suites de ses blessures. La collision s’était produite en plein jour dans l’arrondissement de Villeray—Saint-Michel—Parc-Extension.",
+   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-20/collision-avec-une-voiture/un-pieton-meurt-des-suites-de-ses-blessures.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
+   "source": "La Presse",
+   "id": "presse:collision avec une voiture un piéton meurt des suites de ses blessures",
+   "trouve_le": "2026-11-21",
+   "domaine": "criminel",
+   "route": true
+  },
+  {
+   "col": "presse",
+   "categorie": "Tendances et société",
+   "titre": "Plateau-Mont-Royal | Incendie dans deux triplex, un pompier blessé",
+   "date": "2026-11-20",
+   "resume": "Plus de 80 pompiers combattaient vendredi en milieu de journée un incendie dans deux triplex, à l’intersection de l’avenue des Érables et de la rue Rachel Est, dans l’arrondissement du Plateau-Mont-Royal.",
+   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-20/plateau-mont-royal/incendie-dans-deux-triplex-un-pompier-blesse.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
+   "source": "La Presse",
+   "id": "presse:plateau mont royal incendie dans deux triplex un pompier blessé",
+   "trouve_le": "2026-11-21",
+   "domaine": "criminel",
+   "route": false
+  },
+  {
+   "col": "presse",
+   "categorie": "Tendances et société",
+   "titre": "Montérégie | Collision frontale entre deux poids lourds sur l’A20",
+   "date": "2026-11-20",
+   "resume": "Un camionneur est dans un état critique, et un second a été grièvement blessé quand leurs deux poids lourds sont entrés en collision frontale sur l’autoroute 20 à la hauteur de Coteau-du-Lac, en Montérégie.",
+   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-20/monteregie/collision-frontale-entre-deux-poids-lourds-sur-l-a20.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
+   "source": "La Presse",
+   "id": "presse:montérégie collision frontale entre deux poids lourds sur l a20",
+   "trouve_le": "2026-11-21",
+   "domaine": "criminel",
+   "route": true
+  },
+  {
+   "col": "presse",
    "categorie": "Police et enquêtes",
    "titre": "20e anniversaire de l’opération Colisée | « Un coup de tonnerre pour la mafia montréalaise »",
    "date": "2026-11-20",
@@ -143,19 +208,6 @@
   },
   {
    "col": "presse",
-   "categorie": "Tendances et société",
-   "titre": "Plateau-Mont-Royal | Incendie dans deux triplex, un pompier blessé",
-   "date": "2026-11-20",
-   "resume": "Plus de 80 pompiers combattaient vendredi en milieu de journée un incendie dans deux triplex, à l’intersection de l’avenue des Érables et de la rue Rachel Est, dans l’arrondissement du Plateau-Mont-Royal.",
-   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-20/plateau-mont-royal/incendie-dans-deux-triplex-un-pompier-blesse.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
-   "source": "La Presse",
-   "id": "presse:plateau mont royal incendie dans deux triplex un pompier blessé",
-   "trouve_le": "2026-11-20",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
    "categorie": "Crimes et procès",
    "titre": "Accusé de crimes sexuels | L’action collective contre le milliardaire Robert Miller est autorisée",
    "date": "2026-11-20",
@@ -179,19 +231,6 @@
    "trouve_le": "2026-11-20",
    "domaine": "criminel",
    "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Tendances et société",
-   "titre": "Montérégie | Collision frontale entre deux poids lourds sur l’A20",
-   "date": "2026-11-20",
-   "resume": "Un camionneur est dans un état critique, et un second a été grièvement blessé quand leurs deux poids lourds sont entrés en collision frontale sur l’autoroute 20 à la hauteur de Coteau-du-Lac, en Montérégie.",
-   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-20/monteregie/collision-frontale-entre-deux-poids-lourds-sur-l-a20.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
-   "source": "La Presse",
-   "id": "presse:montérégie collision frontale entre deux poids lourds sur l a20",
-   "trouve_le": "2026-11-20",
-   "domaine": "criminel",
-   "route": true
   },
   {
    "col": "presse",
