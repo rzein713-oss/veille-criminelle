@@ -546,6 +546,51 @@ def enrich_bills(items, limit=20):
         done += 1
 
 
+# ---------- Doublons de la revue de presse ----------
+
+STOP = set("""avec dans pour par sur sous les des une un aux du de la le et est sont ont été être cette ces son ses leur leurs
+plus moins après avant entre vers chez lors depuis selon contre sans tout tous toute toutes elle elles ils lui qui que quoi dont
+ans heures jours hier soir matin mardi mercredi jeudi vendredi samedi dimanche lundi""".split())
+
+
+def tokens(t):
+    t = re.sub(r"[\u0300-\u036f]", "", __import__("unicodedata").normalize("NFD", t.lower()))
+    words = re.findall(r"[a-z]{4,}|\d+", t)
+    return {w for w in words if w not in STOP}
+
+
+COUNT_RE = re.compile(r"\b(deux|trois|quatre|cinq|six|deuxième|troisième|quatrième|cinquième|second|third|fourth|autre|another|\d+e)\b|\b[2-9]\b", re.I)
+
+
+def same_story(a, b):
+    ca, cb = {m.group(0).lower() for m in COUNT_RE.finditer(a["titre"])}, {m.group(0).lower() for m in COUNT_RE.finditer(b["titre"])}
+    if ca != cb and (ca or cb):
+        return False  # nouvel épisode d'une même affaire (« un troisième policier… ») : on garde les deux
+    na, nb = set(re.findall(r"\d{2,}", a["titre"])), set(re.findall(r"\d{2,}", b["titre"]))
+    if na and nb and not (na & nb):
+        return False  # chiffres différents dans les titres (« poste 21 » / « poste 39 ») : histoires distinctes
+    ta, tb = tokens(a["titre"]), tokens(b["titre"])
+    if ta and tb and len(ta & tb) / len(ta | tb) >= 0.5:
+        return True
+    fa, fb = tokens(a["titre"] + " " + a.get("resume", "")[:200]), tokens(b["titre"] + " " + b.get("resume", "")[:200])
+    nums = {w for w in fa & fb if w.isdigit() and len(w) >= 2}
+    inter = len(fa & fb) / max(1, len(fa | fb))
+    return (len(nums) >= 2 and inter >= 0.2) or inter >= 0.45
+
+
+def dedupe_news(items):
+    """Garde un seul article par événement (le premier trouvé), parmi les articles publiés à quelques jours d'intervalle."""
+    kept, removed = [], []
+    for i in sorted((x for x in items if x["col"] == "presse"), key=lambda x: (x.get("trouve_le", ""), -len(x.get("resume", "")))):
+        d = i.get("date", "")
+        twin = next((k for k in kept if abs((dt.date.fromisoformat(k.get("date") or d or "2000-01-01") -
+                                             dt.date.fromisoformat(d or k.get("date") or "2000-01-01")).days) <= 4
+                     and same_story(i, k)), None)
+        (removed if twin else kept).append(i)
+    ids = {id(x) for x in removed}
+    return [x for x in items if id(x) not in ids], removed
+
+
 # ---------- Fusion ----------
 
 def ident(item):
@@ -630,6 +675,9 @@ def main():
         if i["col"] == "presse" and i.get("categorie") != "Sécurité routière et procédure pénale":
             i["categorie"] = news_category(i["titre"] + " " + i.get("resume", ""))
     store["items"] = [i for i in store["items"] if i["col"] != "presse" or not CIVIL_RE.search(i["titre"] + " " + i.get("resume", "")) or NEWS_STRONG.search(i["titre"])]
+    store["items"], doublons = dedupe_news(store["items"])
+    if doublons:
+        log(f"{len(doublons)} doublons retirés de la revue de presse")
     # chaque article de la revue de presse doit avoir un résumé
     store["items"] = [i for i in store["items"] if i["col"] != "presse" or i.get("resume")]
     for i in store["items"]:
