@@ -54,6 +54,19 @@
    "route": false
   },
   {
+   "col": "presse",
+   "categorie": "Police et enquêtes",
+   "titre": "États-Unis | La police poursuit une dinde sauvage sur une autoroute",
+   "date": "2026-11-27",
+   "resume": "Des images diffusées par la police de l'État du New Jersey sur les réseaux sociaux montrent un policier poursuivant une dinde sauvage sur l'autoroute Garden State Parkway.",
+   "url": "https://www.lapresse.ca/actualites/insolite/2026-11-27/etats-unis/la-police-poursuit-une-dinde-sauvage-sur-une-autoroute.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites",
+   "source": "La Presse",
+   "id": "presse:états unis la police poursuit une dinde sauvage sur une autoroute",
+   "trouve_le": "2026-11-27",
+   "domaine": "criminel",
+   "route": false
+  },
+  {
    "col": "juridique",
    "categorie": "Législation",
    "titre": "C-255 (45-1) - Loi modifiant le Code criminel (méfait — biens religieux)",
@@ -103,6 +116,32 @@
    "url": "https://ici.radio-canada.ca/article/info/2303370/cecile-pettersen-enregistrements-commission-scolaire",
    "source": "Radio-Canada",
    "id": "presse:le procès civil pour agression sexuelle à alma suspendu pour écouter des enregistrements",
+   "trouve_le": "2026-11-27",
+   "domaine": "criminel",
+   "route": false
+  },
+  {
+   "col": "presse",
+   "categorie": "Système carcéral",
+   "titre": "Elle évite le pénitencier après avoir failli tuer ses amies en sens inverse sur la 40",
+   "date": "2026-11-26",
+   "resume": "Une courtière immobilière qui a failli tuer ses amies lors d’une collision en sens inverse sur l’autoroute pourra purger sa peine chez elle.",
+   "url": "https://www.journaldemontreal.com/2026/11/26/elle-evite-le-penitencier-apres-avoir-failli-tuer-ses-amies-en-sens-inverse-sur-la-40",
+   "source": "Journal de Montréal",
+   "id": "presse:elle évite le pénitencier après avoir failli tuer ses amies en sens inverse sur la 40",
+   "trouve_le": "2026-11-27",
+   "domaine": "criminel",
+   "route": false
+  },
+  {
+   "col": "presse",
+   "categorie": "Tendances et société",
+   "titre": "Centre-du-Québec | Collision mortelle entre plusieurs véhicules dans le secteur de Warwick",
+   "date": "2026-11-25",
+   "resume": "Un homme a perdu la vie à la suite d’une collision survenue mercredi après-midi dans le secteur de Warwick, dans le Centre-du-Québec.",
+   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-25/centre-du-quebec/collision-mortelle-entre-plusieurs-vehicules-dans-le-secteur-de-warwick.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
+   "source": "La Presse",
+   "id": "presse:centre du québec collision mortelle entre plusieurs véhicules dans le secteur de warwick",
    "trouve_le": "2026-11-27",
    "domaine": "criminel",
    "route": false
