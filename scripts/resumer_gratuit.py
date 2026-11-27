@@ -44,8 +44,15 @@ def call(model, item, token):
     req = urllib.request.Request(ENDPOINT, data=json.dumps(body).encode(), method="POST", headers={
         "Authorization": f"Bearer {token}", "Content-Type": "application/json", "Accept": "application/json"})
     with urllib.request.urlopen(req, timeout=60) as r:
-        out = json.loads(r.read())
-    return json.loads(out["choices"][0]["message"]["content"])
+        raw = r.read()
+        status, ctype = r.status, r.headers.get("Content-Type", "")
+    try:
+        out = json.loads(raw)
+        content = out["choices"][0]["message"]["content"] or ""
+        content = re.sub(r"^```(?:json)?\s*|\s*```$", "", content.strip())
+        return json.loads(content)
+    except (ValueError, KeyError, IndexError) as e:
+        raise ValueError(f"réponse {status} {ctype} : {raw[:300]!r}") from e
 
 
 def main():
