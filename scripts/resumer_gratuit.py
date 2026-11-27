@@ -16,8 +16,17 @@ import urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import store as datastore  # noqa: E402
 
-ENDPOINT = "https://models.github.ai/inference/chat/completions"
+ENDPOINTS = ["https://models.github.ai/inference/chat/completions", "https://models.inference.ai.azure.com/chat/completions"]
+ENDPOINT = ENDPOINTS[0]
 MODELS = [m for m in os.environ.get("MODELES", "openai/gpt-4.1-mini,openai/gpt-4o-mini").split(",") if m]
+
+
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *a, **k):  # une redirection transformerait la requête POST en GET
+        return None
+
+
+OPENER = urllib.request.build_opener(NoRedirect)
 MAX = int(os.environ.get("MAX_RESUMES", "40"))
 
 CONSIGNE = """Tu rédiges, en français juridique québécois clair, le résumé d'une décision pour des avocats en droit criminel et pénal.
@@ -30,7 +39,7 @@ Règles : n'utilise que l'information fournie; n'invente aucun fait, nom, articl
 Ne nomme jamais un adolescent ou une victime mineure (LSJPA). Si la classification est en anglais, rédige quand même en français."""
 
 
-def call(model, item, token):
+def call(model, item, token, endpoint=None):
     body = {
         "model": model,
         "temperature": 0.2,
@@ -41,9 +50,9 @@ def call(model, item, token):
                                         f"Tribunal : {item.get('tribunal', '')}\nClassification : {item.get('source_resume', '')}"},
         ],
     }
-    req = urllib.request.Request(ENDPOINT, data=json.dumps(body).encode(), method="POST", headers={
+    req = urllib.request.Request(endpoint or ENDPOINT, data=json.dumps(body).encode(), method="POST", headers={
         "Authorization": f"Bearer {token}", "Content-Type": "application/json", "Accept": "application/json"})
-    with urllib.request.urlopen(req, timeout=60) as r:
+    with OPENER.open(req, timeout=60) as r:
         raw = r.read()
         status, ctype = r.status, r.headers.get("Content-Type", "")
     try:
@@ -64,6 +73,25 @@ def main():
     todo = [i for i in store["items"] if i["col"] == "decisions" and not i.get("ia") and not i.get("ia_libre") and i.get("source_resume")]
     todo.sort(key=lambda i: i.get("trouve_le", ""), reverse=True)
     done, model = 0, MODELS[0]
+    # choisit l'adresse et le modèle qui répondent vraiment
+    global ENDPOINT
+    probe = todo[0] if todo else None
+    if probe:
+        ok = False
+        for ep in ENDPOINTS:
+            for m in MODELS + [x.split("/")[-1] for x in MODELS]:
+                try:
+                    call(m, probe, token, ep)
+                    ENDPOINT, model, ok = ep, m, True
+                    break
+                except Exception as e:  # noqa: BLE001
+                    print(f"Essai {ep} / {m} : {str(e)[:160]}", file=sys.stderr)
+            if ok:
+                break
+        if not ok:
+            print("GitHub Models indisponible : le résumé automatique sans IA est conservé.", file=sys.stderr)
+            return
+        print(f"GitHub Models : {ENDPOINT} / {model}", file=sys.stderr)
     for item in todo[:MAX]:
         try:
             out = call(model, item, token)
