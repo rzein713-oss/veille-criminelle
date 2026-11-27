@@ -51,7 +51,8 @@ def call(model, item, token, endpoint=None):
         ],
     }
     req = urllib.request.Request(endpoint or ENDPOINT, data=json.dumps(body).encode(), method="POST", headers={
-        "Authorization": f"Bearer {token}", "Content-Type": "application/json", "Accept": "application/json"})
+        "Authorization": f"Bearer {token}", "Content-Type": "application/json",
+        "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"})
     with OPENER.open(req, timeout=60) as r:
         raw = r.read()
         status, ctype = r.status, r.headers.get("Content-Type", "")
@@ -73,6 +74,12 @@ def main():
     todo = [i for i in store["items"] if i["col"] == "decisions" and not i.get("ia") and not i.get("ia_libre") and i.get("source_resume")]
     todo.sort(key=lambda i: i.get("trouve_le", ""), reverse=True)
     done, model = 0, MODELS[0]
+    try:
+        cat = OPENER.open(urllib.request.Request("https://models.github.ai/catalog/models", headers={
+            "Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}), timeout=30).read()
+        print("Catalogue :", cat[:400], file=sys.stderr)
+    except Exception as e:  # noqa: BLE001
+        print("Catalogue indisponible :", str(e)[:200], file=sys.stderr)
     # choisit l'adresse et le modèle qui répondent vraiment
     global ENDPOINT
     probe = todo[0] if todo else None
