@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: write
-  models: read
 
 concurrency:
   group: collecte
@@ -29,10 +28,10 @@ jobs:
         run: |
           pip install --quiet "pypdf>=5,<7"
           python scripts/collect.py
-      - name: Résumés clairs des décisions (GitHub Models, gratuit)
+      - name: Résumés clairs des décisions (Google Gemini, palier gratuit)
         continue-on-error: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/resumer_gratuit.py
       - name: Résumés (seulement si la clé API est configurée)
         env:
