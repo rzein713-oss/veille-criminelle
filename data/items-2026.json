@@ -162,19 +162,6 @@
   {
    "col": "presse",
    "categorie": "Sécurité routière et procédure pénale",
-   "titre": "Jeune homme de 18 ans à 160 km/h sur l’autoroute 85",
-   "date": "2026-11-22",
-   "resume": "Grand excès de vitesse : un jeune homme de 18 ans devra payer un constat d’infraction salé après avoir été intercepté sur l'autoroute 85 Sud.",
-   "url": "https://journallesoir.ca/2026/11/22/jeune-homme-de-18-ans-a-160-km-h-sur-lautoroute-85/",
-   "source": "Journal Le Soir",
-   "id": "presse:jeune homme de 18 ans à 160 km h sur l autoroute 85",
-   "trouve_le": "2026-11-27",
-   "domaine": "penal",
-   "route": true
-  },
-  {
-   "col": "presse",
-   "categorie": "Sécurité routière et procédure pénale",
    "titre": "Intercepté à 160 km/h sur l’autoroute 85",
    "date": "2026-11-22",
    "resume": "Les policiers de la Sûreté du Québec ont intercepté un véhicule pour un grand excès de vitesse sur l’autoroute 85 Sud, près du km 96, vers 23 h 50, ...",
@@ -862,19 +849,6 @@
   },
   {
    "col": "presse",
-   "categorie": "Crimes et procès",
-   "titre": "Un homme arrêté 27 ans après un meurtre à Laval",
-   "date": "2026-11-26",
-   "resume": "L'arrestation est en lien avec le meurtre d'Éric Caron, commis le 14 octobre 1999.",
-   "url": "https://ici.radio-canada.ca/article/info/2303137/arrestation-meutre-resolu-1999-laval-sq",
-   "source": "Radio-Canada",
-   "id": "presse:un homme arrêté 27 ans après un meurtre à laval",
-   "trouve_le": "2026-11-26",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
    "categorie": "Police et enquêtes",
    "titre": "Un instructeur de conduite de Longueuil arrêté pour agression sexuelle sur une jeune élève",
    "date": "2026-11-26",
@@ -1027,19 +1001,6 @@
    "url": "https://ici.radio-canada.ca/article/info/2303288/doug-ford-agression-domicile-ontario",
    "source": "Radio-Canada",
    "id": "presse:agression au domicile doug ford dit qu il n hésiterait pas à utiliser une arme à feu",
-   "trouve_le": "2026-11-26",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Police et enquêtes",
-   "titre": "Un homme de 73 ans arrêté pour des crimes sexuels commis il y a 15 à 20 ans",
-   "date": "2026-11-26",
-   "resume": "Bernard Bray aurait commis ces crimes contre cinq femmes à Montréal, entre 2006 et 2012.",
-   "url": "https://ici.radio-canada.ca/article/info/2303268/bernard-bray-arrestation-crimes-sexuels-non-resolus-montreal",
-   "source": "Radio-Canada",
-   "id": "presse:un homme de 73 ans arrêté pour des crimes sexuels commis il y a 15 à 20 ans",
    "trouve_le": "2026-11-26",
    "domaine": "criminel",
    "route": false
@@ -1461,19 +1422,6 @@
   },
   {
    "col": "presse",
-   "categorie": "Police et enquêtes",
-   "titre": "Pas de poursuite contre des policiers qui ont blessé deux civils lors d’une fusillade",
-   "date": "2026-11-25",
-   "resume": "Le DPCP a publié son analyse plus d’un an après avoir annoncé qu’il ne poursuivrait pas les auteurs.",
-   "url": "https://ici.radio-canada.ca/article/info/2303099/poursuite-dpcp-analyse-policiers-spvm-famile-abdallah",
-   "source": "Radio-Canada",
-   "id": "presse:pas de poursuite contre des policiers qui ont blessé deux civils lors d une fusillade",
-   "trouve_le": "2026-11-25",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
    "categorie": "Crimes et procès",
    "titre": "Meurtre d’un moniteur de YMCA : 11 ans de prison ferme contre son meurtrier",
    "date": "2026-11-25",
@@ -1559,19 +1507,6 @@
    "url": "https://www.ledevoir.com/actualites/1027622/troisieme-policier-spvm-arrete-apres-avoir-ete-congedie-allegations-racisme",
    "source": "Le Devoir",
    "id": "presse:un troisième policier du poste de quartier 39 du spvm a été arrêté",
-   "trouve_le": "2026-11-25",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Police et enquêtes",
-   "titre": "Un troisième policier du SPVM arrêté",
-   "date": "2026-11-25",
-   "resume": "Un troisième ancien policier du poste de quartier 39, à Montréal-Nord, a été arrêté mercredi matin.",
-   "url": "https://www.journaldemontreal.com/2026/11/25/un-troisieme-policier-du-spvm-arrete",
-   "source": "Journal de Montréal",
-   "id": "presse:un troisième policier du spvm arrêté",
    "trouve_le": "2026-11-25",
    "domaine": "criminel",
    "route": false
@@ -1907,19 +1842,6 @@
   },
   {
    "col": "presse",
-   "categorie": "Police et enquêtes",
-   "titre": "Le fil politique | Protection du PM : pas de bris de confiance avec la SQ, assure Paul St-Pierre Plamondon",
-   "date": "2026-11-24",
-   "resume": "Bienvenue dans Le fil politique de La Presse, alimenté par nos journalistes à Québec, Montréal et Ottawa. Retrouvez tout ce qu’il faut savoir : actualités de dernière heure, explications, bruits de coulisses et plus encore…",
-   "url": "https://www.lapresse.ca/actualites/politique/2026-11-24/le-fil-politique/protection-du-pm-pas-de-bris-de-confiance-avec-la-sq-assure-paul-st-pierre-plamondon.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites",
-   "source": "La Presse",
-   "id": "presse:le fil politique protection du pm pas de bris de confiance avec la sq assure paul st pierr",
-   "trouve_le": "2026-11-24",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
    "categorie": "Crimes et procès",
    "titre": "Le géant chinois des technologies Huawei coupable de complot, selon un jury américain",
    "date": "2026-11-24",
@@ -1940,19 +1862,6 @@
    "url": "https://ici.radio-canada.ca/en-bref/1-10817837/un-homme-baie-accuse-meurtre-son-bebe-3-mois",
    "source": "Radio-Canada",
    "id": "presse:un homme de la baie accusé du meurtre de son bébé de 3 mois",
-   "trouve_le": "2026-11-24",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Crimes et procès",
-   "titre": "Un homme de La Baie accusé du meurtre de sa fillette de 3 mois en 2024",
-   "date": "2026-11-24",
-   "resume": "Il a été accusé mardi au palais de justice de Chicoutimi.",
-   "url": "https://ici.radio-canada.ca/article/info/2302775/palais-justice-bebe-meurtre-accusations",
-   "source": "Radio-Canada",
-   "id": "presse:un homme de la baie accusé du meurtre de sa fillette de 3 mois en 2024",
    "trouve_le": "2026-11-24",
    "domaine": "criminel",
    "route": false
@@ -1992,19 +1901,6 @@
    "url": "https://www.ledevoir.com/politique/quebec/1027439/paul-st-pierre-plamondon-muet-raisons-mise-ecart-sq",
    "source": "Le Devoir",
    "id": "presse:paul st pierre plamondon reste muet sur sa mise à l écart des services de protection de la",
-   "trouve_le": "2026-11-24",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Crimes et procès",
-   "titre": "Le juge blâme la Couronne | Trois mois de prison pour avoir harcelé son ex-copine pendant sept ans",
-   "date": "2026-11-23",
-   "resume": "Un homme ayant harcelé son ex-copine pendant sept ans a été condamné mercredi à une peine clémente de trois mois de prison. Le juge lui aurait imposé une peine plus sévère, n’eût été une erreur de la Couronne concernant le statut au pays du délinquant.",
-   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-23/le-juge-blame-la-couronne/trois-mois-de-prison-pour-avoir-harcele-son-ex-copine-pendant-sept-ans.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
-   "source": "La Presse",
-   "id": "presse:le juge blâme la couronne trois mois de prison pour avoir harcelé son ex copine pendant se",
    "trouve_le": "2026-11-24",
    "domaine": "criminel",
    "route": false
@@ -2154,19 +2050,6 @@
   },
   {
    "col": "presse",
-   "categorie": "Crimes et procès",
-   "titre": "Prison à vie pour les meurtriers de Daniel Langlois et de sa conjointe Dominique Marchand",
-   "date": "2026-11-23",
-   "resume": "Les Américains Jonathan Lehrer et Robert Snyder Jr ont été reconnus coupables en juillet dernier.",
-   "url": "https://ici.radio-canada.ca/article/info/2302480/prison-vie-meurtriers-daniel-langlois-dominique-marchand",
-   "source": "Radio-Canada",
-   "id": "presse:prison à vie pour les meurtriers de daniel langlois et de sa conjointe dominique marchand",
-   "trouve_le": "2026-11-23",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
    "categorie": "Police et enquêtes",
    "titre": "Le Manitoba embauche de nouveaux agents de police pour lutter contre le vol à l’étalage",
    "date": "2026-11-23",
@@ -2174,19 +2057,6 @@
    "url": "https://ici.radio-canada.ca/article/info/2302619/embauche-policiers-manitoba-vol-etalage",
    "source": "Radio-Canada",
    "id": "presse:le manitoba embauche de nouveaux agents de police pour lutter contre le vol à l étalage",
-   "trouve_le": "2026-11-23",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Crimes et procès",
-   "titre": "Prison à vie pour les tueurs de Daniel Langlois et de Dominique Marchand",
-   "date": "2026-11-23",
-   "resume": "Les deux Américains ont été condamnés à la prison à perpétuité, sans possibilité de libération conditionnelle.",
-   "url": "https://www.ledevoir.com/actualites/justice/1027094/prison-vie-tueurs-daniel-langlois-dominique-marchand",
-   "source": "Le Devoir",
-   "id": "presse:prison à vie pour les tueurs de daniel langlois et de dominique marchand",
    "trouve_le": "2026-11-23",
    "domaine": "criminel",
    "route": false
@@ -2252,19 +2122,6 @@
    "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-22/ex-tueur-devenu-collaborateur-de-justice/des-victimes-et-des-familles-poursuivent-frederick-silva-pour-3-millions.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
    "source": "La Presse",
    "id": "presse:ex tueur devenu collaborateur de justice des victimes et des familles poursuivent frédéric",
-   "trouve_le": "2026-11-23",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Police et enquêtes",
-   "titre": "Devant le QG du SPVM | Une vingtaine de manifestants dénoncent la violence policière",
-   "date": "2026-11-22",
-   "resume": "Au lendemain du dépôt d’accusations criminelles contre deux ex-agents du Service de police de la Ville de Montréal (SPVM), en lien avec des gestes discriminatoires et racistes au poste de quartier 39, une vingtaine de manifestants se sont rassemblés devant le quartier général du corps policier.",
-   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-22/devant-le-qg-du-spvm/une-vingtaine-de-manifestants-denoncent-la-violence-policiere.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
-   "source": "La Presse",
-   "id": "presse:devant le qg du spvm une vingtaine de manifestants dénoncent la violence policière",
    "trouve_le": "2026-11-23",
    "domaine": "criminel",
    "route": false
@@ -2388,19 +2245,6 @@
   },
   {
    "col": "presse",
-   "categorie": "Crimes et procès",
-   "titre": "Allégations de racisme au poste 39 | Deux ex-policiers du SPVM accusés au criminel",
-   "date": "2026-11-21",
-   "resume": "Deux des sept policiers récemment congédiés et soupçonnés d’avoir posé des gestes discriminatoires et racistes au poste de quartier 39, dans l’arrondissement de Montréal-Nord, ont été arrêtés, a annoncé le Service de police de la Ville de Montréal (SPVM) samedi. Ils font tous deux face à des accusations de voies de fait et d’abus de confiance.",
-   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-21/allegations-de-racisme-au-poste-39/deux-ex-policiers-du-spvm-accuses-au-criminel.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
-   "source": "La Presse",
-   "id": "presse:allégations de racisme au poste 39 deux ex policiers du spvm accusés au criminel",
-   "trouve_le": "2026-11-22",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
    "categorie": "Police et enquêtes",
    "titre": "Le Mexique arrête un baron de la drogue recherché par le FBI",
    "date": "2026-11-21",
@@ -2506,19 +2350,6 @@
   {
    "col": "presse",
    "categorie": "Police et enquêtes",
-   "titre": "Deux ex-policiers du SPVM arrêtés",
-   "date": "2026-11-21",
-   "resume": "Deux ex-policiers du SPVM ont été arrêtés puis libérés sous promesse de comparaître. Ils font face à des accusations de voies de fait, de harcèlement criminel et d’abus de confiance.",
-   "url": "https://ici.radio-canada.ca/en-bref/1-10815438/deux-ex-policiers-spvm-arretes",
-   "source": "Radio-Canada",
-   "id": "presse:deux ex policiers du spvm arrêtés",
-   "trouve_le": "2026-11-21",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Police et enquêtes",
    "titre": "Le SPVM a arrêté deux membres de son personnel policier",
    "date": "2026-11-21",
    "resume": "Ils font l’objet d’accusations criminelles en lien avec des événements survenus au poste de quartier 39.",
@@ -2564,19 +2395,6 @@
    "url": "https://globalnews.ca/news/12160847/montreal-police-misconduct-investigation-charges/",
    "source": "Global News",
    "id": "presse:2 former montreal police officers charged in misconduct investigation",
-   "trouve_le": "2026-11-21",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Police et enquêtes",
-   "titre": "Paul St-Pierre Plamondon largue la SQ, qui assurait sa protection quotidienne",
-   "date": "2026-11-20",
-   "resume": "Cette responsabilité a plutôt été confiée aux constables spéciaux du ministère de la Sécurité intérieure.",
-   "url": "https://ici.radio-canada.ca/article/info/2302094/securite-premier-ministre-quebec-pspp",
-   "source": "Radio-Canada",
-   "id": "presse:paul st pierre plamondon largue la sq qui assurait sa protection quotidienne",
    "trouve_le": "2026-11-21",
    "domaine": "criminel",
    "route": false
@@ -2853,19 +2671,6 @@
   },
   {
    "col": "presse",
-   "categorie": "Système carcéral",
-   "titre": "Turquie : la justice empêche le maire d’Istanbul emprisonné de briguer la présidence",
-   "date": "2026-11-20",
-   "resume": "L'opposition a trouvé un successeur au maire emprisonné pour l’élection présidentielle.",
-   "url": "https://ici.radio-canada.ca/article/info/2301984/turquie-justice-istanbul-candidat-election-presidentielle",
-   "source": "Radio-Canada",
-   "id": "presse:turquie la justice empêche le maire d istanbul emprisonné de briguer la présidence",
-   "trouve_le": "2026-11-20",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
    "categorie": "Tendances et société",
    "titre": "«Géants» : lumière brute sur les agressions qui jalonnent le quotidien des femmes",
    "date": "2026-11-20",
@@ -2886,19 +2691,6 @@
    "url": "https://www.ledevoir.com/culture/cinema/1026557/depardieu-houellebecq-vises-enquete-presume-viol-reunion",
    "source": "Le Devoir",
    "id": "presse:depardieu et houellebecq visés par une enquête pour un présumé viol collectif",
-   "trouve_le": "2026-11-20",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Crimes et procès",
-   "titre": "Jonathan Blanchet ira directement en procès pour le meurtre de Gabie Renaud",
-   "date": "2026-11-20",
-   "resume": "De manière exceptionnelle, le DPCP a déposé un acte d’accusation direct, qui permet de contourner l’enquête préliminaire.",
-   "url": "https://www.ledevoir.com/actualites/justice/1026725/jonathan-blanchet-ira-directement-proces-meurtre-gabie-renaud",
-   "source": "Le Devoir",
-   "id": "presse:jonathan blanchet ira directement en procès pour le meurtre de gabie renaud",
    "trouve_le": "2026-11-20",
    "domaine": "criminel",
    "route": false
@@ -2977,19 +2769,6 @@
    "url": "https://www.journaldemontreal.com/2026/11/19/trafic-de-drogue-blanchiment-meurtres-washington-sanctionne-la-mafia-italienne-ndrangheta-qui-opere-a-toronto",
    "source": "Journal de Montréal",
    "id": "presse:trafic de drogue blanchiment meurtres washington sanctionne la mafia italienne ndrangheta ",
-   "trouve_le": "2026-11-20",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Police et enquêtes",
-   "titre": "Fraternité des policiers et policières de Montréal | Un homme arrêté pour avoir proféré des menaces envers Yves Francœur",
-   "date": "2026-11-19",
-   "resume": "Le président de la Fraternité des policiers et policières de Montréal, Yves Francœur, a été la cible de menaces sur les réseaux sociaux. Un homme de 30 ans, suspecté d’être à l’origine de celles-ci, a été arrêté par le Service de police de la Ville de Montréal (SPVM) jeudi matin.",
-   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-19/fraternite-des-policiers-et-policieres-de-montreal/un-homme-arrete-pour-avoir-profere-des-menaces-envers-yves-francoeur.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
-   "source": "La Presse",
-   "id": "presse:fraternité des policiers et policières de montréal un homme arrêté pour avoir proféré des ",
    "trouve_le": "2026-11-20",
    "domaine": "criminel",
    "route": false
@@ -3208,19 +2987,6 @@
    "url": "https://ici.radio-canada.ca/article/info/2301852/recherche-victimes-potentielles-agressions-sexuelles-spvq",
    "source": "Radio-Canada",
    "id": "presse:le spvq recherche des victimes potentielles d un présumé agresseur sexuel",
-   "trouve_le": "2026-11-19",
-   "domaine": "criminel",
-   "route": false
-  },
-  {
-   "col": "presse",
-   "categorie": "Crimes et procès",
-   "titre": "Le Myanmar reconnu coupable de génocide dans un verdict historique",
-   "date": "2026-11-19",
-   "resume": "Pour la première fois depuis l’adoption de la convention sur le génocide en 1948, la CIJ a reconnu un pays coupable de ce crime.",
-   "url": "https://ici.radio-canada.ca/en-bref/90-17934/myanmar-onu-birmanie-genocide-tribunal",
-   "source": "Radio-Canada",
-   "id": "presse:le myanmar reconnu coupable de génocide dans un verdict historique",
    "trouve_le": "2026-11-19",
    "domaine": "criminel",
    "route": false
