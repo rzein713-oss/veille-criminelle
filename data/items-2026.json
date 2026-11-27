@@ -67,6 +67,19 @@
    "route": false
   },
   {
+   "col": "presse",
+   "categorie": "Police et enquêtes",
+   "titre": "Trois arrestations pour du trafic de stupéfiants à Québec",
+   "date": "2026-11-27",
+   "resume": "Deux hommes de 35 ans ont notamment été appréhendés dans le secteur de Lebourgneuf.",
+   "url": "https://ici.radio-canada.ca/article/info/2303471/trois-arrestations-trafic-stupefiants-quebec",
+   "source": "Radio-Canada",
+   "id": "presse:trois arrestations pour du trafic de stupéfiants à québec",
+   "trouve_le": "2026-11-27",
+   "domaine": "criminel",
+   "route": false
+  },
+  {
    "col": "juridique",
    "categorie": "Législation",
    "titre": "C-255 (45-1) - Loi modifiant le Code criminel (méfait — biens religieux)",
@@ -145,6 +158,19 @@
    "trouve_le": "2026-11-27",
    "domaine": "penal",
    "route": true
+  },
+  {
+   "col": "presse",
+   "categorie": "Tendances et société",
+   "titre": "Centre-du-Québec | Collision mortelle entre plusieurs véhicules dans le secteur de Warwick",
+   "date": "2026-11-25",
+   "resume": "Un homme a perdu la vie à la suite d’une collision survenue mercredi après-midi dans le secteur de Warwick, dans le Centre-du-Québec.",
+   "url": "https://www.lapresse.ca/actualites/justice-et-faits-divers/2026-11-25/centre-du-quebec/collision-mortelle-entre-plusieurs-vehicules-dans-le-secteur-de-warwick.php?utm_source=rss&utm_medium=fil&utm_campaign=actualites&utm_content=justice-et-faits-divers",
+   "source": "La Presse",
+   "id": "presse:centre du québec collision mortelle entre plusieurs véhicules dans le secteur de warwick",
+   "trouve_le": "2026-11-27",
+   "domaine": "criminel",
+   "route": false
   },
   {
    "col": "presse",
