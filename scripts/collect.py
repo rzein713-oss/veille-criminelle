@@ -29,7 +29,7 @@ CRIM_DESC = re.compile(
     r"|Code de procédure pénale|Charte canadienne|Détermination de la peine|Mise en liberté provisoire"
     r"|Infractions réglementaires|infraction pénale|poursuite pénale|droit pénal|constat d.infraction|Code de la sécurité routière",
     re.I)
-CRIM_TITLE = re.compile(r"(^|\s)R\. c\.|c\. R\.|LSJPA|Directeur des poursuites criminelles|\bDPCP\b|c\. Sa Majesté", re.I)
+CRIM_TITLE = re.compile(r"(^|\s)R\. c\.|c\. R\.\s*$|LSJPA|Directeur des poursuites criminelles|\bDPCP\b|c\. Sa Majesté", re.I)
 LEGIS_KW = re.compile(
     r"criminel|pénal|peine|casier|libération|mise en liberté|caution|drogue|stupéfiant|arme|"
     r"adolescent|victime|terroris|exploitation|traite|violence|police|correctionnel|blanchiment|fraude|"
@@ -107,7 +107,7 @@ RESULT_RE = re.compile(
     r"condamn|libération|sursis|irrecevable|accueillie|rejetée|maintenue?s?\b|réduite|substituée?|imposée?s?\b|suspendue?",
     re.I)
 LAW_RE = re.compile(r"(^|\s)(Code|Loi|Règlement|Charte|C\.\s?cr\.|C\.\s?p\.\s?p\.|C\.\s?s\.\s?r\.|L\.R\.|art\.)", re.I)
-CASE_RE = re.compile(r"\bc\.\s|R\. c\.|citée?s?$", re.I)
+CASE_RE = re.compile(r"\bc\.\s|\bv\.\s|R\. c\.|citée?s?$|\b(19|20)\d\d (QC|NL|ON|BC|AB|CS|SC|NS|NB|MB|SK)[A-Z]* \d+", re.I)
 HEADINGS = {
     "infractions criminelles et réglementaires", "procédure", "peine", "sentence", "appel", "constitution", "droits garantis",
     "preuve", "droit administratif", "détermination de la peine", "procédure pénale", "procédure criminelle", "droit criminel",
@@ -117,17 +117,24 @@ HEADINGS = {
 def decompose(classification):
     """Sépare une classification SOQUIJ en questions, résumé, résultat et dispositions."""
     questions, resultat, resume, lois = [], [], [], []
-    for seg in re.split(r"\s+—\s+", classification or ""):
+    for seg in re.split(r"\s+[—|]\s+", classification or ""):
         seg = seg.strip(" .")
         if not seg or seg.endswith("…"):
             continue
         if "?" in seg:
             questions.append(seg.replace(" ?", "?"))
-        elif LAW_RE.match(seg) and len(seg) < 90:
+            continue
+        if LAW_RE.match(seg) and len(seg) < 90:
             lois.append(seg)
-        elif RESULT_RE.search(seg) and len(seg) < 90 and not re.match(r"(Requêtes?|Demandes?) modifiées?", seg):
-            resultat.append(seg)
-        elif seg.lower() in HEADINGS or CASE_RE.search(seg) or len(seg.split()) < 3:
+            continue
+        if seg.lower() in HEADINGS:
+            continue
+        parts = [p.strip(" .") for p in seg.split(", ")]
+        res = [p for p in parts if RESULT_RE.search(p) and len(p) < 90 and not CASE_RE.search(p)
+               and not re.match(r"(Requêtes?|Demandes?) modifiées?", p)]
+        if res and len(seg) < 140:
+            resultat += res
+        elif CASE_RE.search(seg) or len(seg.split()) < 3:
             continue
         else:
             resume.append(seg)
@@ -171,6 +178,67 @@ def from_canlii():
                 "tribunal": tribunal, "date": d.isoformat(), "resume": cut(desc, 1500),
                 "url": text(it, "link"), "source": "CanLII",
             })
+    return out
+
+
+API_DBS = [
+    ("qccq", "Cour du Québec – chambre criminelle et pénale"),
+    ("qccs", "Cour supérieure"),
+    ("qccm", "Cour municipale"),
+    ("qcca", "Cour d'appel du Québec"),
+]
+API_TITLE = re.compile(
+    r"(^|\s)R\. c\.|c\. R\.\s*$|LSJPA|Directeur des poursuites criminelles|Sa Majesté|"
+    r"^(Ville|Municipalité|Cité|Village|Paroisse|Procureur général du Québec|Agence du revenu du Québec|Société de l.assurance automobile)\b.* c\.",
+    re.I)
+
+
+def from_canlii_api(known_refs):
+    """API officielle de CanLII (métadonnées seulement) : toutes les décisions publiées récemment.
+
+    Limites de CanLII : 5 000 requêtes/jour, 2 requêtes/seconde, une à la fois — on attend 0,6 s entre chaque appel.
+    """
+    key = os.environ.get("CANLII_API_KEY")
+    if not key:
+        return []
+    days = int(os.environ.get("CANLII_DAYS", "4"))
+    after = (TODAY - dt.timedelta(days=days)).isoformat()
+    out = []
+
+    def api(path, **params):
+        time.sleep(0.6)
+        q = urllib.parse.urlencode({**params, "api_key": key})
+        return json.loads(fetch(f"https://api.canlii.org/v1/caseBrowse/fr/{path}?{q}"))
+
+    for db, court in API_DBS:
+        try:
+            cases = api(f"{db}/", offset=0, resultCount=1000, publishedAfter=after).get("cases", [])
+        except Exception as e:  # noqa: BLE001
+            log("API CanLII", db, "échec:", type(e).__name__)
+            continue
+        for c in cases:
+            title = c.get("title", "")
+            ref = re.sub(r"\s*\(CanLII\)\s*$", "", c.get("citation", ""))
+            if not API_TITLE.search(title) or ref in known_refs:
+                continue
+            cid = c.get("caseId")
+            case_id = (cid.get("fr") or next(iter(cid.values()), "")) if isinstance(cid, dict) else cid
+            if not case_id:
+                continue
+            try:
+                meta = api(f"{db}/{case_id}/")
+            except Exception as e:  # noqa: BLE001
+                log("API CanLII métadonnées", ref, "échec:", type(e).__name__)
+                continue
+            classification = clean(meta.get("keywords", ""))
+            tribunal = "Chambre de la jeunesse" if db == "qccq" and re.search(r"LSJPA|adolescent", title + classification, re.I) else court
+            out.append({
+                "col": "decisions", "titre": title, "reference": ref, "tribunal": tribunal,
+                "date": meta.get("decisionDate", ""), "resume": cut(classification, 1500),
+                "url": meta.get("longUrl") or c.get("longUrl", ""), "source": "CanLII",
+            })
+            known_refs.add(ref)
+    log(f"API CanLII : {len(out)} décisions criminelles ou pénales ajoutées")
     return out
 
 
@@ -447,7 +515,7 @@ PENAL_RE = re.compile(
     r"permis de conduire|excès de vitesse|distractions? au volant|cellulaire au volant|Règlement sur les distractions",
     re.I)
 CRIMINAL_RE = re.compile(
-    r"Code criminel|\bC\.\s?cr\.|(^|\s)R\. c\.|c\. R\.|LSJPA|justice pénale pour les adolescents|"
+    r"Code criminel|\bC\.\s?cr\.|(^|\s)R\. c\.|c\. R\.\s*$|LSJPA|justice pénale pour les adolescents|"
     r"Loi réglementant certaines drogues|\bLRCDAS\b|criminel|crime", re.I)
 PENAL_NEWS_CAT = "Sécurité routière et procédure pénale"
 
@@ -470,7 +538,7 @@ def domaine(item):
             return "penal" if PENAL_RE.search(texte) else None
         return "criminel"
     if item["col"] == "decisions":
-        if re.search(r"(^|\s)R\. c\.|c\. R\.|LSJPA|c\. Sa Majesté", titre) or re.search(r"Code criminel|\bC\.\s?cr\.|LSJPA|drogues", texte):
+        if re.search(r"(^|\s)R\. c\.|c\. R\.\s*$|LSJPA|c\. Sa Majesté", titre) or re.search(r"Code criminel|\bC\.\s?cr\.|LSJPA|drogues", texte):
             return "criminel"
         if PENAL_RE.search(texte):
             return "penal"
@@ -492,7 +560,9 @@ def main():
     # Cour suprême : remplacée par le flux CanLII (plus complet) — retire les anciennes fiches du site de la CSC
     store["items"] = [i for i in store["items"] if not (i["col"] == "decisions" and i.get("source") == "Cour suprême du Canada")]
     known = {i["id"] for i in store["items"]}
-    for item in from_canlii() + from_legisinfo() + from_assnat() + from_pro_feeds() + from_news():
+    rss = from_canlii()
+    refs = {i.get("reference") for i in store["items"] if i.get("reference")} | {i.get("reference") for i in rss if i.get("reference")}
+    for item in rss + from_canlii_api(refs) + from_legisinfo() + from_assnat() + from_pro_feeds() + from_news():
         iid = item["col"] + ":" + ident(item)
         if iid in known:
             continue

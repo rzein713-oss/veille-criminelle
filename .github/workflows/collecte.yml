@@ -23,6 +23,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: Collecter les nouveaux éléments
+        env:
+          CANLII_API_KEY: ${{ secrets.CANLII_API_KEY }}
         run: |
           pip install --quiet "pypdf>=5,<7"
           python scripts/collect.py
