@@ -374,9 +374,8 @@ body.locked { overflow: hidden; }
   function load() {
     fetch("data/index.json", { cache: "no-cache" }).then(r => r.json()).then(ix => {
       years = (ix.annees || []).map(a => a.annee);
-      const nd = (ix.annees || []).reduce((n, a) => n + (a.decisions || 0), 0);
       $("stamp-date").replaceChildren("Mise à jour : ", el("b", null, ix.mis_a_jour ? new Date(ix.mis_a_jour).toLocaleString("fr-CA", { dateStyle: "long", timeStyle: "short" }) : "—"));
-      $("stamp-count").replaceChildren(el("b", null, String(ix.total || 0)), " éléments archivés, dont ", el("b", null, String(nd)), " décisions");
+      $("stamp-count").replaceChildren(el("b", null, String(ix.total || 0)), (ix.total || 0) > 1 ? " éléments" : " élément");
       ensureYears();
     }).catch(() => { $("stamp-date").textContent = "Données indisponibles"; $("list").replaceChildren(el("div", "empty", "Impossible de charger les données pour le moment.")); });
   }
