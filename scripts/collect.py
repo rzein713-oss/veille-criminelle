@@ -463,6 +463,50 @@ def from_news():
     return out
 
 
+BING_PENAL = [
+    'SAAQ', '"points d\'inaptitude"', '"Code de la sécurité routière"', '"constat d\'infraction" Québec',
+    'excès de vitesse amende Québec', '"photo radar" Québec', '"cellulaire au volant" Québec', '"permis suspendu" Québec',
+    '"Code de procédure pénale"', '"cour municipale" Québec',
+]
+PENAL_ENFORCEMENT = re.compile(
+    r"amende|constat|points? d.inaptitude|excès de vitesse|km/h|permis (?:suspendu|révoqué)|suspension|radar|cinémomètre|"
+    r"Code de la sécurité routière|infraction|intercepté|contravention|cellulaire au volant|distraction|cour municipale|"
+    r"Code de procédure pénale|nouvelles? règles?|en vigueur", re.I)
+
+
+def from_bing_penal():
+    """Revue de presse pénale (C.s.r., C.p.p.) : recherches ciblées dans Bing Actualités, qui fournit un résumé."""
+    out = []
+    if os.environ.get("SKIP_NEWS"):
+        return out
+    for q in BING_PENAL:
+        url = "https://www.bing.com/news/search?" + urllib.parse.urlencode({"q": q, "format": "rss", "setlang": "fr-CA", "cc": "CA"})
+        try:
+            its = items_of(fetch(url))
+        except Exception as e:  # noqa: BLE001
+            log("Bing", q, "échec:", e)
+            continue
+        for it in its:
+            title, desc = clean(text(it, "title")), clean(text(it, "description"))
+            d = pub_date(text(it, "pubDate"))
+            if not recent(d) or not desc:
+                continue
+            texte = title + " " + desc
+            if not (PENAL_NEWS_CAT_RE.search(texte) and PENAL_ENFORCEMENT.search(texte)):
+                continue
+            lien = text(it, "link")
+            m = re.search(r"[?&]url=([^&]+)", lien)
+            if m:
+                lien = urllib.parse.unquote(m.group(1))
+            source = next((clean(c.text or "") for c in it if c.tag.lower().endswith("source")), "") or urllib.parse.urlparse(lien).netloc.replace("www.", "")
+            out.append({
+                "col": "presse", "categorie": "Sécurité routière et procédure pénale", "titre": title, "date": d.isoformat(),
+                "resume": cut(desc, 600), "url": lien, "source": source,
+                "key": re.sub(r"\W+", " ", title.lower())[:90],
+            })
+    return out
+
+
 # ---------- Sommaires des projets de loi ----------
 
 def sommaire_federal(url):
@@ -554,7 +598,7 @@ def domaine(item):
 def main():
     store = datastore.load()
     # applique les filtres actuels aux éléments déjà enregistrés
-    store["items"] = [i for i in store["items"] if i["col"] != "presse" or relevant_news(i["titre"], i.get("source"), i.get("resume", ""))]
+    store["items"] = [i for i in store["items"] if i["col"] != "presse" or (i.get("categorie") == "Sécurité routière et procédure pénale") or relevant_news(i["titre"], i.get("source"), i.get("resume", ""))]
     known = {i["id"] for i in store["items"]}
     added = 0
     # Cour suprême : remplacée par le flux CanLII (plus complet) — retire les anciennes fiches du site de la CSC
@@ -562,7 +606,7 @@ def main():
     known = {i["id"] for i in store["items"]}
     rss = from_canlii()
     refs = {i.get("reference") for i in store["items"] if i.get("reference")} | {i.get("reference") for i in rss if i.get("reference")}
-    for item in rss + from_canlii_api(refs) + from_legisinfo() + from_assnat() + from_pro_feeds() + from_news():
+    for item in rss + from_canlii_api(refs) + from_legisinfo() + from_assnat() + from_pro_feeds() + from_news() + from_bing_penal():
         iid = item["col"] + ":" + ident(item)
         if iid in known:
             continue
