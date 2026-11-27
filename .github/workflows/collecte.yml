@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  models: read
 
 concurrency:
   group: collecte
@@ -16,7 +17,7 @@ concurrency:
 jobs:
   collecte:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -28,6 +29,11 @@ jobs:
         run: |
           pip install --quiet "pypdf>=5,<7"
           python scripts/collect.py
+      - name: Résumés clairs des décisions (GitHub Models, gratuit)
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/resumer_gratuit.py
       - name: Résumés (seulement si la clé API est configurée)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

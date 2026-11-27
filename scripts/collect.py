@@ -147,6 +147,40 @@ def decompose(classification):
     }
 
 
+COURT_PHRASE = {
+    "Cour suprême du Canada": "La Cour suprême du Canada", "Cour d'appel du Québec": "La Cour d'appel du Québec",
+    "Cour supérieure": "La Cour supérieure", "Cour du Québec – chambre criminelle et pénale": "La Cour du Québec",
+    "Chambre de la jeunesse": "La Chambre de la jeunesse de la Cour du Québec", "Cour municipale": "La cour municipale",
+}
+GENERIC = {"infractions criminelles et réglementaires", "procédure", "constitution", "droits garantis", "santé", "droit criminel"}
+
+
+def lower_first(t):
+    return t[:1].lower() + t[1:] if t and not t[:2].isupper() else t
+
+
+def phrase_auto(item):
+    """Résumé en phrases, sans IA, à partir de la classification (filet de sécurité)."""
+    segs = [x.strip(" .") for x in re.split(r"\s+[—|]\s+", item.get("source_resume", "")) if x.strip(" .")]
+    sujets = []
+    for x in segs:
+        if "?" in x or LAW_RE.match(x) or CASE_RE.search(x) or RESULT_RE.search(x) or x.lower() in GENERIC or x in sujets:
+            continue
+        sujets.append(x)
+        if len(sujets) == 2:
+            break
+    cour = COURT_PHRASE.get(item.get("tribunal", ""), "Le tribunal")
+    phrases = []
+    if sujets:
+        sujet = lower_first(sujets[0])
+        de = "d’" if re.match(r"[aeiouyéèêàâîôûh]", sujet, re.I) else "de "
+        phrases.append(f"{cour} se prononce en matière {de}{sujet}" + (f" ({lower_first(sujets[1])})" if len(sujets) > 1 else "") + ".")
+    faits = [f for f in re.split(r"\.\s(?=[A-ZÉÈÀÂÎÔÛÇ])", item.get("resume_points") or "") if f and f.rstrip(".") not in sujets][:3]
+    if faits:
+        phrases.append("Éléments retenus : " + "; ".join(lower_first(f.rstrip(".")) for f in faits) + ".")
+    return " ".join(phrases)
+
+
 # ---------- Sources ----------
 
 def from_canlii():
@@ -681,9 +715,11 @@ def main():
     # chaque article de la revue de presse doit avoir un résumé
     store["items"] = [i for i in store["items"] if i["col"] != "presse" or i.get("resume")]
     for i in store["items"]:
-        if i["col"] == "decisions" and not i.get("ia") and i.get("source") == "CanLII":
+        if i["col"] == "decisions" and not i.get("ia") and not i.get("ia_libre") and i.get("source") == "CanLII":
             i.setdefault("source_resume", i.get("resume", ""))
-            i.update(decompose(i["source_resume"]))
+            parts = decompose(i["source_resume"])
+            i.update(questions=parts["questions"], resultat=parts["resultat"], dispositions=parts["dispositions"], resume_points=parts["resume"])
+            i["resume"] = phrase_auto(i) or parts["resume"]
         i["domaine"] = domaine(i)
     store["items"] = [i for i in store["items"] if i["domaine"]]
     for i in store["items"]:

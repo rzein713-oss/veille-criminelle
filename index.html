@@ -304,7 +304,7 @@ body.locked { overflow: hidden; }
     }
 
     const foot = el("div", "foot");
-    if (i.ia && i.source_resume) {
+    if ((i.ia || i.ia_libre) && i.source_resume) {
       const d = el("details", "src");
       d.append(el("summary", null, "Description d'origine de la source"), el("p", null, i.source_resume));
       foot.append(d);
