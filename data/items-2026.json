@@ -243,7 +243,7 @@
    "reference": "2026 QCCA 1572",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-20",
-   "resume": "La Cour d'appel du Québec se prononce en matière de détermination de la peine (peines consécutives). Éléments retenus : méthode de peine globale et ventilation des chefs; limite de 90 jours pour emprisonnement discontinu, art. 732(1) C.cr; intervention en matière de peine.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de détermination de la peine (peines consécutives). Éléments de contexte : méthode de peine globale et ventilation des chefs; limite de 90 jours pour emprisonnement discontinu, art. 732(1) C.cr; intervention en matière de peine.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1572/2026qcca1572.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1572",
@@ -254,7 +254,8 @@
    "dispositions": "Code criminel, art. 85(2) et 85(4); Code criminel, al. 732.1(3)f) et al. 732.2(2)b)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Méthode de peine globale et ventilation des chefs. Limite de 90 jours pour emprisonnement discontinu, art. 732(1) C.cr. Intervention en matière de peine. Transparence de la démarche, peine incompréhensible. Reprise de l’exercice sans déférence, conclusions de fait non viciées. Peine manifestement non indiquée. Fourchette en matière d’invasion de domicile accompagnée de violence. Réinsertion sociale et dissuasion spécifique, circonstances aggravantes et atténuantes. Peine d’emprisonnement ajustée et modalités revues."
+   "faits": "La Cour d'appel du Québec se prononce en matière de détermination de la peine (peines consécutives). Éléments de contexte : méthode de peine globale et ventilation des chefs; limite de 90 jours pour emprisonnement discontinu, art. 732(1) C.cr; intervention en matière de peine.",
+   "motifs": "Reprise de l’exercice sans déférence, conclusions de fait non viciées. Fourchette en matière d’invasion de domicile accompagnée de violence. Jurisprudence appliquée : R. c. Lacasse; R. c. Cope; R. c. Sheppard; R. c. Sandel."
   },
   {
    "col": "presse",
@@ -340,7 +341,7 @@
    "reference": "2026 QCCA 1554",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-13",
-   "resume": "La Cour d'appel du Québec se prononce en matière de procedure (interventions). Éléments retenus : friend of the Court; criteria for authorizing interventions in criminal appeals; public interest and usefulness assessed.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de procedure (interventions). Éléments de contexte : friend of the Court; criteria for authorizing interventions in criminal appeals; public interest and usefulness assessed.",
    "url": "https://www.canlii.org/en/qc/qcca/doc/2026/2026qcca1554/2026qcca1554.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1554",
@@ -351,7 +352,8 @@
    "dispositions": "Art. 187 C.C.P. and Rules of the Court of Appeal in Criminal Matters applied",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Friend of the Court. Criteria for authorizing interventions in criminal appeals. Public interest and usefulness assessed. Four interventions authorized. Applications granted in part. Scope and limits. “Widen or add to the points in issue”. Whether an intervener may raise a new issue for the first time on appeal. Paragraph 43 “procedural advantages” question treated as new issue. Whether interveners may submit evidence on appeal. Interventions confined to “the factual record led by the parties before the Superior Court”. Reference to Schedule III of the appellants’ brief. Prohibition on additional evidence imposed. Whether written replies to interveners’ written arguments should be authorized. Fairness considerations and rules of the Court weighed. Respondents and impleaded party refused replies. Appellants authorized joint replies and Attorney General of Canada authorized single reply. Replies permitted for appellants only."
+   "faits": "La Cour d'appel du Québec se prononce en matière de procedure (interventions). Éléments de contexte : friend of the Court; criteria for authorizing interventions in criminal appeals; public interest and usefulness assessed.",
+   "motifs": "Jurisprudence appliquée : R. v. Barton; R. v. Morgentaler; Gravel v. Denis."
   },
   {
    "col": "decisions",
@@ -359,7 +361,7 @@
    "reference": "2026 QCCQ 6247",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-11-10",
-   "resume": "La Cour du Québec se prononce en matière de contrôle de constitutionnalité (ordonnance de prélèvement de substances corporelles). Éléments retenus : contestation constitutionnelle après plaidoyer de culpabilité; droits et libertés; liberté de conscience et de religion.",
+   "resume": "La Cour du Québec se prononce en matière de contrôle de constitutionnalité (ordonnance de prélèvement de substances corporelles). Éléments de contexte : contestation constitutionnelle après plaidoyer de culpabilité; droits et libertés; liberté de conscience et de religion.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq6247/2026qccq6247.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 6247",
@@ -370,7 +372,8 @@
    "dispositions": "Charte canadienne des droits et libertés; Code criminel, art. 487.051(1); Charte canadienne des droits et libertés, art. 2a); Code criminel, art. 487.04a)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Contrôle de constitutionnalité. Ordonnance de prélèvement de substances corporelles. Contestation constitutionnelle après plaidoyer de culpabilité. Droits et libertés. Liberté de conscience et de religion. Entrave plus que négligeable ou insignifiante. Seconde étape non franchie, Analyse Oakes non abordée. Crédibilité et valeur probante. Incongruités entre lettre et contre-interrogatoire. Preuve d’autorité religieuse absente. Cohérence des pratiques antérieures. Infractions « super-primaires »."
+   "faits": "La Cour du Québec se prononce en matière de contrôle de constitutionnalité (ordonnance de prélèvement de substances corporelles). Éléments de contexte : contestation constitutionnelle après plaidoyer de culpabilité; droits et libertés; liberté de conscience et de religion.",
+   "motifs": "Seconde étape non franchie, Analyse Oakes non abordée. Crédibilité et valeur probante. Jurisprudence appliquée : R. c. Big M Drug Mart Ltd; Northcrest c. Amselem; Dardari c. Procureur général du Québec; Columbia v. Trinity Western University."
   },
   {
    "col": "decisions",
@@ -378,7 +381,7 @@
    "reference": "2026 QCCQ 6080",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-11-05",
-   "resume": "La Cour du Québec se prononce en matière de verdict (violence conjugale). Éléments retenus : preuve hors de tout doute raisonnable; cinq chefs retenus, période de plusieurs années; accusé sans défense présentée.",
+   "resume": "La Cour du Québec se prononce en matière de verdict (violence conjugale). Éléments de contexte : accusé sans défense présentée; culpabilité déclarée sur les 5 chefs d’accusation; contradictions alléguées, faits périphériques.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq6080/2026qccq6080.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 6080",
@@ -389,7 +392,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Preuve hors de tout doute raisonnable. Cinq chefs retenus, période de plusieurs années. Accusé sans défense présentée. Crédibilité de la plaignante acceptée malgré le passage du temps. Culpabilité déclarée sur les 5 chefs d’accusation. Crédibilité et fiabilité. Contradictions alléguées, faits périphériques. Cohérence du récit sur les éléments essentiels retenue. Corroboration par une proche sur un évènement. Preuve de la poursuite jugée suffisante. Éléments de l’infraction. Porte bloquée, impossibilité de quitter. Durée alléguée brève, absence de « conversation ». Déclarations attribuées à l’accusé jugées éloquentes. Preuve de la poursuite acceptée. Menaces et voies de fait armées. Menace de mort. Couteau sur la gorge, propos rapportés. Incertitude sur l’année exacte des faits."
+   "faits": "La Cour du Québec se prononce en matière de verdict (violence conjugale). Éléments de contexte : accusé sans défense présentée; culpabilité déclarée sur les 5 chefs d’accusation; contradictions alléguées, faits périphériques.",
+   "motifs": "Preuve hors de tout doute raisonnable. Cinq chefs retenus, période de plusieurs années. Crédibilité de la plaignante acceptée malgré le passage du temps. Crédibilité et fiabilité."
   },
   {
    "col": "decisions",
@@ -397,7 +401,7 @@
    "reference": "2026 QCCM 49",
    "tribunal": "Cour municipale",
    "date": "2026-11-05",
-   "resume": "La cour municipale se prononce en matière d’immatriculation (plaque amovible « X »). Éléments retenus : conduite d’un véhicule muni d’une plaque d’une catégorie autre; usage réellement fait du véhicule contesté; infraction reprochée prouvée hors de tout doute raisonnable.",
+   "resume": "La cour municipale se prononce en matière d’immatriculation (plaque amovible « X »). Éléments de contexte : conduite d’un véhicule muni d’une plaque d’une catégorie autre; usage réellement fait du véhicule contesté; déclaration de culpabilité, amende et frais.",
    "url": "https://www.canlii.org/fr/qc/qccm/doc/2026/2026qccm49/2026qccm49.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCM 49",
@@ -408,7 +412,8 @@
    "dispositions": "Code de la sécurité routière, art. 54; Règlement sur l’immatriculation des véhicules routiers; Code de la sécurité routière, art. 10.2; Règlement sur l’immatriculation des véhicules routiers, art. 152 et 153; Code de procédure pénale, art. 64 et 66",
    "domaine": "penal",
    "route": true,
-   "resume_points": "Plaque amovible « X ». Conduite d’un véhicule muni d’une plaque d’une catégorie autre. Usage réellement fait du véhicule contesté. Infraction reprochée prouvée hors de tout doute raisonnable. Déclaration de culpabilité, amende et frais. Plaque « X ». Interprétation des fins de démonstration et de performance. Identification du conducteur. Rapport de police. Documents déposés en preuve sans contestation. Arrestation pour conduite avec facultés affaiblies, conductrice identifiée. Enquête policière relatée. Absence de preuve disculpatoire. Conclusion de fait retenue. Élément essentiel établi. Fardeau de preuve. Exceptions et autorisations. Document de prêt exigé par l’art. 153 non produit. Impossibilité alléguée pour la poursuite d’exclure les hypothèses de l’art. 152."
+   "faits": "La cour municipale se prononce en matière d’immatriculation (plaque amovible « X »). Éléments de contexte : conduite d’un véhicule muni d’une plaque d’une catégorie autre; usage réellement fait du véhicule contesté; déclaration de culpabilité, amende et frais.",
+   "motifs": "Infraction reprochée prouvée hors de tout doute raisonnable. Interprétation des fins de démonstration et de performance. Absence de preuve disculpatoire. Conclusion de fait retenue."
   },
   {
    "col": "decisions",
@@ -416,7 +421,7 @@
    "reference": "2026 QCCQ 6021",
    "tribunal": "Chambre de la jeunesse",
    "date": "2026-10-29",
-   "resume": "La Chambre de la jeunesse de la Cour du Québec se prononce en matière de LSJPA (maintien sous garde). Éléments retenus : LSJPA, art. 98(1) et 98(3); requête de la Directrice provinciale pour le reliquat de la peine; évaluation du risque à partir des propos et comportements en garde ouverte.",
+   "resume": "La Chambre de la jeunesse de la Cour du Québec se prononce en matière de LSJPA (maintien sous garde). Éléments de contexte : LSJPA, art. 98(1) et 98(3); requête de la Directrice provinciale pour le reliquat de la peine; évaluation du risque à partir des propos et comportements en garde ouverte.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq6021/2026qccq6021.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 6021",
@@ -427,7 +432,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Maintien sous garde. LSJPA, art. 98(1) et 98(3). Requête de la Directrice provinciale pour le reliquat de la peine. Évaluation du risque à partir des propos et comportements en garde ouverte. Surveillance dans la collectivité. LSJPA, art. 98(1) et 98(4). Facteurs de risque retenus, menaces récurrentes et gestes simulant une arme. Aucune mesure de surveillance jugée suffisante pour protéger le public. Norme de preuve. LSJPA, art. 98(3). Sens du terme « convaincu » dans l’analyse des motifs raisonnables. Fardeau élevé, sans être hors de tout doute raisonnable. Distinction entre croire et conclure à la perpétration. Exercice du pouvoir. Arguments de détournement de procédure écartés. La Cour refuse de considérer non pertinents les éléments liés à un déménagement en Espagne. Analyse centrée sur la sécurité du public et les facteurs de l’art. 98(4)."
+   "faits": "La Chambre de la jeunesse de la Cour du Québec se prononce en matière de LSJPA (maintien sous garde). Éléments de contexte : LSJPA, art. 98(1) et 98(3); requête de la Directrice provinciale pour le reliquat de la peine; évaluation du risque à partir des propos et comportements en garde ouverte.",
+   "motifs": "Facteurs de risque retenus, menaces récurrentes et gestes simulant une arme. Aucune mesure de surveillance jugée suffisante pour protéger le public. Sens du terme « convaincu » dans l’analyse des motifs raisonnables. Fardeau élevé, sans être hors de tout doute raisonnable. Jurisprudence appliquée : R. v. M.J; R. c. I.M."
   },
   {
    "col": "decisions",
@@ -435,7 +441,7 @@
    "reference": "2026 QCCQ 5483",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-10-27",
-   "resume": "La Cour du Québec se prononce en matière d’enquête préliminaire (tentative de meurtre). Éléments retenus : intention spécifique de tuer inférée des circonstances; coups répétés à la tête, acharnement malgré avertissements; preuve vidéo et reconnaissance.",
+   "resume": "La Cour du Québec se prononce en matière d’enquête préliminaire (tentative de meurtre). Éléments de contexte : intention spécifique de tuer inférée des circonstances; coups répétés à la tête, acharnement malgré avertissements; preuve vidéo et reconnaissance.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq5483/2026qccq5483.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 5483",
@@ -446,7 +452,8 @@
    "dispositions": "Code criminel, art. 239(1)b), art. 548; Code criminel, art. 548; Code criminel, art. 268",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Tentative de meurtre. Intention spécifique de tuer inférée des circonstances. Coups répétés à la tête, acharnement malgré avertissements. Preuve vidéo et reconnaissance. Images de caméras de surveillance, circulaire corporative. Reconnaissance par policiers, concordance habillement, casquette et chaussures. Convergence de preuve directe et circonstancielle. Critère de renvoi à procès. Distinction preuve directe et preuve circonstancielle. Inférences favorables à la poursuite si raisonnablement étayées. Voies de fait graves. Coups de poing et coups de pied à la tête, victime au sol. Blessures graves, vie mise en danger."
+   "faits": "La Cour du Québec se prononce en matière d’enquête préliminaire (tentative de meurtre). Éléments de contexte : intention spécifique de tuer inférée des circonstances; coups répétés à la tête, acharnement malgré avertissements; preuve vidéo et reconnaissance.",
+   "motifs": "Critère de renvoi à procès. Inférences favorables à la poursuite si raisonnablement étayées. Jurisprudence appliquée : R. c. Ancio; R. c. Seymour; R. c. Arcuri; R. c. Sazant."
   },
   {
    "col": "decisions",
@@ -454,7 +461,7 @@
    "reference": "2026 QCCQ 6020",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-10-26",
-   "resume": "La Cour du Québec se prononce en matière de détermination de la peine (agression sexuelle, enfant). Éléments retenus : peine proportionnelle à la gravité et au degré de responsabilité; matériel sexuellement explicite; exposition d’une personne de moins de 16 ans à une vidéo.",
+   "resume": "La Cour du Québec se prononce en matière de détermination de la peine (agression sexuelle, enfant). Éléments de contexte : matériel sexuellement explicite; exposition d’une personne de moins de 16 ans à une vidéo; peines concurrentes ou consécutives.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq6020/2026qccq6020.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 6020",
@@ -465,7 +472,8 @@
    "dispositions": "Code criminel, art. 271a), 718, 718.01, 718.1, 718.2a); Code criminel, art. 171.1(1)b)(2)a); Code criminel, art. 718.2a)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Agression sexuelle, enfant. Peine proportionnelle à la gravité et au degré de responsabilité. Matériel sexuellement explicite. Exposition d’une personne de moins de 16 ans à une vidéo. Peines concurrentes ou consécutives. Caractère continu des gestes. Vidéo montrée pour indiquer comment faire une fellation. Facteurs aggravants et atténuants. Abus de confiance, effet sur la victime. Mauvais traitement d’une personne âgée de moins de 18 ans, abus d’autorité. Profil incomplet sans rapport présentenciel ni évaluation sexologique."
+   "faits": "La Cour du Québec se prononce en matière de détermination de la peine (agression sexuelle, enfant). Éléments de contexte : matériel sexuellement explicite; exposition d’une personne de moins de 16 ans à une vidéo; peines concurrentes ou consécutives.",
+   "motifs": "Peine proportionnelle à la gravité et au degré de responsabilité. Facteurs aggravants et atténuants. Jurisprudence appliquée : R. c. Friesen; R. c. Chouinard; Desjardins c. R."
   },
   {
    "col": "decisions",
@@ -473,7 +481,7 @@
    "reference": "2026 QCCQ 6018",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-10-23",
-   "resume": "La Cour du Québec se prononce en matière d’infractions sexuelles (contacts sexuels (art. 151a) C.cr). Éléments retenus : toucher intentionnel, but sexuel; analyse de la preuve hors de tout doute raisonnable appliquée; déclaration de non-culpabilité.",
+   "resume": "La Cour du Québec se prononce en matière d’infractions sexuelles (contacts sexuels (art. 151a) C.cr). Éléments de contexte : toucher intentionnel, but sexuel; déclaration de non-culpabilité; agression sexuelle (art. 271(1)a) C.cr.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq6018/2026qccq6018.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 6018",
@@ -484,7 +492,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Contacts sexuels (art. 151a) C.cr. Toucher intentionnel, but sexuel. Analyse de la preuve hors de tout doute raisonnable appliquée. Déclaration de non-culpabilité. Agression sexuelle (art. 271(1)a) C.cr. Nature objectivement sexuelle, toucher et force. Doute raisonnable retenu. Appréciation de la preuve. Crédibilité et fiabilité. Contradictions et cumul des divergences. Soutien-gorge, absence d’ADN. Explications de l’experte sur le transfert cellulaire. Valeur probante limitée. La preuve ne confirme ni n’écarte les versions."
+   "faits": "La Cour du Québec se prononce en matière d’infractions sexuelles (contacts sexuels (art. 151a) C.cr). Éléments de contexte : toucher intentionnel, but sexuel; déclaration de non-culpabilité; agression sexuelle (art. 271(1)a) C.cr.",
+   "motifs": "Analyse de la preuve hors de tout doute raisonnable appliquée. Nature objectivement sexuelle, toucher et force. Doute raisonnable retenu. Appréciation de la preuve. Jurisprudence appliquée : R. c. W. (D.); R. c. Chase; R. c. R.V; R. c. Kruk."
   },
   {
    "col": "decisions",
@@ -492,7 +501,7 @@
    "reference": "2026 QCCQ 5894",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-10-23",
-   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (détention avant le procès, exception). Éléments retenus : présomption applicable à la première occasion; fardeau du poursuivant selon la prépondérance des probabilités; pondération des circonstances, accusation paraît fondée.",
+   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (détention avant le procès, exception). Éléments de contexte : présomption applicable à la première occasion; absence d’antécédents, délai entre événements et arrestation.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq5894/2026qccq5894.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 5894",
@@ -503,7 +512,8 @@
    "dispositions": "Art. 515(10) C.cr; Code criminel, art. 515(10)c); Code criminel, art. 515(10)b)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Mise en liberté provisoire. Détention avant le procès, exception. Présomption applicable à la première occasion. Fardeau du poursuivant selon la prépondérance des probabilités. Pondération des circonstances, accusation paraît fondée. Gravité et circonstances, longue peine. Analyse du profil, conduite postérieure. Absence d’antécédents, délai entre événements et arrestation. Référence aux critères de Rondeau."
+   "faits": "La Cour du Québec se prononce en matière de mise en liberté provisoire (détention avant le procès, exception). Éléments de contexte : présomption applicable à la première occasion; absence d’antécédents, délai entre événements et arrestation.",
+   "motifs": "Fardeau du poursuivant selon la prépondérance des probabilités. Pondération des circonstances, accusation paraît fondée. Gravité et circonstances, longue peine. Analyse du profil, conduite postérieure. Jurisprudence appliquée : R. c. Antic; R. c. St-Cloud; R. c. Myers et R. c. Morales; R. c. St-Cloud et R. c. Ishimwe."
   },
   {
    "col": "decisions",
@@ -511,7 +521,7 @@
    "reference": "2026 QCCS 4528",
    "tribunal": "Cour supérieure",
    "date": "2026-10-23",
-   "resume": "La Cour supérieure se prononce en matière de droits et libertés (non-publication). Éléments retenus : interrogatoires policiers enregistrés sur support audiovisuel; déclarations obtenues en contravention des al. 10a) et 10b) Charte; déclarations déclarées inadmissibles.",
+   "resume": "La Cour supérieure se prononce en matière de droits et libertés (non-publication). Éléments de contexte : interrogatoires policiers enregistrés sur support audiovisuel; déclarations obtenues en contravention des al. 10a) et 10b) Charte; déclarations déclarées inadmissibles.",
    "url": "https://www.canlii.org/fr/qc/qccs/doc/2026/2026qccs4528/2026qccs4528.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCS 4528",
@@ -522,7 +532,8 @@
    "dispositions": "Charte canadienne des droits et libertés; Art. 486.5, art. 648 Code criminel",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Droits et libertés. Interrogatoires policiers enregistrés sur support audiovisuel. Déclarations obtenues en contravention des al. 10a) et 10b) Charte. Déclarations déclarées inadmissibles. Règle des confessions. Allégations de ruse policière, oppression et état d’esprit conscient. Choix sélectif de répondre, atmosphère cordiale. Caractère libre et volontaire retenu. Information inadéquate, volet informationnel. Atteinte informationnelle retenue pour l’intervention du 24 mars. Violation établie en partie. Exercice utile du droit à l’avocat, déficit informationnel. Atteinte retenue pour l’arrestation du 25 mars."
+   "faits": "La Cour supérieure se prononce en matière de droits et libertés (non-publication). Éléments de contexte : interrogatoires policiers enregistrés sur support audiovisuel; déclarations obtenues en contravention des al. 10a) et 10b) Charte; déclarations déclarées inadmissibles.",
+   "motifs": "Caractère libre et volontaire retenu. Atteinte informationnelle retenue pour l’intervention du 24 mars. Violation établie en partie. Atteinte retenue pour l’arrestation du 25 mars. Jurisprudence appliquée : R. c. Oickle; Ibrahim v. The King; R. v. Roberts; R. c. Borden."
   },
   {
    "col": "decisions",
@@ -530,7 +541,7 @@
    "reference": "2026 QCCM 46",
    "tribunal": "Cour municipale",
    "date": "2026-10-19",
-   "resume": "La cour municipale se prononce en matière de droits et libertés (voir-dire constitutionnel). Éléments retenus : fardeau du requérant, prépondérance des probabilités; preuve déclarée admissible; contrainte psychologique considérable.",
+   "resume": "La cour municipale se prononce en matière de droits et libertés (voir-dire constitutionnel). Éléments de contexte : preuve déclarée admissible; moment de cristallisation de la détention lors du dépistage; fouilles, perquisitions et saisies.",
    "url": "https://www.canlii.org/fr/qc/qccm/doc/2026/2026qccm46/2026qccm46.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCM 46",
@@ -541,7 +552,8 @@
    "dispositions": "Charte canadienne des droits et libertés; Code criminel, art. 320.14(1)a), art. 320.14(1)b); Charte canadienne des droits et libertés, art. 7, art. 8, art. 9, art. 10a), art. 10b); Charte canadienne des droits et libertés, art. 9; Charte canadienne des droits et libertés, art. 8; Charte canadienne des droits et libertés, art. 10b)",
    "domaine": "criminel",
    "route": true,
-   "resume_points": "Droits et libertés. Fardeau du requérant, prépondérance des probabilités. Preuve déclarée admissible. Contrainte psychologique considérable. Moment de cristallisation de la détention lors du dépistage. Soupçons raisonnables retenus. Absence de détention arbitraire. Fouilles, perquisitions et saisies. Demande de souffler vers le visage. Indices perçus par l’odorat, absence de contrainte physique. Atteinte non établie. Droits lors de l’arrestation ou de la détention. Assistance d’un avocat. Suspension temporaire du droit à l’avocat au dépistage. Consultation confidentielle facilitée après l’arrestation."
+   "faits": "La cour municipale se prononce en matière de droits et libertés (voir-dire constitutionnel). Éléments de contexte : preuve déclarée admissible; moment de cristallisation de la détention lors du dépistage; fouilles, perquisitions et saisies.",
+   "motifs": "Fardeau du requérant, prépondérance des probabilités. Contrainte psychologique considérable. Soupçons raisonnables retenus. Absence de détention arbitraire. Jurisprudence appliquée : R. c. Grant; R. c. Le; R. c. Milette; R. c. Kawkab."
   },
   {
    "col": "decisions",
@@ -549,7 +561,7 @@
    "reference": "2026 QCCS 4514",
    "tribunal": "Cour supérieure",
    "date": "2026-10-09",
-   "resume": "La Cour supérieure se prononce en matière de détermination de la peine (meurtre au deuxième degré). Éléments retenus : état de santé du contrevenant; individualisation de la peine; séquelles après incendie en détention.",
+   "resume": "La Cour supérieure se prononce en matière de détermination de la peine (meurtre au deuxième degré). Éléments de contexte : état de santé du contrevenant; individualisation de la peine; séquelles après incendie en détention.",
    "url": "https://www.canlii.org/fr/qc/qccs/doc/2026/2026qccs4514/2026qccs4514.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCS 4514",
@@ -560,7 +572,8 @@
    "dispositions": "Code criminel, art. 235, 745c) et 745.4; Art. 718 et 718.2 du Code criminel",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Meurtre au deuxième degré. État de santé du contrevenant. Individualisation de la peine. Séquelles après incendie en détention. Situation personnelle pertinente sans allégement exceptionnel. Facteur non déterminant retenu."
+   "faits": "La Cour supérieure se prononce en matière de détermination de la peine (meurtre au deuxième degré). Éléments de contexte : état de santé du contrevenant; individualisation de la peine; séquelles après incendie en détention.",
+   "motifs": "Facteur non déterminant retenu. Jurisprudence appliquée : R. c. Shropshire; R. c. Lacasse; R. c. Bissonnette; R. c. Suter."
   },
   {
    "col": "decisions",
@@ -568,7 +581,7 @@
    "reference": "2026 QCCQ 6217",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-10-08",
-   "resume": "La Cour du Québec se prononce en matière de peine (fixation d’une amende proportionnelle, dénonciation et dissuasion). Éléments retenus : pensions et prestations sociales; capacité de payer et détermination de l’amende; appréciation du budget et de la crédibilité du défendeur.",
+   "resume": "La Cour du Québec se prononce en matière de peine (fixation d’une amende proportionnelle, dénonciation et dissuasion). Éléments de contexte : pensions et prestations sociales; capacité de payer et détermination de l’amende; cumul des peines.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq6217/2026qccq6217.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 6217",
@@ -579,7 +592,8 @@
    "dispositions": "Loi sur les pêches; Code criminel, art. 718; Loi d’interprétation, art. 34(2)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Fixation d’une amende proportionnelle, dénonciation et dissuasion. Pensions et prestations sociales. Capacité de payer et détermination de l’amende. Appréciation du budget et de la crédibilité du défendeur. Possibilité de travaux compensatoires considérée. Cumul des peines. Démembrement d’une seule activité en plusieurs infractions. Peines concurrentes envisagées, Code criminel, art. 718.3(4)b)(i). Amende globale ajustée, Totalité des peines modulée. Facteurs de détermination. Antécédent et plaidoyer. Plaidoyer de culpabilité à la première occasion comme facteur atténuant. Antécédent de pêche illégale comme facteur aggravant. Mise en balance de la responsabilité du contrevenant."
+   "faits": "La Cour du Québec se prononce en matière de peine (fixation d’une amende proportionnelle, dénonciation et dissuasion). Éléments de contexte : pensions et prestations sociales; capacité de payer et détermination de l’amende; cumul des peines.",
+   "motifs": "Fixation d’une amende proportionnelle, dénonciation et dissuasion. Appréciation du budget et de la crédibilité du défendeur. Possibilité de travaux compensatoires considérée. Facteurs de détermination. Jurisprudence appliquée : R. c. Friesen; R. c. Ipeelee; R. c. Bertrand Marchand; R. c. Lacasse cité sur la fréquence régionale."
   },
   {
    "col": "decisions",
@@ -587,7 +601,7 @@
    "reference": "2026 QCCS 4290",
    "tribunal": "Cour supérieure",
    "date": "2026-10-02",
-   "resume": "La Cour supérieure se prononce en matière de preuve (admissibilité). Éléments retenus : vidéo de 13 secondes, activité de nature sexuelle; conditions de l’art. 276(2) examinées à deux étapes; directives au jury et production sous scellés considérées. « Deux mythes ».",
+   "resume": "La Cour supérieure se prononce en matière de preuve (admissibilité). Éléments de contexte : vidéo de 13 secondes, activité de nature sexuelle; conditions de l’art. 276(2) examinées à deux étapes; « Deux mythes ».",
    "url": "https://www.canlii.org/fr/qc/qccs/doc/2026/2026qccs4290/2026qccs4290.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCS 4290",
@@ -598,7 +612,8 @@
    "dispositions": "Code criminel, art. 276, art. 278.92; Code criminel, art. 276(1), art. 276(2); Code criminel, art. 278.93(2), art. 278.93(4), art. 278.94; Code criminel, art. 278.1, art. 278.92(2)a), art. 276; Code criminel, art. 276(2)d), art. 276(3)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Vidéo de 13 secondes, activité de nature sexuelle. Conditions de l’art. 276(2) examinées à deux étapes. Directives au jury et production sous scellés considérées. « Deux mythes ». Vidéo sur balcon, autres activités sexuelles. Procédure en deux étapes. Examen prima facie, « possibilités » d’admissibilité. Exigences de forme et contenu respectées. Dossier relatif à un plaignant. Interaction des régimes. Notion de « dossier » interprétée largement. Régime de l’art. 276 retenu. Valeur probante et effet préjudiciable. Mise en balance. Courte durée de la vidéo, pertinence contestée."
+   "faits": "La Cour supérieure se prononce en matière de preuve (admissibilité). Éléments de contexte : vidéo de 13 secondes, activité de nature sexuelle; conditions de l’art. 276(2) examinées à deux étapes; « Deux mythes ».",
+   "motifs": "Directives au jury et production sous scellés considérées. Exigences de forme et contenu respectées. Régime de l’art. 276 retenu. Jurisprudence appliquée : R. c. Darrach; R. c. Goldfinch; R. c. T.W.W. appliqués; R. c. J.J."
   },
   {
    "col": "decisions",
@@ -606,7 +621,7 @@
    "reference": "2026 QCCQ 6079",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-09-29",
-   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (ordonnance de mise en liberté antérieure, défaut de comparaître). Éléments retenus : infractions d’armes à feu et ordonnance d’interdiction invoquées; détention avant procès; sécurité du public.",
+   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (ordonnance de mise en liberté antérieure, défaut de comparaître). Éléments de contexte : infractions d’armes à feu et ordonnance d’interdiction invoquées; détention avant procès; sécurité du public.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq6079/2026qccq6079.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 6079",
@@ -617,7 +632,8 @@
    "dispositions": "Code criminel, art. 515(6); Code criminel, al. 515(10)b); Code criminel, al. 515(10)c); Charte canadienne des droits et libertés; Charte canadienne des droits et libertés, art. 11d) et 11e)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Mise en liberté provisoire. Ordonnance de mise en liberté antérieure, défaut de comparaître. Infractions d’armes à feu et ordonnance d’interdiction invoquées. Détention avant procès. Sécurité du public. Probabilité de dangerosité, mise en balance des facteurs. Crédibilité jugée faible, confiance absente. Confiance du public. Gravité objective et subjective, circonstances de l’affaire. Participation et possession conjointe alléguées. Mise en liberté sous caution."
+   "faits": "La Cour du Québec se prononce en matière de mise en liberté provisoire (ordonnance de mise en liberté antérieure, défaut de comparaître). Éléments de contexte : infractions d’armes à feu et ordonnance d’interdiction invoquées; détention avant procès; sécurité du public.",
+   "motifs": "Probabilité de dangerosité, mise en balance des facteurs. Crédibilité jugée faible, confiance absente. Gravité objective et subjective, circonstances de l’affaire. Jurisprudence appliquée : R. c. Rondeau; R. c. St-Cloud; R. c. Pearson; R. c. Morales."
   },
   {
    "col": "decisions",
@@ -625,7 +641,7 @@
    "reference": "2026 QCCM 51",
    "tribunal": "Cour municipale",
    "date": "2026-09-29",
-   "resume": "La cour municipale se prononce en matière d’infractions municipales (démolition sans autorisation). Éléments retenus : travaux exécutés au-delà du permis; murs extérieurs « pratiquement plus là »; démolition reprochée sans autorisation du conseil municipal.",
+   "resume": "La cour municipale se prononce en matière d’infractions municipales (démolition sans autorisation). Éléments de contexte : travaux exécutés au-delà du permis; murs extérieurs « pratiquement plus là »; démolition reprochée sans autorisation du conseil municipal.",
    "url": "https://www.canlii.org/fr/qc/qccm/doc/2026/2026qccm51/2026qccm51.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCM 51",
@@ -636,7 +652,8 @@
    "dispositions": "Règlement sur la démolition d’immeubles 1003, art. 6; Règlement sur la démolition d’immeubles 1003, art. 3 et 6",
    "domaine": "penal",
    "route": false,
-   "resume_points": "Démolition sans autorisation. Travaux exécutés au-delà du permis. Murs extérieurs « pratiquement plus là ». Démolition reprochée sans autorisation du conseil municipal. Constat d’infraction après inspection. Interprétation d’un règlement municipal. Définition de « démolition ». Seuil de 33 %. Sens de « superficie » et « murs ». Interprétation défavorable à l’évitement du règlement, Culpabilité retenue. Calcul du pourcentage de démolition. Rapports d’expert contradictoires. Montants 2x4 conservés, fonction structurelle. Ouvertures non murées. Appréciation des photos et inspections. Preuve jugée suffisante, Culpabilité prononcée. Moyens de défense. Diligence raisonnable et impossibilité."
+   "faits": "La cour municipale se prononce en matière d’infractions municipales (démolition sans autorisation). Éléments de contexte : travaux exécutés au-delà du permis; murs extérieurs « pratiquement plus là »; démolition reprochée sans autorisation du conseil municipal.",
+   "motifs": "Interprétation d’un règlement municipal. Interprétation défavorable à l’évitement du règlement, Culpabilité retenue. Appréciation des photos et inspections. Preuve jugée suffisante, Culpabilité prononcée. Jurisprudence appliquée : Beaconsfield c. Shaikh; Céré c. Directeur des poursuites criminelles et pénales."
   },
   {
    "col": "decisions",
@@ -644,7 +661,7 @@
    "reference": "2026 QCCS 4529",
    "tribunal": "Cour supérieure",
    "date": "2026-09-22",
-   "resume": "La Cour supérieure se prononce en matière de peine (meurtre au deuxième degré). Éléments retenus : fixation du délai d’inadmissibilité à la libération conditionnelle entre dix et vingt-cinq ans; jury sans recommandation, art. 745.4; emprisonnement à perpétuité assorti d’un délai de quinze ans.",
+   "resume": "La Cour supérieure se prononce en matière de peine (meurtre au deuxième degré). Éléments de contexte : fixation du délai d’inadmissibilité à la libération conditionnelle entre dix et vingt-cinq ans; jury sans recommandation, art. 745.4; emprisonnement à perpétuité assorti d’un délai de quinze ans.",
    "url": "https://www.canlii.org/fr/qc/qccs/doc/2026/2026qccs4529/2026qccs4529.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCS 4529",
@@ -655,7 +672,8 @@
    "dispositions": "Code criminel, art. 235 et 745 c); Code criminel, art. 718; Code criminel, art. 718.2 a) (ii)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Meurtre au deuxième degré. Fixation du délai d’inadmissibilité à la libération conditionnelle entre dix et vingt-cinq ans. Jury sans recommandation, art. 745.4. Emprisonnement à perpétuité assorti d’un délai de quinze ans. Objectif de protection de la société, dénonciation et dissuasion. Facteurs aggravants et atténuants. Brutalité de l’attaque, vulnérabilité de la victime. Absence de secours et comportement postérieur. Antécédents judiciaires, troubles de consommation. Fardeau de preuve. Faits essentiels compatibles avec le verdict du jury. Preuve additionnelle possible lors de la procédure de détermination de la peine."
+   "faits": "La Cour supérieure se prononce en matière de peine (meurtre au deuxième degré). Éléments de contexte : fixation du délai d’inadmissibilité à la libération conditionnelle entre dix et vingt-cinq ans; jury sans recommandation, art. 745.4; emprisonnement à perpétuité assorti d’un délai de quinze ans.",
+   "motifs": "Facteurs aggravants et atténuants. Absence de secours et comportement postérieur. Fardeau de preuve. Jurisprudence appliquée : R. c. Lacasse; R. c. Bissonnette; R. c. Shropshire; R. c. Ferguson."
   },
   {
    "col": "decisions",
@@ -663,7 +681,7 @@
    "reference": "2026 QCCQ 5906",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-09-11",
-   "resume": "La Cour du Québec se prononce en matière d’infractions d’ordre sexuel (appréciation de la preuve). Éléments retenus : fiabilité des plaignantes contestée, incohérences relevées; pressions alléguées lors des démarches de plainte; verbalisations à un proche.",
+   "resume": "La Cour du Québec se prononce en matière d’infractions d’ordre sexuel (appréciation de la preuve). Éléments de contexte : fiabilité des plaignantes contestée, incohérences relevées; pressions alléguées lors des démarches de plainte; verbalisations à un proche.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq5906/2026qccq5906.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 5906",
@@ -674,7 +692,8 @@
    "dispositions": "Code criminel, art. 151, art. 152, art. 271",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Infractions d’ordre sexuel. Appréciation de la preuve. Fiabilité des plaignantes contestée, incohérences relevées. Pressions alléguées lors des démarches de plainte. Verbalisations à un proche. Objection de la défense aux témoignages des mères. Utilisation admise pour crédibilité et fiabilité. Collusion et mémoire recouvrée invoquées en défense. Position du poursuivant retenue. Preuve déclarée admissible. Preuve de propension. Air of reality de collusion et contamination."
+   "faits": "La Cour du Québec se prononce en matière d’infractions d’ordre sexuel (appréciation de la preuve). Éléments de contexte : fiabilité des plaignantes contestée, incohérences relevées; pressions alléguées lors des démarches de plainte; verbalisations à un proche.",
+   "motifs": "Appréciation de la preuve. Utilisation admise pour crédibilité et fiabilité. Position du poursuivant retenue. Jurisprudence appliquée : R. c. W.(D.) appliqué; R. c. Handy; R. c. Shearing; Nguyen c. R."
   },
   {
    "col": "decisions",
@@ -682,7 +701,7 @@
    "reference": "2026 QCCA 1088",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-08-06",
-   "resume": "La Cour d'appel du Québec se prononce en matière de fraude (appel criminel). Éléments retenus : verdict de culpabilité pour fraude d’une valeur de plus de 5 000 $; procès devant juge et jury; permission d’appeler de la sentence déférée à la formation au fond.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de fraude (appel criminel). Éléments de contexte : verdict de culpabilité pour fraude d’une valeur de plus de 5 000 $; procès devant juge et jury; permission d’appeler de la sentence déférée à la formation au fond.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1088/2026qcca1088.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1088",
@@ -693,7 +712,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Verdict de culpabilité pour fraude d’une valeur de plus de 5 000 $. Procès devant juge et jury. Permission d’appeler de la sentence déférée à la formation au fond. Pouvoirs de la Cour définis et limités par la loi. Absence de disposition législative habilitante. Suspension du verdict et de la sentence. Demande visant aussi les conséquences d’expulsion. Pouvoirs de la Cour jugés limités. Citoyenneté et immigration. Mesures de renvoi. Suspension des procédures d’expulsion. Conclusions relatives au renvoi jugées hors compétence. Lien allégué avec le casier judiciaire. Demande fondée sur l’art. 31 R.C.a.Q.m.c. Obligation de l’appelant d’obtenir et produire les transcriptions."
+   "faits": "La Cour d'appel du Québec se prononce en matière de fraude (appel criminel). Éléments de contexte : verdict de culpabilité pour fraude d’une valeur de plus de 5 000 $; procès devant juge et jury; permission d’appeler de la sentence déférée à la formation au fond.",
+   "motifs": "Absence de disposition législative habilitante. Conclusions relatives au renvoi jugées hors compétence. Lien allégué avec le casier judiciaire. Jurisprudence appliquée : Krela c. Orthosoft Inc."
   },
   {
    "col": "decisions",
@@ -701,7 +721,7 @@
    "reference": "2026 QCCQ 6216",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-06-12",
-   "resume": "La Cour du Québec se prononce en matière d’agression sexuelle (actus reus, consentement). Éléments retenus : capacité de consentir, alcool et endormissement; absence de consentement retenue, Actus reus établi; mens rea, croyance sincère mais erronée.",
+   "resume": "La Cour du Québec se prononce en matière d’agression sexuelle (actus reus, consentement). Éléments de contexte : capacité de consentir, alcool et endormissement; mens rea, croyance sincère mais erronée.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq6216/2026qccq6216.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 6216",
@@ -712,7 +732,8 @@
    "dispositions": "Code criminel, art. 486.4; Code criminel, art. 273.2",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Actus reus, consentement. Capacité de consentir, alcool et endormissement. Absence de consentement retenue, Actus reus établi. Mens rea, croyance sincère mais erronée. Mesures raisonnables, insouciance et aveuglement volontaire."
+   "faits": "La Cour du Québec se prononce en matière d’agression sexuelle (actus reus, consentement). Éléments de contexte : capacité de consentir, alcool et endormissement; mens rea, croyance sincère mais erronée.",
+   "motifs": "Absence de consentement retenue, Actus reus établi. Mesures raisonnables, insouciance et aveuglement volontaire. Jurisprudence appliquée : R. c. G. F; R. c. Rioux; R. c. Ewanchuk; R. c. Barton."
   },
   {
    "col": "decisions",
@@ -720,7 +741,7 @@
    "reference": "2026 QCCS 4530",
    "tribunal": "Cour supérieure",
    "date": "2026-04-30",
-   "resume": "La Cour supérieure se prononce en matière de procès devant jury (meurtre au deuxième degré). Éléments retenus : requête de type Corbett; contre-interrogatoire de l’accusé; risque de culpabilité par propension.",
+   "resume": "La Cour supérieure se prononce en matière de procès devant jury (meurtre au deuxième degré). Éléments de contexte : requête de type Corbett; contre-interrogatoire de l’accusé; risque de culpabilité par propension.",
    "url": "https://www.canlii.org/fr/qc/qccs/doc/2026/2026qccs4530/2026qccs4530.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCS 4530",
@@ -731,7 +752,8 @@
    "dispositions": "Loi sur la preuve au Canada, art. 12(1)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Procès devant jury. Meurtre au deuxième degré. Requête de type Corbett. Contre-interrogatoire de l’accusé. Risque de culpabilité par propension. Valeur probante insuffisante. Valeur probante et effet préjudiciable. Critère de proximité. Absence de proximité et vie ultérieure examinées. Inférence de crédibilité affaiblie avec le temps. Risque de verser dans la propension. Crimes de malhonnêteté et infractions contre l’administration de la justice. Valeur probante insuffisante au regard du préjudice moral."
+   "faits": "La Cour supérieure se prononce en matière de procès devant jury (meurtre au deuxième degré). Éléments de contexte : requête de type Corbett; contre-interrogatoire de l’accusé; risque de culpabilité par propension.",
+   "motifs": "Valeur probante insuffisante. Critère de proximité. Absence de proximité et vie ultérieure examinées. Inférence de crédibilité affaiblie avec le temps. Jurisprudence appliquée : R. c. Corbett; R. c. Hussein."
   },
   {
    "col": "decisions",
@@ -739,7 +761,7 @@
    "reference": "2026 QCCQ 6213",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-04-29",
-   "resume": "La Cour du Québec se prononce en matière de détermination de la peine (enlèvement parental, méfait public). Éléments retenus : facteurs aggravants et atténuants; vulnérabilité de la victime et fausses déclarations; ordonnance de non-publication, Code criminel, art. 486.4(1).",
+   "resume": "La Cour du Québec se prononce en matière de détermination de la peine (enlèvement parental, méfait public). Éléments de contexte : vulnérabilité de la victime et fausses déclarations; ordonnance de non-publication, Code criminel, art. 486.4(1); dénonciation et dissuasion jugées prioritaires.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq6213/2026qccq6213.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 6213",
@@ -750,7 +772,8 @@
    "dispositions": "Code criminel, al. 280(1)a); Code criminel, al. 140(1)b) et 140(2)a); Code criminel, art. 742.1; Code criminel, art. 718 à 718.2; Code criminel, al. 718.2c); Code criminel, al. 725(1)c)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Enlèvement parental, méfait public. Facteurs aggravants et atténuants. Vulnérabilité de la victime et fausses déclarations. Ordonnance de non-publication, Code criminel, art. 486.4(1). Dénonciation et dissuasion jugées prioritaires. Peines concurrentes ou consécutives. Principe de totalité. Intérêts sociétaux différents retenus. Peine globale prononcée. Renseignements sur le délinquant. Pertinence reconnue pour le « caractère »."
+   "faits": "La Cour du Québec se prononce en matière de détermination de la peine (enlèvement parental, méfait public). Éléments de contexte : vulnérabilité de la victime et fausses déclarations; ordonnance de non-publication, Code criminel, art. 486.4(1); dénonciation et dissuasion jugées prioritaires.",
+   "motifs": "Facteurs aggravants et atténuants. Principe de totalité. Intérêts sociétaux différents retenus. Jurisprudence appliquée : R. c. Proulx; R. c. Aoun; R. c. Sendel; R. c. Vaillancourt."
   },
   {
    "col": "decisions",
@@ -758,7 +781,7 @@
    "reference": "2026 QCCQ 6215",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-03-31",
-   "resume": "La Cour du Québec se prononce en matière de détermination de la peine (violence conjugale). Éléments retenus : harcèlement criminel et voies de fait; pondération dénonciation, dissuasion et réhabilitation; conséquences liées au casier judiciaire alléguées.",
+   "resume": "La Cour du Québec se prononce en matière de détermination de la peine (violence conjugale). Éléments de contexte : harcèlement criminel et voies de fait; conséquences liées au casier judiciaire alléguées; violence conjugale, partenaire intime.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2026/2026qccq6215/2026qccq6215.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 6215",
@@ -769,7 +792,8 @@
    "dispositions": "Code criminel, art. 718, 718.1, 718.2a), 718.201; Code criminel, art. 730; Code criminel, art. 718.04, 718.201; Code criminel, art. 718.2d)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Harcèlement criminel et voies de fait. Pondération dénonciation, dissuasion et réhabilitation. Conséquences liées au casier judiciaire alléguées. Fardeau de démonstration du contrevenant. Violence conjugale, partenaire intime. Confiance du public dans le système judiciaire. Examen des peines autres que privatives de liberté. Suivi thérapeutique, travaux communautaires et conditions de non-communication."
+   "faits": "La Cour du Québec se prononce en matière de détermination de la peine (violence conjugale). Éléments de contexte : harcèlement criminel et voies de fait; conséquences liées au casier judiciaire alléguées; violence conjugale, partenaire intime.",
+   "motifs": "Pondération dénonciation, dissuasion et réhabilitation. Fardeau de démonstration du contrevenant. Jurisprudence appliquée : Lévesque c. R; Rozon c. La Reine; Sadak c. R; R. c. Davidson."
   },
   {
    "col": "decisions",
@@ -777,7 +801,7 @@
    "reference": "2025 QCCS 4462",
    "tribunal": "Cour supérieure",
    "date": "2025-09-26",
-   "resume": "La Cour supérieure se prononce en matière de mise en liberté provisoire (révision de l’ordonnance de détention (Code criminel, art. 520)). Éléments retenus : accusation de tentative de meurtre (Code criminel, al. 239(1)b)); détention nécessaire pour la protection et la sécurité du public (Code criminel, al. 515(10)b)); critères pertinence, diligence, plausibilité, influence raisonnable.",
+   "resume": "La Cour supérieure se prononce en matière de mise en liberté provisoire (révision de l’ordonnance de détention (Code criminel, art. 520)). Éléments de contexte : accusation de tentative de meurtre (Code criminel, al. 239(1)b)); ouï-dire, preuve préconstituée; incompatibilité avec les caméras de surveillance.",
    "url": "https://www.canlii.org/fr/qc/qccs/doc/2025/2025qccs4462/2025qccs4462.html",
    "source": "CanLII",
    "id": "decisions:2025 QCCS 4462",
@@ -786,9 +810,10 @@
    "questions": "La preuve nouvelle est-elle plausible et admissible? Le Tribunal peut-il reprendre l’analyse sans preuve nouvelle admissible? Le maintien en détention mine-t-il la confiance du public?",
    "resultat": "Requête en révision rejetée; Requête rejetée; Exercice refusé",
    "dispositions": "",
-   "resume_points": "Mise en liberté provisoire. Révision de l’ordonnance de détention (Code criminel, art. 520). Accusation de tentative de meurtre (Code criminel, al. 239(1)b)). Détention nécessaire pour la protection et la sécurité du public (Code criminel, al. 515(10)b)). Critères pertinence, diligence, plausibilité, influence raisonnable. Ouï-dire, preuve préconstituée. Incompatibilité avec les caméras de surveillance. Pouvoir de révision. Conditions d’intervention, erreur de droit ou décision manifestement inappropriée. Pouvoir limité rappelé. Confiance du public envers l’administration de la justice. Durée de la détention provisoire, procès à venir. Crédit de détention provisoire considéré. Gravité de l’infraction, casier judiciaire.",
    "domaine": "criminel",
-   "route": false
+   "route": false,
+   "faits": "La Cour supérieure se prononce en matière de mise en liberté provisoire (révision de l’ordonnance de détention (Code criminel, art. 520)). Éléments de contexte : accusation de tentative de meurtre (Code criminel, al. 239(1)b)); ouï-dire, preuve préconstituée; incompatibilité avec les caméras de surveillance.",
+   "motifs": "Détention nécessaire pour la protection et la sécurité du public (Code criminel, al. 515(10)b)). Critères pertinence, diligence, plausibilité, influence raisonnable. Conditions d’intervention, erreur de droit ou décision manifestement inappropriée. Crédit de détention provisoire considéré. Jurisprudence appliquée : R. c. Sylvain; Antonelli c. R.)."
   },
   {
    "col": "decisions",
@@ -796,7 +821,7 @@
    "reference": "2025 QCCS 1815",
    "tribunal": "Cour supérieure",
    "date": "2025-06-03",
-   "resume": "La Cour supérieure se prononce en matière de recours extraordinaires (certiorari). Éléments retenus : requête du poursuivant contre une décision ordonnant une enquête préliminaire; ordonnance de non-publication, art. 486.4 C.cr; intervention d’une cour supérieure dans une instance criminelle en cours.",
+   "resume": "La Cour supérieure se prononce en matière de recours extraordinaires (certiorari). Éléments de contexte : requête du poursuivant contre une décision ordonnant une enquête préliminaire; ordonnance de non-publication, art. 486.4 C.cr; intervention d’une cour supérieure dans une instance criminelle en cours.",
    "url": "https://www.canlii.org/fr/qc/qccs/doc/2025/2025qccs1815/2025qccs1815.html",
    "source": "CanLII",
    "id": "decisions:2025 QCCS 1815",
@@ -805,9 +830,10 @@
    "questions": "Une enquête préliminaire déjà débutée peut-elle se poursuivre malgré l’interprétation confirmant l’absence de compétence? Le certiorari peut-il être exercé avant ou pendant le procès en présence d’une erreur juridictionnelle?",
    "resultat": "Requête en certiorari accueillie; Décision cassée; Requête accueillie",
    "dispositions": "Code criminel, art. 535; Code criminel",
-   "resume_points": "Requête du poursuivant contre une décision ordonnant une enquête préliminaire. Ordonnance de non-publication, art. 486.4 C.cr. Intervention d’une cour supérieure dans une instance criminelle en cours. Compétence du juge de la Cour du Québec contestée. Projet de loi C-75. Application de l’interprétation de la « majorité » dans Archambault. Contrôle judiciaire en matière criminelle. Erreur de compétence. Norme de la décision correcte pour la question de compétence. Instance criminelle non fragmentée sauf exceptions limitées. Application immédiate de la jurisprudence.",
    "domaine": "criminel",
-   "route": false
+   "route": false,
+   "faits": "La Cour supérieure se prononce en matière de recours extraordinaires (certiorari). Éléments de contexte : requête du poursuivant contre une décision ordonnant une enquête préliminaire; ordonnance de non-publication, art. 486.4 C.cr; intervention d’une cour supérieure dans une instance criminelle en cours.",
+   "motifs": "Application de l’interprétation de la « majorité » dans Archambault. Erreur de compétence. Application immédiate de la jurisprudence. Jurisprudence appliquée : R. c. Archambault; Bessette c. Colombie-Britannique (Procureur général); R. c. Awashish; Colombie-Britannique c. Imperial Tobacco Canada Ltée."
   },
   {
    "col": "decisions",
@@ -815,7 +841,7 @@
    "reference": "2024 QCCS 4900",
    "tribunal": "Cour supérieure",
    "date": "2024-12-18",
-   "resume": "La Cour supérieure se prononce en matière de mise en liberté provisoire (motifs de détention). Éléments retenus : meurtre au deuxième degré, incendie criminel; confiance du public en l’administration de la justice; conditions et plan de sortie.",
+   "resume": "La Cour supérieure se prononce en matière de mise en liberté provisoire (motifs de détention). Éléments de contexte : meurtre au deuxième degré, incendie criminel; confiance du public en l’administration de la justice; conditions et plan de sortie.",
    "url": "https://www.canlii.org/fr/qc/qccs/doc/2024/2024qccs4900/2024qccs4900.html",
    "source": "CanLII",
    "id": "decisions:2024 QCCS 4900",
@@ -824,9 +850,10 @@
    "questions": "La détention est-elle nécessaire pour la protection ou la sécurité du public? Le plan de sortie permet-il d’atténuer adéquatement les risques identifiés? La probabilité d’une condamnation influence-t-elle l’analyse des motifs de détention?",
    "resultat": "Requête rejetée; Mise en liberté refusée; Probabilité de condamnation; Possibilité raisonnable de condamnation discutée; Détention maintenue",
    "dispositions": "Code criminel, art. 522, art. 515(10); Code criminel, art. 522",
-   "resume_points": "Mise en liberté provisoire. Motifs de détention. Meurtre au deuxième degré, incendie criminel. Confiance du public en l’administration de la justice. Conditions et plan de sortie. Caution, assignation à résidence. Garantie financière, surveillance proposée. Suivi probatoire, limites de la supervision. Conditions jugées insuffisantes. Force de la preuve. Preuve circonstancielle, identification. Déclaration aux services correctionnels, admissibilité mise en doute. Règles de preuve plus flexibles.",
    "domaine": "criminel",
-   "route": false
+   "route": false,
+   "faits": "La Cour supérieure se prononce en matière de mise en liberté provisoire (motifs de détention). Éléments de contexte : meurtre au deuxième degré, incendie criminel; confiance du public en l’administration de la justice; conditions et plan de sortie.",
+   "motifs": "Conditions jugées insuffisantes. Déclaration aux services correctionnels, admissibilité mise en doute. Jurisprudence appliquée : R. c. St-Cloud; R. c. Rondeau; R. c. Zora."
   },
   {
    "col": "decisions",
@@ -834,7 +861,7 @@
    "reference": "2023 QCCQ 9155",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2023-11-20",
-   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (motifs de détention). Éléments retenus : probabilité marquée, risque d’infraction ou de nuire à l’administration de la justice; confiance du public; accusation paraît fondée, gravité et circonstances évaluées.",
+   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (motifs de détention). Éléments de contexte : probabilité marquée, risque d’infraction ou de nuire à l’administration de la justice; confiance du public; enquête sur mise en liberté.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2023/2023qccq9155/2023qccq9155.html",
    "source": "CanLII",
    "id": "decisions:2023 QCCQ 9155",
@@ -845,7 +872,8 @@
    "dispositions": "Code criminel, art. 515(10)b); Code criminel, art. 515(10)c); Charte canadienne des droits et libertés; Code criminel, art. 493.1",
    "domaine": "criminel",
    "route": true,
-   "resume_points": "Mise en liberté provisoire. Motifs de détention. Probabilité marquée, risque d’infraction ou de nuire à l’administration de la justice. Confiance du public. Accusation paraît fondée, gravité et circonstances évaluées. Enquête sur mise en liberté. Qualité de la preuve. Relâchement des règles de preuve, ouï-dire admissible. Droits et libertés. Principe de la retenue, conditions les moins sévères possibles."
+   "faits": "La Cour du Québec se prononce en matière de mise en liberté provisoire (motifs de détention). Éléments de contexte : probabilité marquée, risque d’infraction ou de nuire à l’administration de la justice; confiance du public; enquête sur mise en liberté.",
+   "motifs": "Accusation paraît fondée, gravité et circonstances évaluées. Principe de la retenue, conditions les moins sévères possibles. Jurisprudence appliquée : Reine c. Rondeau; Reine c. St-Cloud; Reine c. Creighton."
   },
   {
    "col": "decisions",
@@ -853,7 +881,7 @@
    "reference": "2023 QCCQ 10488",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2023-07-24",
-   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (détention). Éléments retenus : deuxième et troisième motifs du par. 515(10) C.cr; bénéfice de la mise en liberté comme règle; omission dans la dénonciation, prévenu non visé par les chefs.",
+   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (détention). Éléments de contexte : deuxième et troisième motifs du par. 515(10) C.cr; bénéfice de la mise en liberté comme règle; omission dans la dénonciation, prévenu non visé par les chefs.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2023/2023qccq10488/2023qccq10488.html",
    "source": "CanLII",
    "id": "decisions:2023 QCCQ 10488",
@@ -864,7 +892,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Mise en liberté provisoire. Deuxième et troisième motifs du par. 515(10) C.cr. Bénéfice de la mise en liberté comme règle. Omission dans la dénonciation, prévenu non visé par les chefs. Détention illégale alléguée. Nouvelle dénonciation assermentée et correctifs nécessaires. Réouverture de l’enquête sur mise en liberté pour inclure la nouvelle dénonciation. Régularisation admise par les parties. Enquête rouverte, situation régularisée. Garanties proposées par la garante jugées insuffisantes. Capacité de surveillance et d’ascendant remise en cause. Gravité d’une arme de poing en milieu urbain."
+   "faits": "La Cour du Québec se prononce en matière de mise en liberté provisoire (détention). Éléments de contexte : deuxième et troisième motifs du par. 515(10) C.cr; bénéfice de la mise en liberté comme règle; omission dans la dénonciation, prévenu non visé par les chefs.",
+   "motifs": "Nouvelle dénonciation assermentée et correctifs nécessaires. Garanties proposées par la garante jugées insuffisantes. Gravité d’une arme de poing en milieu urbain. Jurisprudence appliquée : R. c. Antic; R. c. Kadoura; R. c. Rondeau; R. c. St-Cloud."
   },
   {
    "col": "decisions",
@@ -872,7 +901,7 @@
    "reference": "2023 QCCQ 4661",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2023-07-07",
-   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (renversement du fardeau). Éléments retenus : probabilité marquée de récidive; motif tertiaire non retenu; motifs secondaire et tertiaire.",
+   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (renversement du fardeau). Éléments de contexte : probabilité marquée de récidive; motifs secondaire et tertiaire; droits et libertés.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2023/2023qccq4661/2023qccq4661.html",
    "source": "CanLII",
    "id": "decisions:2023 QCCQ 4661",
@@ -883,7 +912,8 @@
    "dispositions": "Code criminel, art. 515(6)d); Code criminel, art. 515(10)b); Code criminel, art. 515(10)c); Code criminel, art. 515(10)b) et c); Charte canadienne; Charte, art. 11e); Code criminel, art. 493.1",
    "domaine": "criminel",
    "route": true,
-   "resume_points": "Mise en liberté provisoire. Renversement du fardeau. Probabilité marquée de récidive. Motif tertiaire non retenu. Motifs secondaire et tertiaire. Détention non nécessaire. Droits et libertés. Mise en liberté sous caution."
+   "faits": "La Cour du Québec se prononce en matière de mise en liberté provisoire (renversement du fardeau). Éléments de contexte : probabilité marquée de récidive; motifs secondaire et tertiaire; droits et libertés.",
+   "motifs": "Renversement du fardeau. Motif tertiaire non retenu. Détention non nécessaire. Jurisprudence appliquée : R. c. Rondeau; R. c. Ruest; R. c. St-Cloud; R. c. Morales."
   },
   {
    "col": "decisions",
@@ -891,7 +921,7 @@
    "reference": "2023 QCCQ 4278",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2023-06-22",
-   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (renversement du fardeau). Éléments retenus : plan de sortie, garanties du père; mise en liberté sous caution; pondération des circonstances.",
+   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (renversement du fardeau). Éléments de contexte : plan de sortie, garanties du père; mise en liberté sous caution; enquête sur mise en liberté.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2023/2023qccq4278/2023qccq4278.html",
    "source": "CanLII",
    "id": "decisions:2023 QCCQ 4278",
@@ -902,7 +932,8 @@
    "dispositions": "Code criminel, al. 515(6)d); Code criminel, al. 515(10)b); Charte canadienne des droits et libertés; Charte, al. 11e); Code criminel, al. 515(10)c); Code criminel, al. 518(1)b); Code criminel, art. 493.1",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Mise en liberté provisoire. Renversement du fardeau. Plan de sortie, garanties du père. Mise en liberté sous caution. Pondération des circonstances. Enquête sur mise en liberté. Limitation des questions sur les faits de la cause. Interventions de la Cour en audience. Questions non permises. Communications et technologie. Conditions de mise en liberté. Condition de rendre accessible le contenu du téléphone intelligent. Conditions les moins sévères possible. Encadrement par garanties, contrôle policier."
+   "faits": "La Cour du Québec se prononce en matière de mise en liberté provisoire (renversement du fardeau). Éléments de contexte : plan de sortie, garanties du père; mise en liberté sous caution; enquête sur mise en liberté.",
+   "motifs": "Renversement du fardeau. Pondération des circonstances. Jurisprudence appliquée : R. c. Rondeau appliqué; R. c. St-Cloud; R. c. Morales."
   },
   {
    "col": "decisions",
@@ -910,7 +941,7 @@
    "reference": "2023 QCCQ 2160",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2023-04-28",
-   "resume": "La Cour du Québec se prononce en matière de droits et libertés (divulgation de la preuve). Éléments retenus : conditions de divulgation DPCP; défense pleine et entière et intérêt résiduel à la vie privée; mise en balance vie privée, sécurité et équité procédurale.",
+   "resume": "La Cour du Québec se prononce en matière de droits et libertés (divulgation de la preuve). Éléments de contexte : conditions de divulgation DPCP; défense pleine et entière et intérêt résiduel à la vie privée; mise en balance vie privée, sécurité et équité procédurale.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2023/2023qccq2160/2023qccq2160.html",
    "source": "CanLII",
    "id": "decisions:2023 QCCQ 2160",
@@ -921,7 +952,8 @@
    "dispositions": "Charte canadienne des droits et libertés, art. 7; Code de déontologie des avocats, art. 5, 61",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Droits et libertés. Divulgation de la preuve. Conditions de divulgation DPCP. Défense pleine et entière et intérêt résiduel à la vie privée. Mise en balance vie privée, sécurité et équité procédurale. Pouvoir discrétionnaire du poursuivant quant à la forme et au moment. Orientations et mesures du ministre de la Justice en matières d’affaires criminelles et pénales, par. 6. Communications et technologie. Risque de diffusion. Téléphone intelligent et reproduction de vidéos. Supervision lors du visionnement comme mesure de prévention. Protection de la vie privée des plaignantes. Conditions jugées non déraisonnables. Avocat de la défense. Norme des moyens raisonnables retenue. Règles jugées trop vagues sans engagement."
+   "faits": "La Cour du Québec se prononce en matière de droits et libertés (divulgation de la preuve). Éléments de contexte : conditions de divulgation DPCP; défense pleine et entière et intérêt résiduel à la vie privée; mise en balance vie privée, sécurité et équité procédurale.",
+   "motifs": "Conditions jugées non déraisonnables. Norme des moyens raisonnables retenue. Jurisprudence appliquée : R. c. Stinchcombe."
   },
   {
    "col": "decisions",
@@ -929,7 +961,7 @@
    "reference": "2022 QCCQ 12407",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2022-12-22",
-   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (détention préventive). Éléments retenus : accusations d’infractions sexuelles contre des enfants; détention fondée sur la gravité, les circonstances et la longue peine d’incarcération; liberté provisoire comme règle, détention dernier recours.",
+   "resume": "La Cour du Québec se prononce en matière de mise en liberté provisoire (détention préventive). Éléments de contexte : accusations d’infractions sexuelles contre des enfants; liberté provisoire comme règle, détention dernier recours; public bien informé, présomption d’innocence.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2022/2022qccq12407/2022qccq12407.html",
    "source": "CanLII",
    "id": "decisions:2022 QCCQ 12407",
@@ -940,7 +972,8 @@
    "dispositions": "Code criminel, par. 515(10); Charte canadienne des droits et libertés; Charte canadienne des droits et libertés, al. 11e)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Mise en liberté provisoire. Accusations d’infractions sexuelles contre des enfants. Détention fondée sur la gravité, les circonstances et la longue peine d’incarcération. Liberté provisoire comme règle, détention dernier recours. Public bien informé, présomption d’innocence. Enregistrement vidéo allégué, caméra dissimulée. Déclarations de plaignantes et corroboration alléguée. Fragilité intrinsèque de la preuve testimoniale reconnue. Analyse du téléphone cellulaire en cours. Accusation jugée fondée. Critère d’intérêt public. Confiance envers l’administration de la justice. Gravité des infractions sexuelles contre des enfants. Abus d’autorité, vulnérabilité des plaignants. Peine d’incarcération importante anticipée."
+   "faits": "La Cour du Québec se prononce en matière de mise en liberté provisoire (détention préventive). Éléments de contexte : accusations d’infractions sexuelles contre des enfants; liberté provisoire comme règle, détention dernier recours; public bien informé, présomption d’innocence.",
+   "motifs": "Détention fondée sur la gravité, les circonstances et la longue peine d’incarcération. Analyse du téléphone cellulaire en cours. Critère d’intérêt public. Gravité des infractions sexuelles contre des enfants. Jurisprudence appliquée : R. c. St-Cloud; R. c. Vandette; R. c. Antic; R. c. Friesen."
   },
   {
    "col": "decisions",
@@ -948,7 +981,7 @@
    "reference": "2022 QCCQ 15017",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2022-06-30",
-   "resume": "La Cour du Québec se prononce en matière de procès (agression sexuelle). Éléments retenus : ordonnance de non-publication, par. 486.4(1) C.cr; requête du ministère public pour faire admettre une déclaration vidéo; application de l’art. 715.1 C.cr. au procès d’agression sexuelle.",
+   "resume": "La Cour du Québec se prononce en matière de procès (agression sexuelle). Éléments de contexte : ordonnance de non-publication, par. 486.4(1) C.cr; requête du ministère public pour faire admettre une déclaration vidéo; application de l’art. 715.1 C.cr. au procès d’agression sexuelle.",
    "url": "https://www.canlii.org/fr/qc/qccq/doc/2022/2022qccq15017/2022qccq15017.html",
    "source": "CanLII",
    "id": "decisions:2022 QCCQ 15017",
@@ -959,7 +992,8 @@
    "dispositions": "Code criminel, art. 715.1",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Ordonnance de non-publication, par. 486.4(1) C.cr. Requête du ministère public pour faire admettre une déclaration vidéo. Application de l’art. 715.1 C.cr. au procès d’agression sexuelle. Déclaration vidéo entendue en voir-dire. Analyse du « délai raisonnable » selon les circonstances. Délai jugé non déraisonnable. Preuve évaluée selon la balance des probabilités. Distinction seuil de fiabilité et fiabilité ultime. Récit jugé cohérent malgré hésitations. Valeur probante et préjudice. Examen de l’équité et de l’intérêt public. Préjudice non démontré par l’accusé. Admission non contraire à l’intérêt public. Crédibilité et fiabilité ultime."
+   "faits": "La Cour du Québec se prononce en matière de procès (agression sexuelle). Éléments de contexte : ordonnance de non-publication, par. 486.4(1) C.cr; requête du ministère public pour faire admettre une déclaration vidéo; application de l’art. 715.1 C.cr. au procès d’agression sexuelle.",
+   "motifs": "Analyse du « délai raisonnable » selon les circonstances. Délai jugé non déraisonnable. Préjudice non démontré par l’accusé. Crédibilité et fiabilité ultime. Jurisprudence appliquée : R. c. L. (D.O.) et R. c. F. (C.C.); R. v. R.A.H. et R. v. Ramos appliqués; R. c. F. (C.C.) cité sur le pouvoir discrétionnaire."
   },
   {
    "col": "presse",
@@ -1359,7 +1393,7 @@
    "reference": "2026 QCCA 1576",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-24",
-   "resume": "La Cour d'appel du Québec se prononce en matière d’appel en matière criminelle (gestion des délais). Éléments retenus : demande de prorogation du délai; notification et dépôt du mémoire de la partie intimée; prorogation de délai.",
+   "resume": "La Cour d'appel du Québec se prononce en matière d’appel en matière criminelle (gestion des délais). Éléments de contexte : demande de prorogation du délai; notification et dépôt du mémoire de la partie intimée; prorogation de délai.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1576/2026qcca1576.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1576",
@@ -1370,7 +1404,8 @@
    "dispositions": "Art. 82 Règles de la Cour d’appel du Québec en matière criminelle",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Appel en matière criminelle. Gestion des délais. Demande de prorogation du délai. Notification et dépôt du mémoire de la partie intimée. Prorogation de délai. Explications fournies considérées. Absence de contestation de la partie appelante."
+   "faits": "La Cour d'appel du Québec se prononce en matière d’appel en matière criminelle (gestion des délais). Éléments de contexte : demande de prorogation du délai; notification et dépôt du mémoire de la partie intimée; prorogation de délai.",
+   "motifs": "Explications fournies considérées. Absence de contestation de la partie appelante."
   },
   {
    "col": "decisions",
@@ -1378,7 +1413,7 @@
    "reference": "2026 QCCA 1575",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-24",
-   "resume": "La Cour d'appel du Québec se prononce en matière d’appel (prorogation du délai d’appel). Éléments retenus : retard important dans le dépôt; intérêt de la justice apprécié; intention d’interjeter appel.",
+   "resume": "La Cour d'appel du Québec se prononce en matière d’appel (prorogation du délai d’appel). Éléments de contexte : retard important dans le dépôt; intérêt de la justice apprécié; intention d’interjeter appel.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1575/2026qcca1575.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1575",
@@ -1389,7 +1424,8 @@
    "dispositions": "Code criminel, par. 678(2); Charte canadienne des droits et libertés; Charte canadienne des droits et libertés, art. 8 et 9",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Prorogation du délai d’appel. Retard important dans le dépôt. Intérêt de la justice apprécié. Intention d’interjeter appel. Déclaration assermentée de l’avocate de première instance. Jugement prononcé par défaut invoqué par l’intimé. Intention retenue malgré la contestation. Difficultés d’aide juridique et d’accès au requérant détenu. Démarche jugée non prioritaire mais preuve suffisante. Moyens d’appel jugés sérieux sans trancher le fond."
+   "faits": "La Cour d'appel du Québec se prononce en matière d’appel (prorogation du délai d’appel). Éléments de contexte : retard important dans le dépôt; intérêt de la justice apprécié; intention d’interjeter appel.",
+   "motifs": "Intention retenue malgré la contestation. Démarche jugée non prioritaire mais preuve suffisante. Jurisprudence appliquée : R. c. Lamontagne; Lemieux c. R; R. c. Roberge; Chemlal c. R. discuté."
   },
   {
    "col": "decisions",
@@ -1397,7 +1433,7 @@
    "reference": "2026 QCCA 1573",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-24",
-   "resume": "La Cour d'appel du Québec se prononce en matière de mise en liberté provisoire (appel en matière criminelle). Éléments retenus : requête selon le par. 679(1) C.cr. et l’art. 33 des Règles de la Cour d’appel du Québec en matière criminelle; échanges sur les conditions de mise en liberté; déclaration sous serment au soutien.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de mise en liberté provisoire (appel en matière criminelle). Éléments de contexte : requête selon le par. 679(1) C.cr. et l’art. 33 des Règles de la Cour d’appel du Québec en matière criminelle; échanges sur les conditions de mise en liberté; déclaration sous serment au soutien.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1573/2026qcca1573.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1573",
@@ -1408,7 +1444,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Mise en liberté provisoire. Appel en matière criminelle. Requête selon le par. 679(1) C.cr. et l’art. 33 des Règles de la Cour d’appel du Québec en matière criminelle. Échanges sur les conditions de mise en liberté. Déclaration sous serment au soutien. Absence de contestation par l’intimé. Critères d’élargissement en appel. Par. 679(3) C.cr. Appel non futile. Engagement à se livrer en conformité avec l’ordonnance. Détention non nécessaire dans l’intérêt public. Conditions de remise en liberté. Conditions suggérées conjointement, caractère raisonnable et suffisant. Ne pas troubler l’ordre public. Ne pas quitter le Canada. Dépôt du passeport au greffe. Interdiction de documents d’identité non délivrés au nom véritable."
+   "faits": "La Cour d'appel du Québec se prononce en matière de mise en liberté provisoire (appel en matière criminelle). Éléments de contexte : requête selon le par. 679(1) C.cr. et l’art. 33 des Règles de la Cour d’appel du Québec en matière criminelle; échanges sur les conditions de mise en liberté; déclaration sous serment au soutien.",
+   "motifs": "Absence de contestation par l’intimé. Critères d’élargissement en appel. Détention non nécessaire dans l’intérêt public. Conditions suggérées conjointement, caractère raisonnable et suffisant."
   },
   {
    "col": "decisions",
@@ -1416,7 +1453,7 @@
    "reference": "2026 QCCA 1574",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-23",
-   "resume": "La Cour d'appel du Québec se prononce en matière d’appel (peine). Éléments retenus : requête en autorisation d’appel de la peine; accueil de l’appel à la seule fin de soustraire des jours; conférence de facilitation pénale, procédure sans audition.",
+   "resume": "La Cour d'appel du Québec se prononce en matière d’appel (peine). Éléments de contexte : requête en autorisation d’appel de la peine; accueil de l’appel à la seule fin de soustraire des jours; conférence de facilitation pénale, procédure sans audition.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1574/2026qcca1574.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1574",
@@ -1427,7 +1464,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Requête en autorisation d’appel de la peine. Accueil de l’appel à la seule fin de soustraire des jours. Conférence de facilitation pénale, procédure sans audition. Retrait du plaidoyer. Changement d’avocat, demande de retrait du plaidoyer. Décision de culpabilité visée par requête en autorisation d’appel. Désistement de l’appelant quant à la culpabilité constaté. Requête en autorisation d’appel de la culpabilité abandonnée. Suggestion commune ne tenant plus, entente rompue. Peine infligée sans tenir l’audience requise. Recours extraordinaire devant la Cour supérieure mentionné. Manquement procédural reconnu par les parties. Calcul du crédit pour la détention provisoire. Correction recherchée dans l’appel de la peine. Solution proposée jugée raisonnable après examen des dossiers."
+   "faits": "La Cour d'appel du Québec se prononce en matière d’appel (peine). Éléments de contexte : requête en autorisation d’appel de la peine; accueil de l’appel à la seule fin de soustraire des jours; conférence de facilitation pénale, procédure sans audition.",
+   "motifs": "Solution proposée jugée raisonnable après examen des dossiers."
   },
   {
    "col": "decisions",
@@ -1435,7 +1473,7 @@
    "reference": "2026 QCCA 1577",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-20",
-   "resume": "La Cour d'appel du Québec se prononce en matière de droit administratif (contrôle judiciaire). Éléments retenus : révision d’une décision de la Cour du Québec; confiscation de la caution et récusation; recours jugé voué à l’échec.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de droit administratif (contrôle judiciaire). Éléments de contexte : révision d’une décision de la Cour du Québec; confiscation de la caution et récusation; recours jugé voué à l’échec.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1577/2026qcca1577.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1577",
@@ -1446,7 +1484,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Révision d’une décision de la Cour du Québec. Confiscation de la caution et récusation. Recours jugé voué à l’échec. Critère de frivolité. Critère de « frivolité » ou de « frivolité manifeste ». Critère jugé équivalent, recours manifestement voué à l’échec. Occasion de présenter les arguments retenue. Apparence de partialité. Forte présomption d’intégrité judiciaire et d’impartialité. Personne raisonnable au courant des circonstances. Reproche sans air de vraisemblance. Remise de l’audience et questionnement du mandat examinés. Discrétion exercée judiciairement."
+   "faits": "La Cour d'appel du Québec se prononce en matière de droit administratif (contrôle judiciaire). Éléments de contexte : révision d’une décision de la Cour du Québec; confiscation de la caution et récusation; recours jugé voué à l’échec.",
+   "motifs": "Critère de frivolité. Critère de « frivolité » ou de « frivolité manifeste ». Critère jugé équivalent, recours manifestement voué à l’échec. Occasion de présenter les arguments retenue. Jurisprudence appliquée : R. c. Awashish appliqué; Lacoste-Méthot c. Cour du Québec et R. c. Haevischer."
   },
   {
    "col": "presse",
@@ -1805,7 +1844,7 @@
    "reference": "2026 QCCA 1565",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-20",
-   "resume": "La Cour d'appel du Québec se prononce en matière d’appel (autorisation d’appel de la sentence). Éléments retenus : instance poursuivie sans mémoire selon la voie accélérée; voie accélérée et exposés; R.C.a.Q.m.c., art. 13, 64 et 65.",
+   "resume": "La Cour d'appel du Québec se prononce en matière d’appel (autorisation d’appel de la sentence). Éléments de contexte : instance poursuivie sans mémoire selon la voie accélérée; voie accélérée et exposés; R.C.a.Q.m.c., art. 13, 64 et 65.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1565/2026qcca1565.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1565",
@@ -1816,7 +1855,8 @@
    "dispositions": "Code criminel, art. 675(1)b); Code criminel, art. 679(3); Code criminel, art. 519.1",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Autorisation d’appel de la sentence. Instance poursuivie sans mémoire selon la voie accélérée. Voie accélérée et exposés. R.C.a.Q.m.c., art. 13, 64 et 65. Argumentation limitée en pages. Mise en liberté provisoire. Critères d’élargissement en appel. Requête non contestée par l’intimé. Conditions de l’engagement. Obligation de garder la paix. Interdictions de contact et de lieux. Restrictions de déplacement et de consommation."
+   "faits": "La Cour d'appel du Québec se prononce en matière d’appel (autorisation d’appel de la sentence). Éléments de contexte : instance poursuivie sans mémoire selon la voie accélérée; voie accélérée et exposés; R.C.a.Q.m.c., art. 13, 64 et 65.",
+   "motifs": "Critères d’élargissement en appel."
   },
   {
    "col": "decisions",
@@ -1824,7 +1864,7 @@
    "reference": "2026 QCCA 1563",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-19",
-   "resume": "La Cour d'appel du Québec se prononce en matière de gestion d’instance (prorogation de délai). Éléments retenus : quatrième demande de prolongation pour déposer mémoire et exposé; dossiers portés au rôle spécial; pièces et transcriptions.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de gestion d’instance (prorogation de délai). Éléments de contexte : quatrième demande de prolongation pour déposer mémoire et exposé; dossiers portés au rôle spécial; pièces et transcriptions.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1563/2026qcca1563.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1563",
@@ -1835,7 +1875,8 @@
    "dispositions": "Art. 82 R.C.a.Q.m.c",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Prorogation de délai. Quatrième demande de prolongation pour déposer mémoire et exposé. Dossiers portés au rôle spécial. Pièces et transcriptions. Transcriptions reçues, pièces manquantes au dossier sur la peine. Absence de démarches auprès du greffe de première instance. Dossiers n’ayant pas progressé avec la diligence requise. Contestation de l’intimé. Demande d’inscription au rôle spécial en vue de faire déclarer les appels abandonnés. Intérêt public de finalité des jugements invoqué. Intérêt de la justice. Préjudice allégué par l’appelante. Préjudice allégué par la famille de la victime. Finalité des procédures et intérêt public considérés."
+   "faits": "La Cour d'appel du Québec se prononce en matière de gestion d’instance (prorogation de délai). Éléments de contexte : quatrième demande de prolongation pour déposer mémoire et exposé; dossiers portés au rôle spécial; pièces et transcriptions.",
+   "motifs": "Absence de démarches auprès du greffe de première instance. Finalité des procédures et intérêt public considérés. Jurisprudence appliquée : Chao c. Lin."
   },
   {
    "col": "decisions",
@@ -1843,7 +1884,7 @@
    "reference": "2026 QCCA 1559",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-19",
-   "resume": "La Cour d'appel du Québec se prononce en matière d’agression sexuelle (ordonnance limitant la publication (art. 486.4 C.cr.)). Éléments retenus : appel interjeté contre la déclaration de culpabilité; peine d’emprisonnement suivie d’une probation; instance d’appel pendante.",
+   "resume": "La Cour d'appel du Québec se prononce en matière d’agression sexuelle (ordonnance limitant la publication (art. 486.4 C.cr.)). Éléments de contexte : appel interjeté contre la déclaration de culpabilité; peine d’emprisonnement suivie d’une probation; instance d’appel pendante.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1559/2026qcca1559.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1559",
@@ -1854,7 +1895,8 @@
    "dispositions": "Code criminel, art. 679(1)a)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Ordonnance limitant la publication (art. 486.4 C.cr.). Appel interjeté contre la déclaration de culpabilité. Peine d’emprisonnement suivie d’une probation. Instance d’appel pendante. Mise en liberté en attendant l’appel. Motifs d’appel non futiles. Absence de raison de croire au défaut de se livrer. Détention non nécessaire pour la sécurité ou la protection du public. Exigences de l’art. 679(1)a) satisfaites. Conditions de mise en liberté. Conditions conjointement proposées. Remise du passeport au greffe. Interdictions de communication et de présence envers la victime et sa famille. Distance minimale du domicile et du lieu de travail. Interdiction d’armes et obligation de conserver une copie des conditions."
+   "faits": "La Cour d'appel du Québec se prononce en matière d’agression sexuelle (ordonnance limitant la publication (art. 486.4 C.cr.)). Éléments de contexte : appel interjeté contre la déclaration de culpabilité; peine d’emprisonnement suivie d’une probation; instance d’appel pendante.",
+   "motifs": "Absence de raison de croire au défaut de se livrer. Détention non nécessaire pour la sécurité ou la protection du public. Exigences de l’art. 679(1)a) satisfaites."
   },
   {
    "col": "decisions",
@@ -1862,7 +1904,7 @@
    "reference": "2026 QCCA 1555",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-18",
-   "resume": "La Cour d'appel du Québec se prononce en matière de provocation (verdict du jury, meurtre au premier degré). Éléments retenus : verdict du jury, meurtre au premier degré. défense partielle soumise au jury; appel du poursuivant sur la provocation; fardeau de présentation.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de provocation (verdict du jury, meurtre au premier degré). Éléments de contexte : défense partielle soumise au jury; appel du poursuivant sur la provocation; provocation, volet objectif.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1555/2026qcca1555.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1555",
@@ -1873,7 +1915,8 @@
    "dispositions": "Code criminel, art. 232",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Verdict du jury, meurtre au premier degré. défense partielle soumise au jury. Appel du poursuivant sur la provocation. Fardeau de présentation. Provocation, volet objectif. « Air of reality » appliqué. Appréciation de la suffisance, question de droit. Directives au jury. Volet objectif de la provocation. Preuve d’observation, attente. Arme chargée puis visée. Choix contrôlé et délibéré retenu. Perte de maîtrise de soi. Intention de tuer exigée avant la provocation. Analyse des passages 330 et 338."
+   "faits": "La Cour d'appel du Québec se prononce en matière de provocation (verdict du jury, meurtre au premier degré). Éléments de contexte : défense partielle soumise au jury; appel du poursuivant sur la provocation; provocation, volet objectif.",
+   "motifs": "Fardeau de présentation. « Air of reality » appliqué. Appréciation de la suffisance, question de droit. Choix contrôlé et délibéré retenu. Jurisprudence appliquée : R. c. Cinous; R. c. Tran; R. v. Duffy; R. c. Cairney."
   },
   {
    "col": "decisions",
@@ -1881,7 +1924,7 @@
    "reference": "2026 QCCA 1551",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-18",
-   "resume": "La Cour d'appel du Québec se prononce en matière de procedure (appeals). Éléments retenus : extension of time; criminal Code, s. 678(2); whether criteria to extend the time limit to appeal are satisfied despite the time elapsed.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de procedure (appeals). Éléments de contexte : extension of time; criminal Code, s. 678(2); whether criteria to extend the time limit to appeal are satisfied despite the time elapsed.",
    "url": "https://www.canlii.org/en/qc/qcca/doc/2026/2026qcca1551/2026qcca1551.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1551",
@@ -1892,7 +1935,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Extension of time. Criminal Code, s. 678(2). Whether criteria to extend the time limit to appeal are satisfied despite the time elapsed. Application not contested by the Respondent. Court holds criteria to extend the time limit to appeal are satisfied. Applicant allowed to file Notice of Appeal within five business days."
+   "faits": "La Cour d'appel du Québec se prononce en matière de procedure (appeals). Éléments de contexte : extension of time; criminal Code, s. 678(2); whether criteria to extend the time limit to appeal are satisfied despite the time elapsed.",
+   "motifs": ""
   },
   {
    "col": "decisions",
@@ -1900,7 +1944,7 @@
    "reference": "2026 QCCA 1561",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-16",
-   "resume": "La Cour d'appel du Québec se prononce en matière d’appel (autorisation d’appel). Éléments retenus : requête en autorisation d’appel d’une déclaration de culpabilité comportant des questions autres; assistance inadéquate alléguée lors du procès; règles de la Cour d’appel du Québec en matière criminelle, art. 60.",
+   "resume": "La Cour d'appel du Québec se prononce en matière d’appel (autorisation d’appel). Éléments de contexte : requête en autorisation d’appel d’une déclaration de culpabilité comportant des questions autres; assistance inadéquate alléguée lors du procès; règles de la Cour d’appel du Québec en matière criminelle, art. 60.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1561/2026qcca1561.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1561",
@@ -1911,7 +1955,8 @@
    "dispositions": "Code criminel, art. 375(1)a)(iii); Code criminel, art. 683(1)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Requête en autorisation d’appel d’une déclaration de culpabilité comportant des questions autres. Assistance inadéquate alléguée lors du procès. Règles de la Cour d’appel du Québec en matière criminelle, art. 60. Rapport d’expert générique sur suivis thérapeutiques et faux souvenirs. Appel n’ayant pas progressé, dossier complet. Pouvoir de gestion exercé."
+   "faits": "La Cour d'appel du Québec se prononce en matière d’appel (autorisation d’appel). Éléments de contexte : requête en autorisation d’appel d’une déclaration de culpabilité comportant des questions autres; assistance inadéquate alléguée lors du procès; règles de la Cour d’appel du Québec en matière criminelle, art. 60.",
+   "motifs": ""
   },
   {
    "col": "presse",
@@ -2673,7 +2718,7 @@
    "reference": "2026 CSC 40",
    "tribunal": "Cour suprême du Canada",
    "date": "2026-11-20",
-   "resume": "La Cour suprême du Canada se prononce en matière d’agression sexuelle (mens rea, consentement communiqué). Éléments retenus : directive toujours discrétionnaire, directive non requise; exposé au jury, mens rea; omission de distinguer actus reus et mens rea.",
+   "resume": "La Cour suprême du Canada se prononce en matière d’agression sexuelle (mens rea, consentement communiqué). Éléments de contexte : directive toujours discrétionnaire, directive non requise; exposé au jury, mens rea; omission de distinguer actus reus et mens rea.",
    "url": "https://www.canlii.org/fr/ca/csc/doc/2026/2026csc40/2026csc40.html",
    "source": "CanLII",
    "id": "decisions:2026 CSC 40",
@@ -2684,7 +2729,8 @@
    "dispositions": "Code criminel, art. 271, 273.2",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Mens rea, consentement communiqué. Directive toujours discrétionnaire, directive non requise. Exposé au jury, mens rea. Omission de distinguer actus reus et mens rea. Consentement communiqué par paroles ou comportement. Erreur de droit, incidence significative. « Degré raisonnable de certitude »."
+   "faits": "La Cour suprême du Canada se prononce en matière d’agression sexuelle (mens rea, consentement communiqué). Éléments de contexte : directive toujours discrétionnaire, directive non requise; exposé au jury, mens rea; omission de distinguer actus reus et mens rea.",
+   "motifs": "Erreur de droit, incidence significative. « Degré raisonnable de certitude ». Jurisprudence appliquée : R. c. Degale; R. c. Ewanchuk; R. c. Graveline; R. c. Morin."
   },
   {
    "col": "decisions",
@@ -2692,7 +2738,7 @@
    "reference": "2026 CSC 39",
    "tribunal": "Cour suprême du Canada",
    "date": "2026-11-20",
-   "resume": "La Cour suprême du Canada se prononce en matière d’agression sexuelle grave (mens rea, consentement communiqué). Éléments retenus : communication du non-consentement. « Seul oui veut dire oui »; appel de la Couronne; substitution d’un verdict.",
+   "resume": "La Cour suprême du Canada se prononce en matière d’agression sexuelle grave (mens rea, consentement communiqué). Éléments de contexte : communication du non-consentement; « Seul oui veut dire oui »; appel de la Couronne.",
    "url": "https://www.canlii.org/fr/ca/csc/doc/2026/2026csc39/2026csc39.html",
    "source": "CanLII",
    "id": "decisions:2026 CSC 39",
@@ -2703,7 +2749,8 @@
    "dispositions": "Code criminel, art. 273, 273.2; Code criminel, art. 273.2; Code criminel, sous-al. 686(4)b)(ii), al. 676(1)a), al. 691(2)b); Code criminel",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Agression sexuelle grave. Mens rea, consentement communiqué. Communication du non-consentement. « Seul oui veut dire oui ». Appel de la Couronne. Substitution d’un verdict. Al. 273.2b) et « mesures raisonnables ». Sens de « ne constitue pas un moyen de défense »."
+   "faits": "La Cour suprême du Canada se prononce en matière d’agression sexuelle grave (mens rea, consentement communiqué). Éléments de contexte : communication du non-consentement; « Seul oui veut dire oui »; appel de la Couronne.",
+   "motifs": "Al. 273.2b) et « mesures raisonnables ». Jurisprudence appliquée : R. c. Ewanchuk; R. c. Villaroman; R. c. Barton; R. c. Cassidy."
   },
   {
    "col": "juridique",
@@ -2971,7 +3018,7 @@
    "reference": "2026 QCCA 1548",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-13",
-   "resume": "La Cour d'appel du Québec se prononce en matière d’agression sexuelle (consentement). Éléments retenus : directives au jury sur la capacité de consentir en contexte d’intoxication; directives jugées suffisantes dans leur ensemble; procès devant jury.",
+   "resume": "La Cour d'appel du Québec se prononce en matière d’agression sexuelle (consentement). Éléments de contexte : directives au jury sur la capacité de consentir en contexte d’intoxication; procès devant jury; mythes et stéréotypes allégués.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1548/2026qcca1548.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1548",
@@ -2982,7 +3029,8 @@
    "dispositions": "Code criminel, art. 273.1; Code criminel, sous-al. 686(1)a)(i)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Directives au jury sur la capacité de consentir en contexte d’intoxication. Directives jugées suffisantes dans leur ensemble. Procès devant jury. Mythes et stéréotypes allégués. Omission de corriger des irrégularités dans la plaidoirie de la défense. Absence d’incidence déterminante retenue. Directive complémentaire demandée par le jury. Aucune probabilité raisonnable de mauvaise compréhension."
+   "faits": "La Cour d'appel du Québec se prononce en matière d’agression sexuelle (consentement). Éléments de contexte : directives au jury sur la capacité de consentir en contexte d’intoxication; procès devant jury; mythes et stéréotypes allégués.",
+   "motifs": "Directives jugées suffisantes dans leur ensemble. Absence d’incidence déterminante retenue. Aucune probabilité raisonnable de mauvaise compréhension. Jurisprudence appliquée : R. c. Ewanchuk; R. c. G.F; R. c. Rioux appliqués; R. c. Kruk et R. c. Seaboyer."
   },
   {
    "col": "decisions",
@@ -2990,7 +3038,7 @@
    "reference": "2026 QCCQ 5930",
    "tribunal": "Cour du Québec – chambre criminelle et pénale",
    "date": "2026-11-10",
-   "resume": "La Cour du Québec se prononce en matière de rights and freedoms (canadian Charter of Rights and Freedoms, ss. 8 and 24(2)). Éléments retenus : application to exclude and excise evidence; warrantless pole camera surveillance used in drug trafficking investigation; reasonable expectation of privacy and reasonableness assessed across multiple cameras.",
+   "resume": "La Cour du Québec se prononce en matière de rights and freedoms (canadian Charter of Rights and Freedoms, ss. 8 and 24(2)). Éléments de contexte : application to exclude and excise evidence; warrantless pole camera surveillance used in drug trafficking investigation; reasonable expectation of privacy and reasonableness assessed across multiple cameras.",
    "url": "https://www.canlii.org/en/qc/qccq/doc/2026/2026qccq5930/2026qccq5930.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCQ 5930",
@@ -3001,7 +3049,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Rights and freedoms. Canadian Charter of Rights and Freedoms, ss. 8 and 24(2). Application to exclude and excise evidence. Warrantless pole camera surveillance used in drug trafficking investigation. Reasonable expectation of privacy and reasonableness assessed across multiple cameras. Search and seizure. Prior judicial authorization. Whether pole camera surveillance generally requires prior judicial authorization. Warrantless outdoor video surveillance may not be a “search” absent objectively reasonable expectation of privacy. Case-by-case assessment, not general notion of privacy, applied with Tessling and Wong. Reasonable expectation of privacy. Whether Applicants had objectively reasonable expectation of privacy in comings and goings recorded from public view. Subject matter confined to identifying visitors and transporting bags. Public point of view, no audio, no intimate details or biographical core information. No s. 8 breach found. Warrants and authorizations. Whether general warrant and video surveillance authorization encompassed pole camera surveillance. General warrant found not to specifically authorize use of the pole camera."
+   "faits": "La Cour du Québec se prononce en matière de rights and freedoms (canadian Charter of Rights and Freedoms, ss. 8 and 24(2)). Éléments de contexte : application to exclude and excise evidence; warrantless pole camera surveillance used in drug trafficking investigation; reasonable expectation of privacy and reasonableness assessed across multiple cameras.",
+   "motifs": "Warrantless outdoor video surveillance may not be a “search” absent objectively reasonable expectation of privacy. Whether Applicants had objectively reasonable expectation of privacy in comings and goings recorded from public view."
   },
   {
    "col": "presse",
@@ -3308,7 +3357,7 @@
    "reference": "2026 QCCA 1545",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-16",
-   "resume": "La Cour d'appel du Québec se prononce en matière d’infractions d’ordre sexuel (attouchement à des fins d’ordre sexuel sur une enfant de moins de 16 ans). Éléments retenus : déclaration de culpabilité en première instance; appel en matière criminelle; autorisation d’appel pour ajouter un motif fondé sur la représentation inadéquate.",
+   "resume": "La Cour d'appel du Québec se prononce en matière d’infractions d’ordre sexuel (attouchement à des fins d’ordre sexuel sur une enfant de moins de 16 ans). Éléments de contexte : déclaration de culpabilité en première instance; appel en matière criminelle; autorisation d’appel pour ajouter un motif fondé sur la représentation inadéquate.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1545/2026qcca1545.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1545",
@@ -3319,7 +3368,8 @@
    "dispositions": "Code criminel, art. 151 a)",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Infractions d’ordre sexuel. Attouchement à des fins d’ordre sexuel sur une enfant de moins de 16 ans. Déclaration de culpabilité en première instance. Appel en matière criminelle. Autorisation d’appel pour ajouter un motif fondé sur la représentation inadéquate. Avocat présent en chambre de la jeunesse lors du témoignage antérieur. Erreur reconnue de ne pas avoir utilisé ce témoignage au procès. Requête pour permission de présenter une preuve nouvelle. Dépôt de la transcription des notes sténographiques en chambre de la jeunesse. Preuve invoquée pour démontrer l’assistance inadéquate. Transcription d’un témoignage antérieur en chambre de la jeunesse portant sur les mêmes événements. Contre-interrogatoire au procès criminel sans utilisation du témoignage antérieur."
+   "faits": "La Cour d'appel du Québec se prononce en matière d’infractions d’ordre sexuel (attouchement à des fins d’ordre sexuel sur une enfant de moins de 16 ans). Éléments de contexte : déclaration de culpabilité en première instance; appel en matière criminelle; autorisation d’appel pour ajouter un motif fondé sur la représentation inadéquate.",
+   "motifs": "Erreur reconnue de ne pas avoir utilisé ce témoignage au procès. Preuve invoquée pour démontrer l’assistance inadéquate."
   },
   {
    "col": "decisions",
@@ -3327,7 +3377,7 @@
    "reference": "2026 QCCA 1541",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-13",
-   "resume": "La Cour d'appel du Québec se prononce en matière de requête (mémoire). Éléments retenus : requête afin d’obtenir l’autorisation de produire un mémoire de plus de trente pages; appréciation de l’ampleur et de la complexité du dossier; fixation d’une limite maximale de pages.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de requête (mémoire). Éléments de contexte : requête afin d’obtenir l’autorisation de produire un mémoire de plus de trente pages; fixation d’une limite maximale de pages; décision de plafonner l’argumentation écrite.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1541/2026qcca1541.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1541",
@@ -3338,7 +3388,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Requête afin d’obtenir l’autorisation de produire un mémoire de plus de trente pages. Appréciation de l’ampleur et de la complexité du dossier. Fixation d’une limite maximale de pages. Décision de plafonner l’argumentation écrite. Demande visant une argumentation de 90 pages. Consentement partiel du ministère public et de la Procureure générale du Québec. Notification et dépôt. Prolongation corrélative des délais de l’intimé et de la mise en cause. Absence d’opposition sur les délais. Gestion de l’échéancier des mémoires en appel."
+   "faits": "La Cour d'appel du Québec se prononce en matière de requête (mémoire). Éléments de contexte : requête afin d’obtenir l’autorisation de produire un mémoire de plus de trente pages; fixation d’une limite maximale de pages; décision de plafonner l’argumentation écrite.",
+   "motifs": "Appréciation de l’ampleur et de la complexité du dossier."
   },
   {
    "col": "decisions",
@@ -3346,7 +3397,7 @@
    "reference": "2026 QCCA 1535",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-13",
-   "resume": "La Cour d'appel du Québec se prononce en matière d’appel (requête pour interjeter appel). Éléments retenus : déclaration de culpabilité par procédure sommaire; appel pour des motifs comportant de simples questions de droit (sous-al. 675(1)a)(i) C.cr.); encadrement de l’accès à l’appel examiné.",
+   "resume": "La Cour d'appel du Québec se prononce en matière d’appel (requête pour interjeter appel). Éléments de contexte : déclaration de culpabilité par procédure sommaire; appel pour des motifs comportant de simples questions de droit (sous-al. 675(1)a)(i) C.cr.); encadrement de l’accès à l’appel examiné.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1535/2026qcca1535.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1535",
@@ -3357,7 +3408,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Requête pour interjeter appel. Déclaration de culpabilité par procédure sommaire. Appel pour des motifs comportant de simples questions de droit (sous-al. 675(1)a)(i) C.cr.). Encadrement de l’accès à l’appel examiné. Poursuite par voie sommaire pour omission de se conformer à une ordonnance de mise en liberté. Critères du par. 675(1.1) C.cr. jugés remplis. Dépôt recherché à l’égard de deux dossiers. Pouvoir d’encadrement de la procédure d’appel exercé. Avis d’appel visant les deux jugements permis."
+   "faits": "La Cour d'appel du Québec se prononce en matière d’appel (requête pour interjeter appel). Éléments de contexte : déclaration de culpabilité par procédure sommaire; appel pour des motifs comportant de simples questions de droit (sous-al. 675(1)a)(i) C.cr.); encadrement de l’accès à l’appel examiné.",
+   "motifs": "Critères du par. 675(1.1) C.cr. jugés remplis."
   },
   {
    "col": "decisions",
@@ -3365,7 +3417,7 @@
    "reference": "2026 QCCA 1540",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-11",
-   "resume": "La Cour d'appel du Québec se prononce en matière d’appel en matière criminelle (crimes de nature sexuelle). Éléments retenus : déclaration de culpabilité fondée sur témoignages contradictoires; ordonnance limitant la publication, art. 486.4 C.cr; motifs du juge de première instance.",
+   "resume": "La Cour d'appel du Québec se prononce en matière d’appel en matière criminelle (crimes de nature sexuelle). Éléments de contexte : déclaration de culpabilité fondée sur témoignages contradictoires; ordonnance limitant la publication, art. 486.4 C.cr; motifs du juge de première instance.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1540/2026qcca1540.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1540",
@@ -3376,7 +3428,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Appel en matière criminelle. Crimes de nature sexuelle. Déclaration de culpabilité fondée sur témoignages contradictoires. Ordonnance limitant la publication, art. 486.4 C.cr. Motifs du juge de première instance. Lecture des motifs comme un tout. Ouï-dire et propension. Témoignage du frère de la plaignante. Propos de la mère et d’une ex-copine rapportés."
+   "faits": "La Cour d'appel du Québec se prononce en matière d’appel en matière criminelle (crimes de nature sexuelle). Éléments de contexte : déclaration de culpabilité fondée sur témoignages contradictoires; ordonnance limitant la publication, art. 486.4 C.cr; motifs du juge de première instance.",
+   "motifs": "Jurisprudence appliquée : R. c. W.(D.) en première instance; R. c. Chung; R. c. Gerrard; R. v. Z.V."
   },
   {
    "col": "juridique",
@@ -3784,7 +3837,7 @@
    "reference": "2026 QCCA 1536",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-13",
-   "resume": "La Cour d'appel du Québec se prononce en matière de peine (appel de la sentence). Éléments retenus : peines ne tenant pas compte de la détention présentencielle; appels selon les observations des parties.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de peine (appel de la sentence). Éléments de contexte : peines ne tenant pas compte de la détention présentencielle; appels selon les observations des parties.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1536/2026qcca1536.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1536",
@@ -3795,7 +3848,8 @@
    "resultat": "Nouveau procès ordonné; Peines fixées; Appels accueillis",
    "dispositions": "Code criminel, art. 719(3); Code criminel, art. 719(3.1)",
    "route": false,
-   "resume_points": "Appel de la sentence. Peines ne tenant pas compte de la détention présentencielle. Appels selon les observations des parties."
+   "faits": "La Cour d'appel du Québec se prononce en matière de peine (appel de la sentence). Éléments de contexte : peines ne tenant pas compte de la détention présentencielle; appels selon les observations des parties.",
+   "motifs": ""
   },
   {
    "col": "decisions",
@@ -3803,7 +3857,7 @@
    "reference": "2026 QCCA 1527",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-12",
-   "resume": "La Cour d'appel du Québec se prononce en matière de sentence (crédit de détention préventive). Éléments retenus : erreur de principe dans le calcul de la détention préventive; suggestion commune entérinée sur informations incomplètes; prolongation du délai.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de sentence (crédit de détention préventive). Éléments de contexte : suggestion commune entérinée sur informations incomplètes; prolongation du délai; requête modifiée en prolongation du délai d’appel.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1527/2026qcca1527.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1527",
@@ -3814,7 +3868,8 @@
    "resultat": "Jugement infirmé; peine modifiée",
    "dispositions": "Code criminel, art. 267b), art. 266a)",
    "route": false,
-   "resume_points": "Crédit de détention préventive. Erreur de principe dans le calcul de la détention préventive. Suggestion commune entérinée sur informations incomplètes. Prolongation du délai. Requête modifiée en prolongation du délai d’appel."
+   "faits": "La Cour d'appel du Québec se prononce en matière de sentence (crédit de détention préventive). Éléments de contexte : suggestion commune entérinée sur informations incomplètes; prolongation du délai; requête modifiée en prolongation du délai d’appel.",
+   "motifs": "Erreur de principe dans le calcul de la détention préventive."
   },
   {
    "col": "decisions",
@@ -3822,7 +3877,7 @@
    "reference": "2026 QCCA 1518",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-11",
-   "resume": "La Cour d'appel du Québec se prononce en matière de permission d’appeler (deuxième niveau d’appel). Éléments retenus : question sérieuse, opportunité et chance raisonnable de succès examinées; portée du débat en appel; décret numéro 2-2021.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de permission d’appeler (deuxième niveau d’appel). Éléments de contexte : décret numéro 2-2021.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1518/2026qcca1518.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1518",
@@ -3833,7 +3888,8 @@
    "resultat": "Demande rejetée",
    "dispositions": "Code de procédure pénale, art. 291; Loi sur la santé publique",
    "route": false,
-   "resume_points": "Deuxième niveau d’appel. Question sérieuse, opportunité et chance raisonnable de succès examinées. Portée du débat en appel. Décret numéro 2-2021."
+   "faits": "La Cour d'appel du Québec se prononce en matière de permission d’appeler (deuxième niveau d’appel). Éléments de contexte : décret numéro 2-2021.",
+   "motifs": "Question sérieuse, opportunité et chance raisonnable de succès examinées. Portée du débat en appel. Jurisprudence appliquée : Lanaudière-Laurentides c. 9308-0588 Québec inc."
   },
   {
    "col": "decisions",
@@ -3841,7 +3897,7 @@
    "reference": "2026 QCCA 1517",
    "tribunal": "Cour d'appel du Québec",
    "date": "2026-11-10",
-   "resume": "La Cour d'appel du Québec se prononce en matière de suspension invoquée pour raisons de sécurité (délai de 11 minutes entre détention et arrestation). Éléments retenus : arrestation sans mandat; possession conjointe alléguée.",
+   "resume": "La Cour d'appel du Québec se prononce en matière de suspension invoquée pour raisons de sécurité (délai de 11 minutes entre détention et arrestation). Éléments de contexte : arrestation sans mandat; possession conjointe alléguée.",
    "url": "https://www.canlii.org/fr/qc/qcca/doc/2026/2026qcca1517/2026qcca1517.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCA 1517",
@@ -3852,7 +3908,8 @@
    "resultat": "Aucune violation retenue; Appel rejeté",
    "dispositions": "Charte canadienne des droits et libertés; C.cr., art. 495; C.cr., art. 4(3)",
    "route": false,
-   "resume_points": "Suspension invoquée pour raisons de sécurité. Délai de 11 minutes entre détention et arrestation. Arrestation sans mandat. Possession conjointe alléguée."
+   "faits": "La Cour d'appel du Québec se prononce en matière de suspension invoquée pour raisons de sécurité (délai de 11 minutes entre détention et arrestation). Éléments de contexte : arrestation sans mandat; possession conjointe alléguée.",
+   "motifs": "Jurisprudence appliquée : R. c. Stairs."
   },
   {
    "col": "decisions",
@@ -3860,7 +3917,7 @@
    "reference": "2026 CSC 38",
    "tribunal": "Cour suprême du Canada",
    "date": "2026-11-10",
-   "resume": "La Cour suprême du Canada se prononce en matière de pourvoi (arrêt de la Cour d’appel). Éléments retenus : pourvoi contre un arrêt de la Cour d’appel des Territoires du Nord-Ouest; jugement unanime prononcé oralement; motifs de la majorité adoptés.",
+   "resume": "La Cour suprême du Canada se prononce en matière de pourvoi (arrêt de la Cour d’appel). Éléments de contexte : pourvoi contre un arrêt de la Cour d’appel des Territoires du Nord-Ouest; jugement unanime prononcé oralement; motifs de la majorité adoptés.",
    "url": "https://www.canlii.org/fr/ca/csc/doc/2026/2026csc38/2026csc38.html",
    "source": "CanLII",
    "id": "decisions:2026 CSC 38",
@@ -3871,7 +3928,8 @@
    "dispositions": "",
    "domaine": "criminel",
    "route": false,
-   "resume_points": "Arrêt de la Cour d’appel. Pourvoi contre un arrêt de la Cour d’appel des Territoires du Nord-Ouest. Jugement unanime prononcé oralement. Motifs de la majorité adoptés. Pourvoi entendu et jugement rendu le même jour. Renvoi aux motifs de la Cour d’appel des Territoires du Nord-Ouest."
+   "faits": "La Cour suprême du Canada se prononce en matière de pourvoi (arrêt de la Cour d’appel). Éléments de contexte : pourvoi contre un arrêt de la Cour d’appel des Territoires du Nord-Ouest; jugement unanime prononcé oralement; motifs de la majorité adoptés.",
+   "motifs": ""
   },
   {
    "col": "decisions",
@@ -3879,7 +3937,7 @@
    "reference": "2026 QCCM 47",
    "tribunal": "Cour municipale",
    "date": "2026-11-09",
-   "resume": "La cour municipale se prononce en matière de sécurité routière (distractions au volant). Éléments retenus : présomption d’usage par appareil tenu en main; conditions d’exception non respectées.",
+   "resume": "La cour municipale se prononce en matière de sécurité routière (distractions au volant). Éléments de contexte : présomption d’usage par appareil tenu en main; conditions d’exception non respectées.",
    "url": "https://www.canlii.org/fr/qc/qccm/doc/2026/2026qccm47/2026qccm47.html",
    "source": "CanLII",
    "id": "decisions:2026 QCCM 47",
@@ -3890,7 +3948,8 @@
    "resultat": "Acquittement",
    "dispositions": "Code de la sécurité routière, art. 443.1; Règlement sur les distractions au volant, art. 1",
    "route": true,
-   "resume_points": "Distractions au volant. Présomption d’usage par appareil tenu en main. Conditions d’exception non respectées."
+   "faits": "La cour municipale se prononce en matière de sécurité routière (distractions au volant). Éléments de contexte : présomption d’usage par appareil tenu en main; conditions d’exception non respectées.",
+   "motifs": "Jurisprudence appliquée : DPCP c. Girard."
   },
   {
    "col": "juridique",

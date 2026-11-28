@@ -289,7 +289,8 @@ body.locked { overflow: hidden; }
         dl.append(dt, dd);
       };
       row("Questions en litige", i.questions, "", "Non précisé par la source");
-      row("Résumé", i.resume, "", "Non précisé par la source");
+      row("Résumé des faits", i.faits || i.resume, "", "Non précisé par la source");
+      row("Motifs de la décision", i.motifs, "", "Non précisés par la source");
       row("Résultat", i.resultat, "", "Non précisé par la source");
       if (i.dispositions) row("Dispositions", i.dispositions, "dispo");
       art.append(dl);
@@ -326,7 +327,7 @@ body.locked { overflow: hidden; }
     const cutoff = state.range ? new Date(Date.now() - state.range * 864e5).toISOString().slice(0, 10) : "";
     const q = norm(state.q);
     const shown = items.filter(i => (!state.route || i.route) && (!state.cat || catOf(i) === state.cat) && (!cutoff || (i.trouve_le || "") >= cutoff)
-      && (!q || norm([i.titre, i.reference, i.resume, i.questions, i.resultat, i.dispositions, i.source].join(" ")).includes(q)));
+      && (!q || norm([i.titre, i.reference, i.resume, i.faits, i.motifs, i.questions, i.resultat, i.dispositions, i.source].join(" ")).includes(q)));
     $("status").textContent = shown.length + (shown.length > 1 ? " éléments" : " élément");
     const list = $("list"); list.replaceChildren();
     if (!shown.length) { list.append(el("div", "empty", items.length ? "Aucun élément pour ces filtres." : "Aucun élément pour l'instant. La prochaine collecte en ajoutera.")); return; }

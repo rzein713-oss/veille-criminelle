@@ -114,9 +114,17 @@ HEADINGS = {
 }
 
 
+MOTIFS_RE = re.compile(
+    r"critère|analyse|appliqu|retenu|écart|erreur|considér|pondér|proportionn|fardeau|\btest\b|principe|gravité|"
+    r"raisonnable|crédibilit|apprécia|interpréta|jurisprudence|fourchette|facteurs?|justifi|conclu|insuffisan|"
+    r"suffisan|établi|démontr|prépondéran|doute|absence de|exigence|nécessaire|lien|portée|objectiv|subjectiv",
+    re.I)
+CITE_RE = re.compile(r"(?:^|\s)((?:R\.|[A-ZÉ][\w.'’-]+) (?:c\.|v\.) [^,;—|]{2,60}?)(?:,\s*(?:\d{4}|\[\d{4}\])[^,;—|]*)?(?:\s+citée?s?)?(?=$|[,;—|])")
+
+
 def decompose(classification):
-    """Sépare une classification SOQUIJ en questions, résumé, résultat et dispositions."""
-    questions, resultat, resume, lois = [], [], [], []
+    """Sépare une classification SOQUIJ en questions, faits, motifs, résultat et dispositions."""
+    questions, resultat, faits, motifs, lois, arrets = [], [], [], [], [], []
     for seg in re.split(r"\s+[—|]\s+", classification or ""):
         seg = seg.strip(" .")
         if not seg or seg.endswith("…"):
@@ -132,17 +140,24 @@ def decompose(classification):
         parts = [p.strip(" .") for p in seg.split(", ")]
         res = [p for p in parts if RESULT_RE.search(p) and len(p) < 90 and not CASE_RE.search(p)
                and not re.match(r"(Requêtes?|Demandes?) modifiées?", p)]
+        cites = [m.group(1).strip() for m in CITE_RE.finditer(seg)]
+        arrets += [c.rstrip(" .") for c in cites if c.strip(" .") and not re.match(r"(Ville|Municipalité|Directeur)", c)]
         if res and len(seg) < 140:
             resultat += res
         elif CASE_RE.search(seg) or len(seg.split()) < 3:
             continue
+        elif MOTIFS_RE.search(seg):
+            motifs.append(seg)
         else:
-            resume.append(seg)
+            faits.append(seg)
     uniq = lambda xs: list(dict.fromkeys(xs))
     return {
         "questions": " ".join(uniq(questions)),
         "resultat": "; ".join(uniq(resultat)),
-        "resume": ". ".join(uniq(resume)) + ("." if resume else ""),
+        "resume": ". ".join(uniq(faits + motifs)) + ("." if faits or motifs else ""),
+        "faits_points": uniq(faits),
+        "motifs_points": uniq(motifs),
+        "arrets": uniq(arrets)[:4],
         "dispositions": "; ".join(uniq(lois)),
     }
 
@@ -159,8 +174,8 @@ def lower_first(t):
     return t[:1].lower() + t[1:] if t and not t[:2].isupper() else t
 
 
-def phrase_auto(item):
-    """Résumé en phrases, sans IA, à partir de la classification (filet de sécurité)."""
+def phrase_auto(item, parts):
+    """Faits et motifs en phrases, sans IA, à partir de la classification (filet de sécurité)."""
     segs = [x.strip(" .") for x in re.split(r"\s+[—|]\s+", item.get("source_resume", "")) if x.strip(" .")]
     sujets = []
     for x in segs:
@@ -170,15 +185,20 @@ def phrase_auto(item):
         if len(sujets) == 2:
             break
     cour = COURT_PHRASE.get(item.get("tribunal", ""), "Le tribunal")
-    phrases = []
+    faits = []
     if sujets:
         sujet = lower_first(sujets[0])
         de = "d’" if re.match(r"[aeiouyéèêàâîôûh]", sujet, re.I) else "de "
-        phrases.append(f"{cour} se prononce en matière {de}{sujet}" + (f" ({lower_first(sujets[1])})" if len(sujets) > 1 else "") + ".")
-    faits = [f for f in re.split(r"\.\s(?=[A-ZÉÈÀÂÎÔÛÇ])", item.get("resume_points") or "") if f and f.rstrip(".") not in sujets][:3]
-    if faits:
-        phrases.append("Éléments retenus : " + "; ".join(lower_first(f.rstrip(".")) for f in faits) + ".")
-    return " ".join(phrases)
+        faits.append(f"{cour} se prononce en matière {de}{sujet}" + (f" ({lower_first(sujets[1])})" if len(sujets) > 1 else "") + ".")
+    pts = [f for f in parts["faits_points"] if f not in sujets][:3]
+    if pts:
+        faits.append("Éléments de contexte : " + "; ".join(lower_first(f) for f in pts) + ".")
+    motifs = []
+    if parts["motifs_points"]:
+        motifs.append(" ".join(f[:1].upper() + f[1:] + "." for f in parts["motifs_points"][:4]))
+    if parts["arrets"]:
+        motifs.append("Jurisprudence appliquée : " + "; ".join(parts["arrets"]) + ".")
+    return " ".join(faits), " ".join(motifs)
 
 
 # ---------- Sources ----------
@@ -718,8 +738,10 @@ def main():
         if i["col"] == "decisions" and not i.get("ia") and not i.get("ia_libre") and i.get("source") == "CanLII":
             i.setdefault("source_resume", i.get("resume", ""))
             parts = decompose(i["source_resume"])
-            i.update(questions=parts["questions"], resultat=parts["resultat"], dispositions=parts["dispositions"], resume_points=parts["resume"])
-            i["resume"] = phrase_auto(i) or parts["resume"]
+            faits, motifs = phrase_auto(i, parts)
+            i.update(questions=parts["questions"], resultat=parts["resultat"], dispositions=parts["dispositions"],
+                     faits=faits or parts["resume"], motifs=motifs, resume=faits or parts["resume"])
+            i.pop("resume_points", None)
         i["domaine"] = domaine(i)
     store["items"] = [i for i in store["items"] if i["domaine"]]
     for i in store["items"]:

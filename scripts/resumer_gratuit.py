@@ -22,9 +22,10 @@ PAUSE = float(os.environ.get("PAUSE_RESUMES", "7"))  # palier gratuit : quelques
 
 CONSIGNE = """Tu rédiges, en français juridique québécois clair, le résumé d'une décision pour des avocats en droit criminel et pénal.
 On te donne l'intitulé, le tribunal et la classification SOQUIJ/CanLII (mots-clés séparés par « — » ou « | »).
-Réponds UNIQUEMENT en JSON : {"resume": "...", "questions": "...", "resultat": "..."}
-- resume : 2 ou 3 phrases complètes et fluides expliquant de quoi il s'agit et ce que le tribunal a décidé.
+Réponds UNIQUEMENT en JSON : {"questions": "...", "faits": "...", "motifs": "...", "resultat": "..."}
 - questions : la ou les questions en litige, en phrase(s) interrogative(s) claire(s).
+- faits : résumé des faits en 2 ou 3 phrases complètes (contexte, parties, ce qui est reproché ou demandé).
+- motifs : les motifs de la décision en 2 ou 3 phrases (raisonnement, critères appliqués, jurisprudence citée).
 - resultat : l'issue en une phrase courte.
 Règles : n'utilise que l'information fournie; n'invente aucun fait, nom, article ou résultat; si un élément manque, dis-le sobrement.
 Ne nomme jamais un adolescent ou une victime mineure (LSJPA). Si la classification est en anglais, rédige quand même en français."""
@@ -109,10 +110,10 @@ def main():
         except (urllib.error.URLError, TimeoutError, ValueError, KeyError, IndexError) as e:
             print(f"Réponse inutilisable pour {item['titre'][:50]} : {str(e)[:150]}", file=sys.stderr)
             continue
-        resume = str(out.get("resume", "")).strip()
-        if len(resume) >= 40:
-            item["resume"] = resume
-            for k in ("questions", "resultat"):
+        faits = str(out.get("faits", "")).strip()
+        if len(faits) >= 40:
+            item["faits"] = item["resume"] = faits
+            for k in ("questions", "motifs", "resultat"):
                 v = str(out.get(k, "")).strip()
                 if v and not re.search(r"non précisé|n'est pas (indiqué|précisé)|ne (le )?précise pas", v, re.I):
                     item[k] = v
