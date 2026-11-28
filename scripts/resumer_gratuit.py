@@ -24,7 +24,11 @@ CONSIGNE = """Tu rédiges, en français juridique québécois clair, le résumé
 On te donne l'intitulé, le tribunal et la classification SOQUIJ/CanLII (mots-clés séparés par « — » ou « | »).
 Réponds UNIQUEMENT en JSON : {"questions": "...", "faits": "...", "motifs": "...", "resultat": "..."}
 - questions : la ou les questions en litige, en phrase(s) interrogative(s) claire(s).
-- faits : résumé des faits en 2 ou 3 phrases complètes (contexte, parties, ce qui est reproché ou demandé).
+- faits : le récit des faits en 2 ou 3 phrases, comme on raconte une affaire : qui a fait quoi, à qui, et ce qui est reproché
+  (ex. « M. X était accusé d'avoir touché la plaignante à des fins sexuelles; il a nié le caractère sexuel du geste »).
+  Désigne l'accusé par son nom tel qu'il apparaît dans l'intitulé (« M. Meus », « Mme Tremblay »), ou « l'accusé » si l'intitulé
+  ne donne que des initiales ou s'il s'agit d'une affaire LSJPA; désigne les autres personnes par leur rôle (la plaignante,
+  la victime, le policier, la poursuite). N'écris aucun détail (lieu, date, circonstance) qui ne figure pas dans la classification.
 - motifs : les motifs de la décision en 2 ou 3 phrases (raisonnement, critères appliqués, jurisprudence citée).
 - resultat : l'issue en une phrase courte.
 Règles : n'utilise que l'information fournie; n'invente aucun fait, nom, article ou résultat; si un élément manque, dis-le sobrement.
