@@ -8,8 +8,11 @@
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=4">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png?v=4">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=5">
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="/manifest.webmanifest">
 <meta name="apple-mobile-web-app-title" content="Sub Rosa">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="description" content="Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec. Créé par Rami Zein.">
 <meta property="og:title" content="Revue en droit criminel et pénal | Sub Rosa Connect">
 <meta property="og:description" content="Décisions, législations, nouvelles de la profession et actualités liées au droit criminel et pénal au Québec. Créé par Rami Zein.">
@@ -44,7 +47,7 @@ a { color: inherit; }
 
 /* Bandeau */
 .hero { background: radial-gradient(90% 120% at 50% -10%, var(--navy-3) 0%, var(--navy) 60%); color: #fff; text-align: center; }
-.hero .container { padding-block: 48px 36px; display: grid; justify-items: center; gap: 10px; }
+.hero .container { padding-block: calc(48px + env(safe-area-inset-top, 0px)) 36px; display: grid; justify-items: center; gap: 10px; }
 .medal { width: clamp(150px, 30vw, 210px); height: auto; margin-bottom: 10px; filter: drop-shadow(0 14px 32px rgba(0,0,0,.45)); }
 .brand { font-family: var(--f-display); font-weight: 600; font-size: clamp(30px, 5.6vw, 44px); line-height: 1; color: var(--gold); letter-spacing: .02em; }
 .hero h1 { font: 500 12.5px var(--f-mono); letter-spacing: .28em; text-transform: uppercase; color: #fff; margin: 4px 0 0; }
@@ -57,7 +60,7 @@ a { color: inherit; }
 
 /* Barre des sections */
 .sections { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 11; background: #fff; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 11; background: var(--navy); }
 .sections .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; padding-block: 14px; }
 .tgroup { justify-items: center; }
 .tgroup { display: grid; gap: 6px; }
@@ -124,7 +127,7 @@ footer .fbrand { font-family: var(--f-display); font-weight: 600; font-size: 20p
 footer .fbrand span { color: var(--gold); font: 500 11px var(--f-mono); letter-spacing: .18em; text-transform: uppercase; margin-left: 10px; }
 
 @media (max-width: 640px) {
-  .hero .container { padding-block: 36px 28px; }
+  .hero .container { padding-block: calc(36px + env(safe-area-inset-top, 0px)) 28px; }
   .hero h1 { letter-spacing: .18em; font-size: 11.5px; }
   .sections { position: static; }
   .sections .container { justify-content: flex-start; }
